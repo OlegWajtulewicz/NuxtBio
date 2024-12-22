@@ -1,0 +1,227 @@
+@use "sass:math";
+@use '../utils/functions' as *;
+@use '../utils/vars' as *;
+@use '../mixins' as *;
+
+.home {
+    background-color: var(--background-color);
+    position: relative;
+    
+    &__container {
+        max-width: 100em;
+        padding-right: var(--container-padding);
+        padding-left: var(--container-padding);
+        margin-inline: auto;
+       // max-width: 100%;
+        display: grid;
+        align-items: flex-end;
+        height: calc(var(--vh, 1vh) * 60);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @media (max-width: $mobileSmall) {
+            height: calc(var(--vh, 1vh) * 55); 
+        }
+    }
+       
+    &__bg {
+        position: relative;
+        background: linear-gradient(360deg,
+             rgb(24 24 27) 10%, transparent 25%, 
+             rgba(43, 39, 39, 0.712) 5%, transparent 25%, 
+             rgba(10, 0, 0, 0.959) 85%), 
+             url('@/assets/images/bbg.png') center center / cover no-repeat;
+        top: -20em;
+        right: 0;
+        left: 0;
+        height: 60vh;
+        height: calc(var(--vh, 1vh) * 60);
+        z-index: 0;
+        @media (max-width: $mobile) {
+          //  top: -8em; 
+        }
+        @media (max-width: $mobileSmall) {
+            height: calc(var(--vh, 1vh) * 55); 
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-color);
+            opacity: 0.3;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4em;
+            background-color: var(--background-color);
+            bottom: -2em;
+        }
+    }
+
+    &__canvas {
+        left: var(--container-padding);
+        bottom: var(--container-padding);
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+        overflow: hidden;
+        grid-row: 2 / 3;
+        border: .5px solid rgba(var(--color-white-rgb), 0.05);
+        box-shadow: 2px 2px 17px #000;
+        
+        @include adaptiveValue("width", 128, 60);
+        @include adaptiveValue("height", 128, 60);
+    }
+
+    &__canvas-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 2;
+        padding: .2em;
+        background-color: conic-gradient(in hsl longer hue from var(--a), hsl(315, 2%, 56%) 0 0);
+        animation: spin 2s linear infinite;
+    }
+
+    &__text {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        padding-bottom: var(--container-padding);
+       /// font-family: 'Montserrat' !important;
+        font-family: 'Porlane-Regular' !important;
+        text-transform: uppercase;
+        @include adaptiveValue("row-gap", 32, 10);
+        @media (max-width: $mobile) {
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+           
+        }
+    }
+
+    &__text--left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    &__subtitle,
+    &__subtitle--right,
+    &__subtitle--right1 {
+       // font-family: 'Porlane-Regular' !important;
+        font-weight: 600;
+        
+        @include adaptiveValue("font-size", 142, 34);
+    }
+
+    &__subtitle {
+        position: relative;
+        z-index: 2;
+        width: fit-content;
+        grid-row: 1 / 2;
+        font-family: 'FilsonPro-Regular' !important;
+        text-transform: none;
+      //  font-weight: 600;
+      //  grid-column: 1 / 2 !important;
+        @include adaptiveValue("font-size", 142, 64);
+    }
+
+    &__subtitle--right { 
+        font-family: 'Decoy', sans-serif  !important;
+        background: linear-gradient(180deg, #fa5c33, #ffef62, #ffc852, #f45639, #ffdd44);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: right;
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        justify-self: end;
+        @include adaptiveValue("font-size", 142, 68);
+        @media (max-width: $mobile) {
+            grid-row: 2 / 3;
+            grid-column: span 2;
+            
+        }
+    }
+
+    &__subtitle--right1 {
+        text-align: right;
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        justify-self: end;
+        margin-left: -20px;
+        @include adaptiveValue("font-size", 124, 32);
+        @media (max-width: $mobile) {
+            grid-row: 3 / 4;
+          //  grid-column: 1 / 3;
+            margin-left: 0;
+        }
+        .span-lines {
+            display: flex;
+            white-space: nowrap;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        bottom: -15vh;
+        line-height: 1.1;
+        font-weight: 500;
+        font-family: 'Montserrat' !important;
+        margin-bottom: 0.625rem;
+        width: 100%;
+        filter: drop-shadow(0px 0px 8px rgba(21, 4, 26, 0.733));
+        white-space: nowrap;
+
+        &--body {
+            position: relative;
+            display: block;
+            padding: 0 0 .625rem 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #a0a09d;
+        margin-right: 1.25rem;
+        @include adaptiveValue("font-size", 22, 16);
+    }
+}
+.span-lines {
+   display: grid;
+}
+.line {
+    width: calc(100vw - (var(--container-padding) * 2));
+    margin: 0 auto;
+    position: relative;
+    bottom: 0;
+    border-bottom: .01em solid var(--color-border-light);
+}
+
+.line-shadow {
+    border-radius: 50%;
+    position: absolute;
+    top: calc(var(--row-gap) * -1);
+    left: 0%;
+    right: 0%;
+    height: 10vh;
+    background-color: var(--color-dark);
+    filter: blur(0.75vw);
+    opacity: .1;
+    mix-blend-mode: multiply;
+    z-index: 0;
+} 

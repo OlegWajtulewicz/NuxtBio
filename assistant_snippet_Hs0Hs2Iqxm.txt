@@ -1,0 +1,7 @@
+1|<template>
+2|  <div data-scroll-container>
+3|    <NuxtLayout>
+4|      <NuxtPage />
+5|    </NuxtLayout>
+6|  </div>
+7|</template> 

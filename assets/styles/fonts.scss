@@ -1,0 +1,46 @@
+@use './utils/functions' as *;
+@use './mixins' as *;
+@use './utils/google-fonts';
+
+// Локальные шрифты
+// @include font("Open Sans", "OpenSans-Light", 300, normal);
+// @include font("Open Sans", "OpenSans-Regular", 400, normal);
+// @include font("Open Sans", "OpenSans-Medium", 500, normal);
+// @include font("Open Sans", "OpenSans-SemiBold", 600, normal);
+// @include font("Open Sans", "OpenSans-Bold", 700, normal);
+// @include font("Open Sans", "OpenSans-ExtraBold", 800, normal);
+
+// Inter (если нужен)
+// @include font("Inter", "Inter-Light", 300, normal);
+// @include font("Inter", "Inter-Regular", 400, normal);
+// @include font("Inter", "Inter-Medium", 500, normal);
+ @include font("Inter", "Inter-SemiBold", 600, normal);
+// @include font("Inter", "Inter-Bold", 700, normal);
+// @include font("Inter", "Inter-ExtraBold", 800, normal); 
+
+@font-face {
+  font-family: 'Porlane-Regular';
+  src: url('../fonts/Porlane-Regular.woff2') format('woff2'),
+       url('../fonts/Porlane-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Decoy';
+    src: url('../fonts/Decoy-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Decoy-BlackItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'FilsonPro-Regular';
+  src: url('../fonts/FilsonPro-Regular.woff2') format('woff2'),
+      url('../fonts/FilsonPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}

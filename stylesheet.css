@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Decoy';
+    src: url('Decoy-BlackItalic.woff2') format('woff2'),
+        url('Decoy-BlackItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Oddlini ExtBd UltExp';
+    src: url('Oddlini-ExtBdUltExp.woff2') format('woff2'),
+        url('Oddlini-ExtBdUltExp.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+

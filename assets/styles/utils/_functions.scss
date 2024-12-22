@@ -1,0 +1,19 @@
+@use "sass:math";
+
+// Перевод в REM
+@function toRem($value) {
+    $remValue: math.div($value, 16) + rem;
+    @return $remValue;
+}
+
+// Перевод в EM
+@function toEm($value) {
+    $emValue: math.div($value, 16) + em;
+    @return $emValue;
+}
+
+// Перевод в проценты
+@function percentage($value) {
+    $percentValue: math.div($value, 16) * 100%;
+    @return $percentValue;
+} 
