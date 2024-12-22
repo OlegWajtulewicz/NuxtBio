@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt'
   ],
   plugins: [
-    { src: '~/plugins/lazyLoad.js', mode: 'client' }
+    { src: '~/plugins/lazyLoad.js', mode: 'client' },
+    { src: '~/plugins/mouseCursor.client.js', mode: 'client' }
   ],
   googleFonts: {
     families: {
@@ -41,7 +42,7 @@ export default defineNuxtConfig({
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
   },
   build: {
-    transpile: ['gsap'],
+    transpile: ['gsap', 'three'],
   },
   app: {
     pageTransition: {
@@ -85,7 +86,8 @@ export default defineNuxtConfig({
       ],
       style: [
        // { children: 'body{opacity: 0;}' }
-      ]
+      ],
+      script: []
     }
   }
 })

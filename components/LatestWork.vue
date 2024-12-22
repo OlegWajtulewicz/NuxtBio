@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useNuxtApp } from '#app'
+import MouseHome from './MouseHome.vue'
 
 const isClient = ref(false)
 const { $locomotiveScroll: scroll } = useNuxtApp()
@@ -25,6 +26,36 @@ onUnmounted(() => {
 </script>
 
 <template>
+    <div class="mouse-image">
+    <div class="mouse-image__bounce overlay">
+        <div class="mouse-image__float-wrap">
+            <li class="mouse-image__image-inner visible">
+                <div class="item-latest-work__images" v-if="isClient" v-lazy>
+                    <div class="item-latest-work__color orange"></div>
+                    <img data-src="/img/works/Julia.png" alt="image" class="tile-image item-latest-work__image ibg">
+                </div>            
+            </li>
+            <li class="mouse-image__image-inner visible">
+                <div class="item-latest-work__images" v-if="isClient" v-lazy>
+                    <div class="item-latest-work__color blue1"></div>
+                    <img data-src="/img/works/bwg.png" alt="image" class="item-latest-work__image ibg">
+                </div>
+            </li>
+            <li class="mouse-image__image-inner visible">
+                <div class="item-latest-work__images" v-if="isClient" v-lazy>
+                    <div class="item-latest-work__color yellow"></div>
+                    <img data-src="/img/works/pizza-next.png" alt="image" class="item-latest-work__image ibg "/>
+                </div>
+            </li>
+        </div>
+    </div>
+</div>
+
+<div class="mouse-btn no-select"></div>
+<div class="mouse-span no-select">
+    <p class="icon-Right"></p>
+</div>
+   
     <section class="latest-work" data-scroll-section>
     <div class="latest-work__container">
         <h3 class="latest-work__title">latest work</h3>

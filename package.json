@@ -16,11 +16,13 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@pinia/nuxt": "^0.9.0",
     "@studio-freight/lenis": "^1.0.42",
+    "@types/three": "^0.171.0",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "locomotive-scroll": "^4.1.4",
     "nuxt": "^3.14.1592",
-    "pinia": "^2.3.0"
+    "pinia": "^2.3.0",
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@nuxt/image": "^1.8.1",

@@ -8,7 +8,7 @@
     position: relative;
     
     &__container {
-        max-width: 100em;
+        max-width: 80em;
         padding-right: var(--container-padding);
         padding-left: var(--container-padding);
         margin-inline: auto;
@@ -104,7 +104,7 @@
         padding-bottom: var(--container-padding);
        /// font-family: 'Montserrat' !important;
         font-family: 'Porlane-Regular' !important;
-        text-transform: uppercase;
+      //  text-transform: uppercase;
         @include adaptiveValue("row-gap", 32, 10);
         @media (max-width: $mobile) {
             grid-template-rows: repeat(3, 1fr);
@@ -150,7 +150,7 @@
         grid-column: 2 / 4;
         grid-row: 1 / 2;
         justify-self: end;
-        @include adaptiveValue("font-size", 142, 68);
+        @include adaptiveValue("font-size", 152, 68);
         @media (max-width: $mobile) {
             grid-row: 2 / 3;
             grid-column: span 2;
@@ -164,6 +164,7 @@
         grid-row: 2 / 3;
         justify-self: end;
         margin-left: -20px;
+        font-weight: 300;
         @include adaptiveValue("font-size", 124, 32);
         @media (max-width: $mobile) {
             grid-row: 3 / 4;

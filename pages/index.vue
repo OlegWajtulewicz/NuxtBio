@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Home • Aleh Vaitulevich'
+  title: 'Aleh Vaitulevich • Freelance Developer'
 })
 import HomeLayout from '@/layouts/home-layout.vue'
 
@@ -12,4 +12,3 @@ definePageMeta({
 <template>
   <HomeLayout />
 </template>
-

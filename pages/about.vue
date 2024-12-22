@@ -10,41 +10,26 @@ definePageMeta({
 
 <template>
   <div class="about">
-    <!-- Использование компонента с именованными слотами -->
-    <SectionLayout>
-      <!-- Контент для слота header -->
-      <template #header>
-        <h1 class="about__title">About Me</h1>
-        <p class="about__subtitle">Creative Developer based in Belarus</p>
-      </template>
-
-      <!-- Контент для основного слота -->
+    <div>
+      <h1 class="about__title">About Me</h1>
+      <p class="about__subtitle">Creative Developer based in Belarus</p>
       <div class="about__content">
         <p>I'm a creative developer who combines code and design to create unique digital experiences.</p>
       </div>
+      <div class="about__links">
+        <a href="#" class="about__link">GitHub</a>
+        <a href="#" class="about__link">LinkedIn</a>
+      </div>
+    </div>
 
-      <!-- Контент для слота footer -->
-      <template #footer>
-        <div class="about__links">
-          <a href="#" class="about__link">GitHub</a>
-          <a href="#" class="about__link">LinkedIn</a>
-        </div>
-      </template>
-    </SectionLayout>
-
-    <!-- Использование того же компонента, но с частичным заполнением слотов -->
-    <SectionLayout>
-      <template #header>
-        <h2>My Skills</h2>
-      </template>
-
-      <!-- Здесь используется только основной слот -->
+    <div>
+      <h2>My Skills</h2>
       <div class="skills-grid">
         <div class="skill">Frontend Development</div>
         <div class="skill">Creative Coding</div>
         <div class="skill">UI/UX Design</div>
       </div>
-    </SectionLayout>
+    </div>
   </div>
 </template>
 

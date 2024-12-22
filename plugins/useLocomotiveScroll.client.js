@@ -14,25 +14,27 @@ export default defineNuxtPlugin((nuxtApp) => {
     function startCheckScroll() {
       scroll.on('scroll', (instance) => {
         var nowScrollTop = instance.scroll.y
+        const wrapper = document.querySelector('.wrapper')
+        const header = document.querySelector('header')
 
         if (Math.abs(lastScrollTop - nowScrollTop) >= threshold) {
           if (nowScrollTop > lastScrollTop) {
-            document.querySelector('.wrapper').classList.add('scroll-direction-down')
-            document.querySelector('header').classList.add('scroll-direction-down')
+            wrapper?.classList.add('scroll-direction-down')
+            header?.classList.add('scroll-direction-down')
           } else {
-            document.querySelector('.wrapper').classList.remove('scroll-direction-down')
-            document.querySelector('header').classList.remove('scroll-direction-down')
+            wrapper?.classList.remove('scroll-direction-down')
+            header?.classList.remove('scroll-direction-down')
           }
           lastScrollTop = nowScrollTop
 
           if (nowScrollTop > threshold) {
-            document.querySelector('.wrapper').classList.add('scroll-scrolled')
-            document.querySelector('header').classList.add('scroll-scrolled')
-            document.querySelector('header').classList.remove('nav-see-through')
+            wrapper?.classList.add('scroll-scrolled')
+            header?.classList.add('scroll-scrolled')
+            header?.classList.remove('nav-see-through')
           } else {
-            document.querySelector('.wrapper').classList.remove('scroll-scrolled')
-            document.querySelector('header').classList.remove('scroll-scrolled')
-            document.querySelector('header').classList.add('nav-see-through')
+            wrapper?.classList.remove('scroll-scrolled')
+            header?.classList.remove('scroll-scrolled')
+            header?.classList.add('nav-see-through')
           }
         }
       })
