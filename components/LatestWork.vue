@@ -1,7 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useNuxtApp } from '#app'
-import MouseHome from './MouseHome.vue'
+import MouseCursor from './MouseCursor.vue'
+import { projects } from '@/data/projects'
 
 const isClient = ref(false)
 const { $locomotiveScroll: scroll } = useNuxtApp()
@@ -26,108 +27,42 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="mouse-image">
-    <div class="mouse-image__bounce overlay">
-        <div class="mouse-image__float-wrap">
-            <li class="mouse-image__image-inner visible">
-                <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                    <div class="item-latest-work__color orange"></div>
-                    <img data-src="/img/works/Julia.png" alt="image" class="tile-image item-latest-work__image ibg">
-                </div>            
-            </li>
-            <li class="mouse-image__image-inner visible">
-                <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                    <div class="item-latest-work__color blue1"></div>
-                    <img data-src="/img/works/bwg.png" alt="image" class="item-latest-work__image ibg">
-                </div>
-            </li>
-            <li class="mouse-image__image-inner visible">
-                <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                    <div class="item-latest-work__color yellow"></div>
-                    <img data-src="/img/works/pizza-next.png" alt="image" class="item-latest-work__image ibg "/>
-                </div>
-            </li>
-        </div>
-    </div>
-</div>
-
-<div class="mouse-btn no-select"></div>
-<div class="mouse-span no-select">
-    <p class="icon-Right"></p>
-</div>
+    <MouseCursor :projects="projects" />
    
     <section class="latest-work" data-scroll-section>
     <div class="latest-work__container">
         <h3 class="latest-work__title">latest work</h3>
         <ul class="latest-work__wrapper work-wrapper">
-            <li class="latest-work__item item-latest-work  visible">
+            <li v-for="project in projects" :key="project.image" class="latest-work__item item-latest-work visible">
                 <div class="latest-work__diwider"></div>
-                <a href="./julia-maisa.html" class="item-latest-work__body">
+                <a :href="project.link" class="item-latest-work__body">
                     <div class="item-latest-work__title">
-                        <div class="item-latest-work__title--item">Julia Maisa</div>
+                        <div class="item-latest-work__title--item">{{ project.title }}</div>
                     </div>
                     <div class="item-latest-work__body-image">
                         <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                            <img data-src="/img/works/Julia.png" alt="Julia Maisa" class="item-latest-work__image ibg">
+                            <img :data-src="project.image" :alt="project.alt" class="item-latest-work__image ibg">
                         </div>
                     </div>
                     
-                    <div class="item-latest-work__descr">Design & Development</div>
-                </a>
-            </li>
-            <li class="latest-work__item item-latest-work  visible">
-                <div class="latest-work__diwider"></div>
-                <a href="./groove-school.html" div class="item-latest-work__body">
-                    <div class="item-latest-work__title">Groove School</div>
-                    <div class="item-latest-work__body-image">
-                        <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                            <img data-src="/img/works/bwg.png" alt="Groove School" class="item-latest-work__image ibg">
-                        </div>
-                    </div>
-                    
-                    <div class="item-latest-work__descr">Design & Development</div>
-                </a>
-            </li>
-            <li class="latest-work__item item-latest-work  visible">
-                <div class="latest-work__diwider"></div>
-                <a href="./pizza.html" class="item-latest-work__body">
-                    <div class="item-latest-work__title">Pizza-Next</div>
-                    <div class="item-latest-work__body-image">
-                        <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                            <img data-src="/img/works/pizza-next.png" alt="Pizza Next" class="item-latest-work__image ibg">
-                        </div>
-                    </div>
-                    
-                    <div class="item-latest-work__descr">Full Stack Development</div>
+                    <div class="item-latest-work__descr">{{ project.description }}</div>
                 </a>
             </li>
             <div class="latest-work__diwider"></div>
         </ul>
 
         <ul class="latest-work__wrapper--tiles">
-            <li class="latest-work__item item-latest-work  visible">
-                <a href="./julia-maisa.html" class="item-latest-work__body single-tile-wrap">
+            <li v-for="project in projects.slice(0,2)" :key="project.image" class="latest-work__item item-latest-work visible">
+                <a :href="project.link" class="item-latest-work__body single-tile-wrap">
                     <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                        <div class="item-latest-work__color orange"></div>
-                        <img data-src="/img/works/Julia.png" alt="Julia Maisa" class="tile-image item-latest-work__image ibg">
+                        <div class="item-latest-work__color" :class="project.color"></div>
+                        <img :data-src="project.image" :alt="project.alt" class="tile-image item-latest-work__image ibg">
                     </div>
                     <div class="item-latest-work__title">
-                        <div class="item-latest-work__title--item">Julia Maisa</div>
+                        <div class="item-latest-work__title--item">{{ project.title }}</div>
                     </div>
                     <div class="latest-work__diwider"></div>
-                    <div class="item-latest-work__descr">Design & Development</div>
-                </a>
-            </li>
-            
-            <li class="latest-work__item item-latest-work  visible">
-                <a href="./groove-school.html" class="item-latest-work__body single-tile-wrap">
-                    <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                        <div class="item-latest-work__color blue1"></div>
-                        <img data-src="/img/works/bwg.png" alt="Groove School" class="item-latest-work__image ibg">
-                    </div>
-                    <div class="item-latest-work__title">Groove School</div>
-                    <div class="latest-work__diwider"></div>
-                    <div class="item-latest-work__descr">Design & Development</div>
+                    <div class="item-latest-work__descr">{{ project.description }}</div>
                 </a>
             </li>
         </ul>
