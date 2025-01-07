@@ -24,6 +24,8 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/check-if-layout-used.js")> &
   InjectionType<typeof import("../../plugins/lazyLoad.js")> &
   InjectionType<typeof import("../../plugins/mouseCursor.client.js")> &
+  InjectionType<typeof import("../../plugins/locomotiveScroll.client.js")> &
+  InjectionType<typeof import("../../plugins/hamburgerNav.client.js")> &
   InjectionType<typeof import("../../plugins/gsap.client.js")> &
   InjectionType<typeof import("../../plugins/magneticButtons.client.js")> &
   InjectionType<typeof import("../../plugins/useLocomotiveScroll.client.js")>
