@@ -10,7 +10,8 @@ export default defineNuxtConfig({
   ],
   plugins: [
     { src: '~/plugins/lazyLoad.js', mode: 'client' },
-    { src: '~/plugins/mouseCursor.client.js', mode: 'client' }
+    { src: '~/plugins/mouseCursor.client.js', mode: 'client' },
+   // { src: '~/plugins/hamburgerNav.client.js', mode: 'client' }
   ],
   googleFonts: {
     families: {

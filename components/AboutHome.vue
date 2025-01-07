@@ -1,11 +1,8 @@
 <script setup>
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
-}
+const { $lenis } = useNuxtApp()
 
 function initTricksWords() {
   const spanWords = document.querySelectorAll('.about__text .span-lines')
@@ -17,27 +14,27 @@ function initTricksWords() {
 function initSpanLinesAnimation() {
   document.querySelectorAll('.about__text .span-lines.animate').forEach(function(triggerElement) {
     let targetElements = triggerElement.querySelectorAll('.span-line-inner')
-
+    
     gsap.set(targetElements, {
       opacity: 0.1
     })
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerElement,               
-        toggleActions: 'play none none reset', 
-        start: "center bottom",                       
-        end: "bottom top",                         
-      //  markers: true,
-        scroller: "[data-scroll-container]"                               
-      }
-    })
+    $lenis.on('scroll', () => {
+      const rect = triggerElement.getBoundingClientRect()
+      const inView = rect.top <= window.innerHeight && rect.bottom >= 0
 
-    tl.to(targetElements, {
-      opacity: 1,
-      stagger: 0.05,            
-      ease: "power3.out",       
-      duration: 0.5              
+      if (inView) {
+        gsap.to(targetElements, {
+          opacity: 1,
+          stagger: 0.05,
+          ease: "power3.out",
+          duration: 0.5
+        })
+      } else {
+        gsap.set(targetElements, {
+          opacity: 0.1
+        })
+      }
     })
   })
 }

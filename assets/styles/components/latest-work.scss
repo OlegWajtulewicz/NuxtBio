@@ -41,14 +41,14 @@
         display: none; 
       }
       &--tiles {
-        @media (min-width:$tablet){
-            display: none; 
-        }
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         position: relative;
         padding-top: var(--gap-padding);
+        @media (min-width:$tablet){
+            display: none; 
+        }
         .item-latest-work {
             display: block;
             width: 50%;

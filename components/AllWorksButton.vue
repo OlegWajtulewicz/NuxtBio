@@ -6,7 +6,7 @@
 <template>
     <section class="all-works" data-scroll-section>
     <div class="all-works__container">
-        <a href="./work.html" class="all-works__btn btn magnetic" data-btn-hover data-strength="70" data-strength-text="40">
+        <NuxtLink to="/work" class="all-works__btn btn magnetic" data-btn-hover data-strength="70" data-strength-text="40">
             <div class="btn__bg"></div>
             <div class="btn__circle-wrap">
                 <div class="btn__circle">
@@ -17,7 +17,7 @@
                 <p class="btn-text-p change">All works</p>
             </span>
             <div class="btn__border"></div>
-        </a>
+        </NuxtLink>
     </div>
     <div class="line">
     </div>

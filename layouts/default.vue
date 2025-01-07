@@ -9,6 +9,7 @@
 </template>
 
 <script setup>
+import Lenis from '@studio-freight/lenis'
 import TheHeader from '@/components/TheHeader.vue'
 import MenuMobile from '@/components/MenuMobile.vue'
 </script>
