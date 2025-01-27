@@ -11,7 +11,8 @@ export default defineNuxtConfig({
   plugins: [
     { src: '~/plugins/lazyLoad.js', mode: 'client' },
     { src: '~/plugins/mouseCursor.client.js', mode: 'client' },
-    { src: '~/plugins/locomotiveScroll.client.js', mode: 'client' },
+   // { src: '~/plugins/locomotiveScroll.client.js', mode: 'client' },
+    { src: '~/plugins/scrollDirection.client.js', mode: 'client' },
     { src: '~/plugins/hamburgerNav.client.js', mode: 'client' }
   ],
   googleFonts: {
@@ -34,9 +35,9 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "@/assets/styles/utils/_vars" as *;
-            @use "@/assets/styles/utils/_functions" as *;
-            @use "@/assets/styles/mixins" as *;
+            @use "./assets/styles/utils/_functions" as *;
+            @use "./assets/styles/utils/_vars" as *;
+            @use "./assets/styles/mixins" as *;
           `
         }
       }

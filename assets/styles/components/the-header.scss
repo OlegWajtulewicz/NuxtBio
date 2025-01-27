@@ -7,11 +7,12 @@
     position: relative;
     padding: toRem(20);
     display: flex;
-    flex: 1 1 auto;
+   // flex: 1 1 auto;
     z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
+  //  height: unset;
     color: #fff;
     padding: calc(var(--gap-padding) / 2);
     padding-right: calc(var(--gap-padding) * .1);

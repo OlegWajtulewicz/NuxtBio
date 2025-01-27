@@ -1,6 +1,6 @@
 import { gsap, Power3, Power4, Elastic } from 'gsap'
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin((nuxtApp) => {
   function initMagneticButtons() {
     // Magnetic Buttons
     const magnets = document.querySelectorAll('.magnetic')
@@ -131,6 +131,16 @@ export default defineNuxtPlugin(() => {
         })
       }
     }
+  }
+
+  if (process.client) {
+    // При первой загрузке
+    window.addEventListener('load', initMagneticButtons)
+    
+    // При переходах между страницами
+    nuxtApp.hook('page:finish', () => {
+      initMagneticButtons()
+    })
   }
 
   // Инициализация при монтировании

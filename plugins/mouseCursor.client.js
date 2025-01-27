@@ -5,6 +5,18 @@ const $ = jQuery
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('app:mounted', () => {
     initStickyCursorWithDelay()
+
+    if (process.client) {
+      // При первой загрузке
+      nuxtApp.hook('app:mounted', () => {
+        initStickyCursorWithDelay()
+      })
+      
+      // При переходах между страницами
+      nuxtApp.hook('page:finish', () => {
+        initStickyCursorWithDelay()
+      })
+    }
   })
 
   function initStickyCursorWithDelay() {

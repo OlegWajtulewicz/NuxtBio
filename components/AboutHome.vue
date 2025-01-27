@@ -2,7 +2,7 @@
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 
-const { $lenis } = useNuxtApp()
+//const { $lenis } = useNuxtApp()
 
 function initTricksWords() {
   const spanWords = document.querySelectorAll('.about__text .span-lines')
@@ -19,7 +19,7 @@ function initSpanLinesAnimation() {
       opacity: 0.1
     })
 
-    $lenis.on('scroll', () => {
+    window.addEventListener('scroll', () => {
       const rect = triggerElement.getBoundingClientRect()
       const inView = rect.top <= window.innerHeight && rect.bottom >= 0
 

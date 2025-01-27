@@ -410,7 +410,7 @@
 }
 .hamburger-wrap {
 	transition: transform .4s cubic-bezier(0.36, 0, 0.66, 0);
-   	transform: translateY(0%) scale(0) rotate(0.001deg);
+  // 	transform: translateY(0%) scale(0) rotate(0.001deg);
 	position: fixed;
 	top: calc(var(--gap-padding) / 1.5);
 	right: calc(var(--gap-padding) / 1.5);
@@ -445,10 +445,10 @@
 	z-index: 1000;
 	position: relative;
 	&.active {
-		transform: translateY(0%) scale(0) rotate(0.001deg);
+		transform: translateY(0%) scale(1) rotate(0.001deg);
 	}
 }
-
+main.scroll-scrolled 
 main.nav-active .menu {
 	display: block !important;
 }

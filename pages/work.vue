@@ -1,4 +1,6 @@
 <script setup>
+
+
 useHead({
   title: 'Work • Aleh Vaitulevich'
 })

@@ -95,12 +95,6 @@
       "public/*": [
         "../public/*"
       ],
-      "#build": [
-        "."
-      ],
-      "#build/*": [
-        "./*"
-      ],
       "#app": [
         "../node_modules/nuxt/dist/app"
       ],
@@ -127,6 +121,12 @@
       ],
       "#components": [
         "./components"
+      ],
+      "#build": [
+        "."
+      ],
+      "#build/*": [
+        "./*"
       ]
     },
     "esModuleInterop": true,

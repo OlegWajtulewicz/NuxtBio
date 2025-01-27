@@ -188,7 +188,7 @@ function initTHREEScene() {
 
 <template>
     <section class="home" data-scroll-section>
-        <div class="home__bg" data-scroll data-scroll-speed="-4.5" ></div>
+        <div class="home__bg" data-scroll data-scroll-speed="-1.5" ></div>
         <div class="home__container ">
             <div class="home__text" data-scroll data-scroll-speed="-3" data-scroll-position="top"> 
                 <div class="span-lines animate">

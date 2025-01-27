@@ -4,7 +4,7 @@ useHead({
 })
 
 definePageMeta({
-  layout: 'default'
+  layout: 'about-layout'
 })
 </script>
 

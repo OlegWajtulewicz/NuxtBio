@@ -1,14 +1,25 @@
 <script setup>
+import MainHome from '@/components/MainHome.vue'
+import MarqueeHome from '@/components/MarqueeHome.vue'
+import AboutHome from '@/components/AboutHome.vue'
+import LatestWork from '@/components/LatestWork.vue'
+import AllWorksButton from '@/components/AllWorksButton.vue'
+
 useHead({
   title: 'Aleh Vaitulevich • Freelance Developer'
 })
-import HomeLayout from '@/layouts/home-layout.vue'
 
 definePageMeta({
-  layout: 'default'
+  layout: 'home-layout'
 })
 </script>
 
 <template>
-  <HomeLayout />
+  <div>
+    <MainHome />
+    <MarqueeHome />
+    <AboutHome />
+    <LatestWork />
+    <AllWorksButton />
+  </div>
 </template>

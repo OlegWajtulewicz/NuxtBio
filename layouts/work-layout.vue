@@ -1,17 +1,29 @@
-<script setup>
-
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-    WORK
-    </div>
-  </header>
-
-  
+  <div class="wrapper" data-lenis-prevent>
+    <TheHeader />
+    <MenuMobile />
+    <main class="main">
+      <slot />
+    </main>
+    <FooterMain />
+  </div>
 </template>
 
-<style lang="scss" scoped>
+<script setup>
+import TheHeader from '@/components/TheHeader.vue'
+import MenuMobile from '@/components/MenuMobile.vue'
+import FooterMain from '@/components/FooterMain.vue'
+</script>
 
+<style lang="scss">
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
 </style>

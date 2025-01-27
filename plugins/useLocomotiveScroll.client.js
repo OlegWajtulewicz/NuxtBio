@@ -1,4 +1,4 @@
-import Lenis from '@studio-freight/lenis'
+/*import Lenis from '@studio-freight/lenis'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const { initLenis } = useLenis()
@@ -28,3 +28,4 @@ export default defineNuxtPlugin((nuxtApp) => {
   initLenis(lenis)
   nuxtApp.provide('lenis', lenis)
 })
+*/

@@ -1,25 +1,21 @@
+<script setup>
+import TheHeader from '@/components/TheHeader.vue'
+import MenuMobile from '@/components/MenuMobile.vue'
+import FooterMain from '@/components/FooterMain.vue'
+</script>
+
 <template>
-  <div class="home-layout">
-    <MainHome />
-    <MarqueeHome />
-    <AboutHome />
-    <LatestWork />
-    <AllWorksButton />
+  <div class="wrapper" data-lenis-prevent>
+    <TheHeader />
+    <MenuMobile />
+    <main class="main">
+      <slot />
+    </main>
     <FooterMain />
   </div>
 </template>
 
-<script setup>
-import MainHome from '@/components/MainHome.vue'
-import MarqueeHome from '@/components/MarqueeHome.vue'
-import AboutHome from '@/components/AboutHome.vue'
-import LatestWork from '@/components/LatestWork.vue'
-import AllWorksButton from '@/components/AllWorksButton.vue'
 
-defineProps({
-  // Здесь можно определить пропсы, если они нужны
-})
-</script>
 
 <style lang="scss">
 .home-layout {
