@@ -1,0 +1,17 @@
+@use "sass:math";
+@use '../utils/functions' as *;
+@use '../utils/vars' as *;
+@use '../mixins' as *;
+@use '../variables' as vars;
+
+.page-head .home__container {
+    height: unset;
+    position: relative;
+    display: flex;
+}
+.page-head .home__text {
+    display: flex;
+    padding-top: calc(var(--section-padding)* 2);
+    padding-bottom: calc(var(--section-padding)* .66);
+    text-transform: none;
+}

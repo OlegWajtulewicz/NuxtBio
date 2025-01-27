@@ -1,0 +1,130 @@
+@use "sass:math";
+@use '../utils/functions' as *;
+@use '../utils/vars' as *;
+@use '../mixins' as *;
+@use '../variables' as vars;
+
+.works {
+	background-color: var(--background-color);
+	position: relative;
+	z-index: 3;
+	border-radius: 0 0 calc(var(--border-radius)* 2) calc(var(--border-radius)* 2);
+	border-bottom: .01em solid var(--color-border-light);
+	overflow: hidden;
+	top: toEm(-1);
+	&__color {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		z-index: 4;
+		pointer-events: none;
+	}
+}
+.works-switch {
+	position: relative;
+	background-color: var(--background-color);
+	z-index: 2;
+	// .works-switch__container
+
+	&__container {
+		padding: var(--container-padding);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .works-switch__title
+
+	&__title {
+		padding-top: 0.5em;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1.8;
+		opacity: 0.5;
+		letter-spacing: .05em;
+	}
+
+	// .works-switch__buttons
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		gap: 1em;
+		@media (max-width:$tablet){
+			display: none;
+		}
+		@media (min-width: toEm(1677)){
+			  transform: none !important;
+		}
+	}
+
+	// .works-switch__grid
+
+	&__grid,
+	&__flex {
+		outline: 1px solid var(--color-border-light);
+		border: none;
+		color: #ebe3dc;
+		padding: 1.3em;
+		border-radius: 50%;
+		height: unset;
+		.btn-text-p {
+			height: 100%;
+			//width: 1em;
+			color: vars.$mainColor;
+			img, svg {
+				//height: 1em;
+				width: 1.5em;
+				color: vars.$mainColor;
+				transition: var(--animation-smooth);
+			}
+			
+		}
+		
+		
+	}
+	
+	&__flex-wrap.active .btn,
+	&__grid-wrap.active .btn {
+		background-color: vars.$mainColor;
+		transition: var(--animation-smooth);
+	}
+	.btn-normal.active .btn-text-p svg path  {
+		fill: var(--background-color);
+	}
+	.btn-normal .btn-text svg path  {
+		fill: vars.$mainColor;
+	}
+}
+
+//===== line-shadow ===================================================================================================================================================
+.line {
+    width: calc(100vw - (var(--container-padding) * 2));
+    margin: 0 auto;
+    position: relative;
+    
+    bottom: 0;
+    border-bottom: toEm(1) solid var(--color-border-light);
+    .firefox & {
+     // bottom: toEm(1);
+    }
+   
+}  
+.line-shadow {
+    border-radius: 50%;
+    position: absolute;
+    top: calc(var(--row-gap)* -1);
+    left: 0%;
+    right: 0%;
+    height: 10vh;
+    background-color: var(--color-dark);
+    filter: blur(0.75vw);
+    opacity: .1;
+    mix-blend-mode: multiply;
+    z-index: 0;
+} 
+//========================================================================================================================================================
