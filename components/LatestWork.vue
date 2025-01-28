@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useNuxtApp } from '#app'
 import MouseCursor from './MouseCursor.vue'
-import { projects } from '@/data/projects'
+import { works } from '@/data/works'
 
 const isClient = ref(false)
 const { $locomotiveScroll: scroll } = useNuxtApp()
@@ -27,13 +27,13 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <MouseCursor :projects="projects" />
+    <MouseCursor :projects="works.slice(0,4)" />
    
     <section class="latest-work" data-scroll-section>
     <div class="latest-work__container">
         <h3 class="latest-work__title">latest work</h3>
         <ul class="latest-work__wrapper work-wrapper">
-            <li v-for="project in projects" :key="project.image" class="latest-work__item item-latest-work visible">
+            <li v-for="project in works.slice(0,4)" :key="project.image" class="latest-work__item item-latest-work visible">
                 <div class="latest-work__diwider"></div>
                 <a :href="project.link" class="item-latest-work__body">
                     <div class="item-latest-work__title">
@@ -41,7 +41,7 @@ onUnmounted(() => {
                     </div>
                     <div class="item-latest-work__body-image">
                         <div class="item-latest-work__images" v-if="isClient" v-lazy>
-                            <img :data-src="project.image" :alt="project.alt" class="item-latest-work__image ibg">
+                            <img :data-src="project.image" :alt="project.title" class="item-latest-work__image ibg">
                         </div>
                     </div>
                     
@@ -52,11 +52,11 @@ onUnmounted(() => {
         </ul>
 
         <ul class="latest-work__wrapper--tiles">
-            <li v-for="project in projects.slice(0,2)" :key="project.image" class="latest-work__item item-latest-work visible">
+            <li v-for="project in works.slice(0,2)" :key="project.image" class="latest-work__item item-latest-work visible">
                 <a :href="project.link" class="item-latest-work__body single-tile-wrap">
                     <div class="item-latest-work__images" v-if="isClient" v-lazy>
                         <div class="item-latest-work__color" :class="project.color"></div>
-                        <img :data-src="project.image" :alt="project.alt" class="tile-image item-latest-work__image ibg">
+                        <img :data-src="project.image" :alt="project.title" class="tile-image item-latest-work__image ibg">
                     </div>
                     <div class="item-latest-work__title">
                         <div class="item-latest-work__title--item">{{ project.title }}</div>

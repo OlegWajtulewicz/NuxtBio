@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxtjs/google-fonts',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxt/ui'
   ],
   plugins: [
     { src: '~/plugins/lazyLoad.js', mode: 'client' },

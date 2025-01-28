@@ -1,12 +1,15 @@
 <script setup>
 import { useGridViewStore } from '@/stores/gridView'
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, nextTick } from 'vue'
+import gsap from 'gsap'
+import { Elastic, Power4 } from 'gsap'
 
 const gridViewStore = useGridViewStore()
 
-// Загружаем сохраненное состояние при монтировании компонента
-onMounted(() => {
+onMounted(async () => {
+  await nextTick()
   gridViewStore.loadSavedState()
+  initMagneticButtons()
 })
 
 // Вычисляемые свойства для классов кнопок
@@ -32,8 +35,43 @@ const handleViewChange = (newView) => {
   if (process.client) {
     setTimeout(() => {
       gridViewStore.setView(newView)
-    }, 150) // Добавляем небольшую задержку для плавности
+      initMagneticButtons()
+    }, 150)
   }
+}
+
+function initMagneticButtons() {
+  if (window.innerWidth > 540) {
+    const magnets = document.querySelectorAll('.magnetic')
+    magnets.forEach((magnet) => {
+      magnet.addEventListener('mousemove', moveMagnet)
+      magnet.parentNode?.classList.remove('not-active')
+      
+      magnet.addEventListener('mouseleave', function(event) {
+        gsap.to(event.currentTarget, {
+          duration: 1.5,
+          x: 0,
+          y: 0,
+          ease: Elastic.easeOut,
+          clearProps: "all",
+        })
+      })
+    })
+  }
+}
+
+function moveMagnet(event) {
+  const magnetButton = event.currentTarget
+  const bounding = magnetButton.getBoundingClientRect()
+  const magnetsStrength = magnetButton.getAttribute("data-strength") || "70"
+  
+  gsap.to(magnetButton, {
+    duration: 1.5,
+    x: (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * magnetsStrength,
+    y: (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * magnetsStrength,
+    rotate: "0.001deg",
+    ease: Power4.easeOut
+  })
 }
 </script>
 

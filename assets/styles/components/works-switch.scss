@@ -60,6 +60,12 @@
 		@media (min-width: toEm(1677)){
 			  transform: none !important;
 		}
+        .active  {
+            .works-switch__flex .btn-text-p svg,
+            .works-switch__grid .btn-text-p svg {
+                color: var(--background-color);
+            }
+        }
 	}
 
 	// .works-switch__grid
@@ -72,6 +78,7 @@
 		padding: 1.3em;
 		border-radius: 50%;
 		height: unset;
+        transition: var(--animation-smooth);
 		.btn-text-p {
 			height: 100%;
 			//width: 1em;
@@ -93,11 +100,10 @@
 		background-color: vars.$mainColor;
 		transition: var(--animation-smooth);
 	}
-	.btn-normal.active .btn-text-p svg path  {
-		fill: var(--background-color);
-	}
+	
 	.btn-normal .btn-text svg path  {
 		fill: vars.$mainColor;
+        background-color: var(--background-color);
 	}
 }
 
