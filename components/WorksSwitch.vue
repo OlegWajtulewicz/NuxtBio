@@ -1,15 +1,30 @@
 <script setup>
 import { useGridViewStore } from '@/stores/gridView'
-import { computed, onMounted, nextTick } from 'vue'
+import { computed, onMounted, nextTick, watch } from 'vue'
 import gsap from 'gsap'
 import { Elastic, Power4 } from 'gsap'
 
 const gridViewStore = useGridViewStore()
 
+const props = defineProps({
+  isLoading: {
+    type: Boolean,
+    required: true
+  }
+})
+
 onMounted(async () => {
   await nextTick()
   gridViewStore.loadSavedState()
-  initMagneticButtons()
+  if (!props.isLoading) {
+    initMagneticButtons()
+  }
+})
+
+watch(() => props.isLoading, (newValue) => {
+  if (!newValue) {
+    initMagneticButtons()
+  }
 })
 
 // Вычисляемые свойства для классов кнопок
@@ -18,8 +33,8 @@ const gridButtonClasses = computed(() => ({
   'btn-': true,
   'btn-normal': true,
   'columns-btn': true,
-  'active': gridViewStore.view === 'columns',
-  'not-active': gridViewStore.view === 'rows'
+  'active': !props.isLoading && gridViewStore.view === 'columns',
+  'not-active': !props.isLoading && gridViewStore.view === 'rows'
 }))
 
 const listButtonClasses = computed(() => ({
@@ -27,8 +42,8 @@ const listButtonClasses = computed(() => ({
   'btn-': true,
   'btn-normal': true,
   'rows-btn': true,
-  'active': gridViewStore.view === 'rows',
-  'not-active': gridViewStore.view === 'columns'
+  'active': !props.isLoading && gridViewStore.view === 'rows',
+  'not-active': !props.isLoading && gridViewStore.view === 'columns'
 }))
 
 const handleViewChange = (newView) => {

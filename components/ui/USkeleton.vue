@@ -28,11 +28,7 @@ defineProps({
   overflow: hidden;
 
   &--bg {
-  //  background-color: #dfdfdf46;
-    
-    @media (prefers-color-scheme: dark) {
-     // background-color: #5e5e5ea9;
-    }
+    background-color: rgb(8, 8, 8);
   }
 
   &--rounded {
@@ -50,7 +46,7 @@ defineProps({
 
 @keyframes pulse {
   50% {
-    opacity: .1;
+    opacity: .7;
   }
 }
 </style> 

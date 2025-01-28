@@ -13,6 +13,7 @@ const isImagesLoaded = ref(false)
 
 onMounted(() => {
   gridViewStore.loadSavedState()
+  // Временно убираем изменение isLoading для стилизации
   
   Promise.all(
     works.map(work => {
@@ -30,6 +31,7 @@ onMounted(() => {
     isLoading.value = false
     isImagesLoaded.value = true
   })
+  
 })
 
 useHead({
@@ -45,7 +47,7 @@ definePageMeta({
   <div>
     <MouseCursor :projects="works"  />
     <WorkPageHead />
-    <WorksSwitch />
+    <WorksSwitch :isLoading="isLoading" />
     
     <div v-if="isLoading" class="works-skeleton">
       <div v-for="i in 6" :key="i" class="works-skeleton__item">
@@ -105,12 +107,12 @@ definePageMeta({
 
   &__title {
     height: 2rem;
-    width: 60%;
+    width: 90%;
   }
 
   &__text {
     height: 1.5rem;
-    width: 40%;
+    width: 60%;
   }
 }
 </style>

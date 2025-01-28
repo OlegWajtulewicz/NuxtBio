@@ -10,7 +10,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       // Mouse Reset
       magnets.forEach((magnet) => {
         magnet.addEventListener('mousemove', moveMagnet)
-        magnet.parentNode.classList.remove('not-active')
+      //  magnet.parentNode.classList.remove('not-active')
         
         magnet.addEventListener('mouseleave', function(event) {
           gsap.to(event.currentTarget, {
