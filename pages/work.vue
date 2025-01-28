@@ -9,10 +9,27 @@ import { works } from '@/data/works'
 
 const gridViewStore = useGridViewStore()
 const isLoading = ref(true)
+const isImagesLoaded = ref(false)
 
 onMounted(() => {
   gridViewStore.loadSavedState()
-  isLoading.value = false
+  
+  Promise.all(
+    works.map(work => {
+      return new Promise((resolve) => {
+        if (work.image) {
+          const img = new Image()
+          img.onload = resolve
+          img.src = work.image
+        } else {
+          resolve()
+        }
+      })
+    })
+  ).then(() => {
+    isLoading.value = false
+    isImagesLoaded.value = true
+  })
 })
 
 useHead({
@@ -26,7 +43,7 @@ definePageMeta({
 
 <template>
   <div>
-    <MouseCursor :projects="works" />
+    <MouseCursor :projects="works"  />
     <WorkPageHead />
     <WorksSwitch />
     

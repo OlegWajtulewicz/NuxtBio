@@ -3,21 +3,21 @@ import jQuery from 'jquery'
 const $ = jQuery
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.hook('app:mounted', () => {
-    initStickyCursorWithDelay()
-
-    if (process.client) {
-      // При первой загрузке
-      nuxtApp.hook('app:mounted', () => {
+  if (process.client) {
+    // При первой загрузке
+    nuxtApp.hook('app:mounted', () => {
+      setTimeout(() => {
         initStickyCursorWithDelay()
-      })
-      
-      // При переходах между страницами
-      nuxtApp.hook('page:finish', () => {
+      }, 150)
+    })
+    
+    // При переходах между страницами
+    nuxtApp.hook('page:finish', () => {
+      setTimeout(() => {
         initStickyCursorWithDelay()
-      })
-    }
-  })
+      }, 150)
+    })
+  }
 
   function initStickyCursorWithDelay() {
     // Sticky Cursor with delay
