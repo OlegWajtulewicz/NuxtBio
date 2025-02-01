@@ -7,8 +7,20 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/google-fonts',
     '@pinia/nuxt',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxtjs/i18n'
   ],
+  i18n: {
+    vueI18n: './i18n.config.js',
+    locales: ['en', 'ru'],
+    defaultLocale: 'en',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  },
   plugins: [
     { src: '~/plugins/lazyLoad.js', mode: 'client' },
     { src: '~/plugins/mouseCursor.client.js', mode: 'client' },

@@ -92,7 +92,7 @@
         z-index: 2;
         padding: .2em;
         background-color: conic-gradient(in hsl longer hue from var(--a), hsl(315, 2%, 56%) 0 0);
-        animation: spin 2s linear infinite;
+      //  animation: spin 2s linear infinite;
     }
 
     &__text {
@@ -136,6 +136,7 @@
         grid-row: 1 / 2;
         font-family: 'FilsonPro-Regular' !important;
         text-transform: none;
+        letter-spacing: 0.02em;
       //  font-weight: 600;
       //  grid-column: 1 / 2 !important;
         @include adaptiveValue("font-size", 142, 64);

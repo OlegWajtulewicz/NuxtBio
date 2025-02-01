@@ -1,8 +1,11 @@
 <script setup>
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
+import { useI18n } from 'vue-i18n'
 
 //const { $lenis } = useNuxtApp()
+
+const { t } = useI18n()
 
 function initTricksWords() {
   const spanWords = document.querySelectorAll('.about__text .span-lines')
@@ -56,16 +59,12 @@ onMounted(() => {
            <div class="about__body">
             <div class="about__text">
                 <p class="p span-lines animate">
-                    I'm a web developer with a passion for creating websites. 
-                    I strive for perfection, so that my projects are not only 
-                    aesthetically pleasing and functional, 
-                    but also effectively solve business problems.
+                    {{ t('about_home.main_text') }}
                 </p> 
             </div>
             <div class="about__kontext">
                 <p class="about__kontext--text">
-                    On this website I present my best works created using modern web development technologies. 
-                    I will be happy to offer my services and help you stand out in the digital world.
+                    {{ t('about_home.context_text') }}
                 </p>
                 <div class="about__image magnetic" data-scroll data-scroll-speed="-1.2">
                     <div class="spinner magnetic" data-strength="70"></div>

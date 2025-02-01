@@ -1,6 +1,7 @@
-
 <script setup>
-// Здесь можно добавить необходимую логику
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -14,7 +15,7 @@
                 </div>
             </div>
             <span class="btn__text">
-                <p class="btn-text-p change">All works</p>
+                <p class="btn-text-p change">{{ t('latest_work.all_works') }}</p>
             </span>
             <div class="btn__border"></div>
         </NuxtLink>

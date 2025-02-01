@@ -1,9 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useNuxtApp } from '#app'
+import { useI18n } from 'vue-i18n'
 import MouseCursor from './MouseCursor.vue'
 import { works } from '@/data/works'
 
+const { t } = useI18n()
 const isClient = ref(false)
 const { $locomotiveScroll: scroll } = useNuxtApp()
 
@@ -31,7 +33,7 @@ onUnmounted(() => {
    
     <section class="latest-work" data-scroll-section>
     <div class="latest-work__container">
-        <h3 class="latest-work__title">latest work</h3>
+        <h3 class="latest-work__title">{{ t('latest_work.title') }}</h3>
         <ul class="latest-work__wrapper work-wrapper">
             <li v-for="project in works.slice(0,4)" :key="project.image" class="latest-work__item item-latest-work visible">
                 <div class="latest-work__diwider"></div>
