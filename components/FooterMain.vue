@@ -2,6 +2,9 @@
 import { onMounted, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -9,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 let timeInterval
 
 // Функция для обновления времени
+
 function getTimeMillis() {
   const myTime = document.querySelector(".time-millisec")
   if (!myTime) return

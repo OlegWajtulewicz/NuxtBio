@@ -138,5 +138,15 @@ export const works = [
     color: 'teal',
     external: true,
     description: 'Development'
-  }
+  },
+  {
+    title: 'Test_WWM',
+    service: 'Design & Development',
+    year: '2025',
+    link: 'https://vaitulevichaleh.com/test',
+    image: '/img/works/test.png',
+    color: 'yellow',
+    external: true,
+    description: 'Design & Development'
+  },
 ] 

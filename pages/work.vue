@@ -1,11 +1,12 @@
 <script setup>
 import { useGridViewStore } from '@/stores/gridView'
-import WorkPageHead from '@/components/WorkPageHead.vue'
+import PageHead from '@/components/PageHead.vue'
 import WorksSwitch from '@/components/WorksSwitch.vue'
 import WorksList from '@/components/WorksList.vue'
 import WorksGrid from '@/components/WorksGrid.vue'
 import MouseCursor from '@/components/MouseCursor.vue'
 import { works } from '@/data/works'
+
 
 const gridViewStore = useGridViewStore()
 const isLoading = ref(true)
@@ -46,7 +47,7 @@ definePageMeta({
 <template>
   <div>
     <MouseCursor :projects="works"  />
-    <WorkPageHead />
+    <PageHead />
     <WorksSwitch :isLoading="isLoading" />
     
     <div v-if="isLoading" class="works-skeleton">

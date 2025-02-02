@@ -4,11 +4,25 @@
 @use './variables' as v;
 @use './mixins' as *;
 
+[data-scroll-container] {
+	background: transparent;
+	pointer-events: auto;
+	z-index: auto;
+	position: relative;
+}
+
 body {
 	color: v.$mainColor;
 	line-height: 1;
 	font-family: v.$fontFamily;
 	font-size: v.$fontSize;
+	background-color: var(--background-color);
+	-webkit-font-smoothing: antialiased;
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
 }
 
 main {
@@ -54,7 +68,7 @@ html.has-scroll-smooth {
 }
 
 html.has-scroll-init.has-scroll-smooth {
-//	pointer-events: none;
+	// pointer-events: none;
 }
 
 html.has-scroll-dragging {
@@ -142,32 +156,16 @@ html.has-scroll-dragging {
 }
 //================================
 html.lenis.lenis-smooth {
-	//pointer-events: none;
+	// pointer-events: none;
 }
 
-body {
-	background-color: var(--background-color);
-	-webkit-font-smoothing: antialiased;
-	pointer-events: none;
-	// Скролл заблоковано
-	//overflow: hidden;
-	.lock & {
-		overflow: hidden;
-		touch-action: none;
-		overscroll-behavior: none;
-	}
-	
-}
 .main-wrap {
 	box-sizing: border-box;
     width: 100vw;
-	//height: 100%;
-  //  will-change: transform;
-  //  position: fixed;
     display: block;
     display: flex;
     flex-direction: column;
-	pointer-events: none;
+	// pointer-events: none;
 }
 
 .c-scrollbar {
@@ -200,18 +198,19 @@ body {
 	flex-direction: column;
 	overflow: hidden;
 	position: relative;
-	pointer-events: none;
+	pointer-events: auto;
 	@supports (overflow: clip) {
 		//overflow: clip;
 	}
 	// Притискаєм footer
 	> main {
 		flex: 1 1 auto;
-		//height: 100%;
+		pointer-events: auto;
 	}
 	// Фікс для слайдерів
 	> * {
 		min-width: 0;
+		pointer-events: auto;
 	}
 	&__color {
 		position: absolute;

@@ -110,7 +110,8 @@
 	z-index: 3;
 	border-radius: 0 0 calc(var(--border-radius)* 2) calc(var(--border-radius)* 2);
    	box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
-
+	border-bottom: .01em solid var(--color-border-light);
+	overflow: hidden;
 	
 	@media (max-width:$tablet){
 		display: none;
@@ -212,7 +213,7 @@
    overflow: hidden;
    position: relative;
    z-index: 3;
-//   border-bottom: 1px solid #9aa6b173;
+   border-bottom: 1px solid #9aa6b173;
    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
   // top: toEm(-1);
    border-radius: 0 0 calc(var(--border-radius)* 2) calc(var(--border-radius)* 2);

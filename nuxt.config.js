@@ -26,7 +26,8 @@ export default defineNuxtConfig({
     { src: '~/plugins/mouseCursor.client.js', mode: 'client' },
    // { src: '~/plugins/locomotiveScroll.client.js', mode: 'client' },
     { src: '~/plugins/scrollDirection.client.js', mode: 'client' },
-    { src: '~/plugins/hamburgerNav.client.js', mode: 'client' }
+    { src: '~/plugins/hamburgerNav.client.js', mode: 'client' },
+    { src: '~/plugins/seo.client.js', mode: 'client' }
   ],
   googleFonts: {
     families: {
