@@ -1,3 +1,5 @@
+import privacyTranslations from './locales/privacy'
+
 export default defineI18nConfig(() => ({
   legacy: false,
   locale: 'en',
@@ -72,7 +74,7 @@ export default defineI18nConfig(() => ({
         settings: 'Cookie settings',
         privacy: 'Privacy'
       },
-      
+      privacy_page: privacyTranslations.en
     },
     ru: {
       navigation: 'навигация',
@@ -143,7 +145,7 @@ export default defineI18nConfig(() => ({
         settings: 'Настройки cookies',
         privacy: 'Privacy'
       },
-      
+      privacy_page: privacyTranslations.ru
     },
     pl: {
       navigation: 'nawigacja',
@@ -217,7 +219,7 @@ export default defineI18nConfig(() => ({
         guard_orchestra: "Orkiestra Reprezentacyjna Wojska Białoruskiego",
         music_theater: "Białoruski Państwowy Teatr Muzyczny"
       },
-     
+      privacy_page: privacyTranslations.pl
     }
   }
 })) 
