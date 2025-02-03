@@ -1,17 +1,20 @@
 <template>
-  <div class="wrapper" data-scroll-container>
+  <div class="wrapper" data-lenis-prevent>
     <TheHeader />
     <MenuMobile />
     <main class="main">
       <slot />
     </main>
+    <FooterMain />
+    <Cookies />
   </div>
 </template>
 
 <script setup>
-import Lenis from '@studio-freight/lenis'
 import TheHeader from '@/components/TheHeader.vue'
 import MenuMobile from '@/components/MenuMobile.vue'
+import FooterMain from '@/components/FooterMain.vue'
+import Cookies from '~/components/Cookies.vue'
 </script>
 
 <style lang="scss">
@@ -25,4 +28,4 @@ import MenuMobile from '@/components/MenuMobile.vue'
 .main {
   flex: 1 1 auto;
 }
-</style> 
+</style>

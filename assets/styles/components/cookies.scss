@@ -1,0 +1,106 @@
+@use "sass:math";
+@use '../utils/functions' as *;
+@use '../utils/vars' as *;
+@use '../mixins' as *;
+@use '../variables' as vars;
+
+.cookie-consent-banner {
+  position: fixed;
+  bottom: -100%;
+  width: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: .5em;
+  border-radius: var(--row-gap);
+  border: 1px solid #fff;
+  background-color: rgba(var(--bgColor-dark-rgb), .6);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  
+  text-align: center;
+  z-index: 99;
+  transition: all 0.5s ease-in-out;
+  @include adaptiveValue("padding", 20, 10);
+//  display: none; /* По умолчанию скрыт, будет показан только если пользователь еще не принял условия использования cookies */
+  &__buttons{
+      display: flex; 
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: toRem(10);
+  }
+  &__container {
+      @media (max-width:$tablet){
+          padding: 0;
+      }
+      a, button {
+        transition: all 0.3s;
+            width: fit-content;
+            @media (any-hover: hover){
+                &:hover{
+                    color: var(--accent-color);
+                }
+            }
+      }
+      
+  }
+}
+
+.cookie-consent-banner.visible {
+  bottom: 0%; /* Отображается */
+}
+
+.cookie-consent-banner h3 {
+  margin-bottom: .6em;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--main-color);
+  @include adaptiveValue("font-size", 16, 14);
+  }
+
+.cookie-consent-banner p {
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+  color: var(--main-color);
+  font-weight: 100;
+  @include adaptiveValue("font-size", 16, 12);
+  }
+
+.cookie-consent-button {
+  border-radius: var(--row-gap);
+  @include adaptiveValue("font-size", 16, 12);
+  @include adaptiveValue("padding-block", 10, 5);
+  @include adaptiveValue("padding-inline", 20, 10);
+}
+
+.btn-success {
+  background-color: vars.$accentColor1;
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: #fff;
+  color: vars.$accentColor1;
+  border: 1px solid vars.$accentColor1;
+}
+
+.btn-grayscale {
+ // background-color: vars.$accentColor2;
+  color: #fff;
+}
+
+.cookie-consent-options {
+  display: flex;
+  justify-content: center;
+  padding-top: toRem(15);
+  flex-wrap: wrap;
+  align-content: center;
+  gap: toRem(10);
+}
+
+.cookie-consent-options label {
+  color: var(--main-color);
+  display: flex;
+  gap: toRem(5);
+  @include adaptiveValue("font-size", 16, 12);
+}

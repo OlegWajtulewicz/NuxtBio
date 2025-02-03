@@ -114,6 +114,12 @@ onUnmounted(() => {
             </a>
         </div>
         </div>
+        <div class="footer__cookie magnetic" data-strength="20" data-strength-text="10">
+          <a href="/cookie" class="footer__cookie">Cookie Policy<p hidden class="btn__text"></p></a>
+        </div>
+        <div class="magnetic footer__privacy" data-strength="20" data-strength-text="10">
+          <a href="/privacy" class="footer__cookie">Privacy Policy<p hidden class="btn__text"></p></a>
+        </div>
         <div class="footer__time-component">
             <h5 class="footer__time-label">TIME</h5>
             <p class="time-millisec"></p>

@@ -4,12 +4,14 @@
 
 export const localeCodes =  [
   "en",
-  "ru"
+  "ru",
+  "pl"
 ]
 
 export const localeLoaders = {
   "en": [],
-  "ru": []
+  "ru": [],
+  "pl": []
 }
 
 export const vueI18nConfigs = [
@@ -45,7 +47,8 @@ export const nuxtI18nOptions = {
   "vueI18n": "./i18n.config.js",
   "locales": [
     "en",
-    "ru"
+    "ru",
+    "pl"
   ],
   "defaultLocale": "en",
   "defaultDirection": "ltr",
@@ -85,6 +88,10 @@ export const normalizedLocales = [
   {
     "language": "ru",
     "code": "ru"
+  },
+  {
+    "language": "pl",
+    "code": "pl"
   }
 ]
 

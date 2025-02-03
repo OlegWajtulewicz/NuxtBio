@@ -159,6 +159,11 @@
         .logo-text {
             width: 8em;
         }
+        @media (max-width:$mobileSmall){
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: .15em;
+        }
     }
     &__time-component {
         display: flex;
@@ -188,6 +193,13 @@
         font-size: 12px;
         font-weight: 300;
         line-height: 1;
+    }
+    &__cookie,
+    &__privacy {
+        margin-bottom: .15em;
+        @media (max-width:$mobileSmall){
+            padding-left: calc(var(--gap-padding) / 3.5);
+        }
     }
 }
 .footer__copyright .header__header {

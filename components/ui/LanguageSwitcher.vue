@@ -7,8 +7,9 @@ const { locale: currentLocale, setLocale } = useI18n()
 const router = useRouter()
 
 const locales = [
-  { code: 'en', name: 'English' },
+  { code: 'pl', name: 'Polski' },
   { code: 'ru', name: 'Русский' },
+  { code: 'en', name: 'English' }
 ]
 
 const isOpen = ref(false)
@@ -18,9 +19,15 @@ const toggleDropdown = () => {
 }
 
 const switchLanguage = async (lang) => {
-  localStorage.setItem('user-locale', lang)
-  await setLocale(lang)
-  isOpen.value = false
+  try {
+    if (lang === currentLocale.value) return // Пропускаем если тот же язык
+    
+    isOpen.value = false // Сначала закрываем дропдаун
+    await setLocale(lang) // Затем меняем язык
+    localStorage.setItem('user-locale', lang) // И сохраняем
+  } catch (error) {
+    console.error('Error switching language:', error)
+  }
 }
 
 // Закрытие дропдауна при клике вне компонента

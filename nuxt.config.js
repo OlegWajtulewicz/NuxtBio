@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   ],
   i18n: {
     vueI18n: './i18n.config.js',
-    locales: ['en', 'ru'],
+    locales: ['en', 'ru', 'pl'],
     defaultLocale: 'en',
     strategy: 'no_prefix',
     detectBrowserLanguage: {
@@ -34,6 +34,7 @@ export default defineNuxtConfig({
       'Space+Mono': [400, 700],
       'Open+Sans': [300, 400, 500, 600, 700, 800],
       'Montserrat': [100, 200, 300, 400, 500, 600, 700, 900],
+      'Decoy': [100, 200, 300, 400, 500, 600, 700, 900],
     },
     display: 'swap',
     prefetch: true,

@@ -62,4 +62,25 @@ p {
 
 .font-extrabold {
   font-weight: 800;
+}
+
+// Базовый шрифт для английского
+html.lang-en {
+  .home__subtitle,
+  .works__title
+  // ... другие элементы, использующие FilsonPro
+  {
+  //  font-family: 'FilsonPro-Regular' !important;
+  }
+}
+
+// Монтсеррат для русского
+html.lang-ru {
+  .home__subtitle,
+  .works__title,
+  .collumn-bio__title-film
+  // ... другие элементы, использующие FilsonPro
+  {
+    font-family: 'Montserrat' !important;
+  }
 } 

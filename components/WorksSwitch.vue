@@ -93,7 +93,7 @@ function moveMagnet(event) {
 <template>
     <section class="works-switch" data-scroll-section>
         <div class="works-switch__container">
-            <h5 class="works-switch__title">all works</h5>
+            <h5 class="works-switch__title">{{ $t('all_works') }}</h5>
             <div class="works-switch__buttons product-header-pr">
                 <button :class="gridButtonClasses" @click="handleViewChange('columns')"
                 >

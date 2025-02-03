@@ -28,15 +28,33 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
   };
 
+  const updateLang = () => {
+    const lang = nuxtApp.$i18n.locale.value;
+    
+    if (process.client) {
+      document.documentElement.lang = lang;
+      // Добавляем класс для языка
+      document.documentElement.className = `lang-${lang}`;
+    }
+
+    // ... остальной код updateLang
+  };
+
   if (process.client) {
     // Вызываем при инициализации
     updateSEO();
+    updateLang();
     
     // Вызываем при смене страницы
     nuxtApp.hook('page:start', updateSEO);
+    nuxtApp.hook('page:start', updateLang);
     
     // Вызываем при смене языка
-    nuxtApp.$i18n.onBeforeLanguageSwitch = () => {
+    nuxtApp.$i18n.onBeforeLanguageSwitch = (oldLocale, newLocale) => {
+      if (process.client) {
+        document.documentElement.lang = newLocale;
+        document.documentElement.className = `lang-${newLocale}`;
+      }
       updateSEO();
     };
   }

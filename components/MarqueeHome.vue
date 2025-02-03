@@ -122,10 +122,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @use '@/assets/styles/components/marquee-home';
 </style>
-
 
 
 

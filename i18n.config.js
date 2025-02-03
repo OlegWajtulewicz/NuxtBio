@@ -11,6 +11,8 @@ export default defineI18nConfig(() => ({
       contact: 'Contact',
       menu: 'Menu',
       close: 'Close',
+      all_works: 'all works',
+      privacy: 'Privacy',
 
       about_home: {
         main_text: "I'm a web developer with a passion for creating websites. I strive for perfection, so that my projects are not only aesthetically pleasing and functional, but also effectively solve business problems.",
@@ -23,11 +25,54 @@ export default defineI18nConfig(() => ({
       footer_m: "Let's talk",
 
       pages: {
-        home: { title: 'Home' },
+        home: { title: '' },
         about: { title: 'About' },
         work: { title: 'Works' },
-        contact: { title: 'Contact' }
-      }
+        cookie: { title: 'Cookie' },
+        privacy: { title: 'Privacy' }
+      },
+      bio: {
+        title: "FRONTEND DEVELOPER",
+        contacts: "Contacts",
+        location: "Warszawa",
+        skills: "Skills",
+        education: "EDUCATION",
+        other: "OTHER",
+        languages: "Languages:",
+        languages_level: "English – A1 / Russian – C / Polish - B",
+        license: "Car, cat B driver's license",
+        experience: "EXPERIENCE",
+        partnership: "Partnership:",
+        consent: "I agree to the processing of my personal data for the purposes necessary to carry out the recruitment process (in accordance with the Act of August 29, 1997 on the Protection of Personal Data; consolidated text: Journal of Laws 2016, item 922).",
+        university: "Belarusian State University of Culture and Arts",
+        bachelor: "Bachelor of Arts (BA), Instrumental music, Percussion instruments",
+        frontend_dev: "Frontend Developer (Freelance)",
+        drummer: "Drummer",
+        session_musician: "Session musician | (Freelance)",
+        drummer_perc: "Drummer, percussionist",
+        concert_activity: "Concert activity, participation in various projects, studio work",
+        orchestral_artist: "Orchestral Artist",
+        percussion_instruments: "Percussion instruments",
+        percussion_teacher: "Percussion Teacher, Orchestral Artist",
+        comprehensive_school: "Comprehensive School",
+        present: "Present",
+        guard_orchestra: "Guard of Honor Orchestra",
+        music_theater: "Belarusian State Academic Musical Theater"
+      },
+      cookies: {
+        title: "We value your privacy",
+        description: "We use cookies to improve your browsing experience, display personalized ads or content, and analyze traffic. By clicking the \"Accept All\" button, you consent to our use of ",
+        accept_all: "Accept all",
+        save: "Save",
+        reject: "Reject",
+        necessary: "Necessary",
+        analytics: "Analytics",
+        preferences: "Preferences",
+        marketing: "Marketing",
+        settings: 'Cookie settings',
+        privacy: 'Privacy'
+      },
+      
     },
     ru: {
       navigation: 'навигация',
@@ -38,6 +83,7 @@ export default defineI18nConfig(() => ({
       contact: 'Контакты',
       menu: 'Меню',
       close: 'Закрыть',
+      all_works: 'все работы',
 
       about_home: {
         main_text: "Я веб-разработчик, увлеченный созданием сайтов. Я стремлюсь к совершенству, чтобы мои проекты были не только эстетически привлекательными и функциональными, но и эффективно решали бизнес-задачи.",
@@ -50,11 +96,128 @@ export default defineI18nConfig(() => ({
       footer_m: 'Поговорим',
 
       pages: {
-        home: { title: 'Главная' },
+        home: { title: '' },
         about: { title: 'Обо мне' },
         work: { title: 'Работы' },
-        contact: { title: 'Контакты' }
-      }
+        cookie: { title: 'Cookie' },
+        privacy: { title: 'Privacy' }
+      },
+      bio: {
+        title: "ФРОНТЕНД РАЗРАБОТЧИК",
+        contacts: "Контакты",
+        location: "Варшава",
+        skills: "Навыки",
+        education: "ОБРАЗОВАНИЕ",
+        other: "ДРУГОЕ",
+        languages: "Языки:",
+        languages_level: "Английский – A1 / Русский – C / Польский - B",
+        license: "Водительские права кат. B",
+        experience: "ОПЫТ",
+        partnership: "Сотрудничество:",
+        consent: "Даю согласие на обработку моих персональных данных для целей, необходимых для реализации процесса рекрутинга (в соответствии с Законом от 29.08.1997 о защите персональных данных; сводный текст: Законодательный вестник 2016 г., поз. 922).",
+        university: "Белорусский государственный университет культуры и искусств",
+        bachelor: "Бакалавр искусств (BA), Инструментальная музыка, Ударные инструменты",
+        frontend_dev: "Фронтенд-разработчик (Фриланс)",
+        drummer: "Барабанщик",
+        session_musician: "Сессионный музыкант | (Фриланс)",
+        drummer_perc: "Барабанщик, перкуссионист",
+        concert_activity: "Концертная деятельность, участие в различных проектах, студийная работа",
+        orchestral_artist: "Артист оркестра",
+        percussion_instruments: "Ударные инструменты",
+        percussion_teacher: "Преподаватель ударных, артист оркестра",
+        comprehensive_school: "Общеобразовательная школа",
+        present: "настоящее время",
+        guard_orchestra: "Оркестр Роты Почетного Караула",
+        music_theater: "Белорусский Государственный Музыкальный Театр"
+      },
+      cookies: {
+        title: "Мы ценим вашу конфиденциальность",
+        description: "Мы используем файлы cookie для улучшения удобства просмотра, показа персонализированной рекламы или контента и анализа трафика. Нажимая кнопку «Принять все», вы соглашаетесь на использование нами файлов ",
+        accept_all: "Принять все",
+        save: "Сохранить",
+        reject: "Отклонить",
+        necessary: "Необходимые",
+        analytics: "Аналитика",
+        preferences: "Предпочтения",
+        marketing: "Маркетинг",
+        settings: 'Настройки cookies',
+        privacy: 'Privacy'
+      },
+      
+    },
+    pl: {
+      navigation: 'nawigacja',
+      home: 'Główna',
+      about: 'O mnie',
+      work: 'Prace',
+      works: 'Prace',
+      contact: 'Kontakt',
+      menu: 'Menu',
+      close: 'Zamknij',
+      all_works: 'wszystkie prace',
+      cookie: 'Pliki cookie',
+      privacy: 'Prywatność',
+
+      cookies: {
+        title: "Cenimy Twoją prywatność",
+        description: "Używamy plików cookie w celu poprawy komfortu przeglądania, wyświetlania spersonalizowanych reklam lub treści oraz analizowania ruchu. Klikając przycisk \"Akceptuję wszystko\", użytkownik wyraża zgodę na korzystanie przez nas z plików ",
+        accept_all: "Zaakceptuj wszystkie",
+        save: "Zapisz",
+        reject: "Odrzucić",
+        necessary: "Niezbędny",
+        analytics: "Analityka",
+        preferences: "Preferencje",
+        marketing: "Marketing",
+        settings: 'Ustawienia plików cookie',
+        privacy: 'Prywatność'
+      },
+
+      about_home: {
+        main_text: "Jestem programistą webowym z pasją do tworzenia stron internetowych. Dążę do perfekcji, aby moje projekty były nie tylko estetyczne i funkcjonalne, ale także skutecznie rozwiązywały problemy biznesowe.",
+        context_text: "Na tej stronie prezentuję moje najlepsze prace stworzone przy użyciu nowoczesnych technologii web developmentu. Chętnie zaoferuję swoje usługi i pomogę Ci wyróżnić się w świecie cyfrowym."
+      },
+      latest_work: {
+        title: "ostatnie prace",
+        all_works: "Wszystkie prace"
+      },
+      footer_m: "Porozmawiajmy",
+
+      pages: {
+        home: { title: '' },
+        about: { title: 'O mnie' },
+        work: { title: 'Prace' },
+        cookie: { title: 'Cookie' },
+        privacy: { title: 'Prywatność' }
+      },
+      bio: {
+        title: "FRONTEND DEVELOPER",
+        contacts: "Kontakty",
+        location: "Warszawa",
+        skills: "Umiejętności",
+        education: "EDUKACJA",
+        other: "INNE",
+        languages: "Języki:",
+        languages_level: "Angielski – A1 / Rosyjski – C / Polski - B",
+        license: "Prawo jazdy kat. B",
+        experience: "DOŚWIADCZENIE",
+        partnership: "Współpraca:",
+        consent: "Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z Ustawą z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922).",
+        university: "Białoruski Państwowy Uniwersytet Kultury i Sztuki",
+        bachelor: "Licencjat (BA), Muzyka instrumentalna, Instrumenty perkusyjne",
+        frontend_dev: "Frontend Developer (Freelance)",
+        drummer: "Perkusista",
+        session_musician: "Muzyk sesyjny | (Freelance)",
+        drummer_perc: "Perkusista, instrumenty perkusyjne",
+        concert_activity: "Działalność koncertowa, udział w różnych projektach, praca studyjna",
+        orchestral_artist: "Artysta orkiestrowy",
+        percussion_instruments: "Instrumenty perkusyjne",
+        percussion_teacher: "Nauczyciel perkusji, Artysta orkiestrowy",
+        comprehensive_school: "Szkoła ogólnokształcąca",
+        present: "obecnie",
+        guard_orchestra: "Orkiestra Reprezentacyjna Wojska Białoruskiego",
+        music_theater: "Białoruski Państwowy Teatr Muzyczny"
+      },
+     
     }
   }
 })) 

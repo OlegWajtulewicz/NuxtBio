@@ -827,7 +827,8 @@ const _inlineRuntimeConfig = {
       "trailingSlash": false,
       "locales": [
         "en",
-        "ru"
+        "ru",
+        "pl"
       ],
       "detectBrowserLanguage": {
         "alwaysRedirect": false,

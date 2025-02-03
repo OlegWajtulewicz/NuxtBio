@@ -73,6 +73,9 @@
             color: var(--text-primary);
             color: unset;
             padding: toRem(7) 0;
+            @media (max-width:$mobileSmall){
+                padding: 0;
+            }
         }
     }
 

@@ -1,17 +1,16 @@
 <script setup>
 import PageHead from '@/components/PageHead.vue'
 import MouseCursor from '@/components/MouseCursor.vue'
-import BioAbout from '@/components/BioAbout.vue'
-
+import PrivacyPage from '@/components/PrivacyPage.vue'
 // Создаем пустой массив для курсора
 const works = ref([])
 
 useHead({
-  title: 'About • Aleh Vaitulevich'
+  title: 'Privacy Policy • Aleh Vaitulevich'
 })
 
 definePageMeta({
-  layout: 'about-layout'
+  layout: 'privacy-layout'
 })
 </script>
 
@@ -20,16 +19,11 @@ definePageMeta({
     <MouseCursor :projects="works" />
     <PageHead />
     <div>
-      <BioAbout />
+      <PrivacyPage /> 
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.about {
-  padding-top: toRem(100);
-
-}
-
 
 </style>
