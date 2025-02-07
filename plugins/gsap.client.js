@@ -10,4 +10,4 @@ export default defineNuxtPlugin(() => {
       ScrollTrigger
     }
   }
-})
+}) 

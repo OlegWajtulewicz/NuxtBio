@@ -14,15 +14,14 @@ defineProps({
       <ul class="works-items__items-list work-wrapper">
         <li v-for="work in works" :key="work.title" class="works-items__item visible">
           <div class="line"></div>
-          <a 
-            :href="work.link" 
-            :class="['works-items__link link-works-items', work.external ? 'works-link' : '']" 
-            :target="work.external ? '_blank' : ''"
+          <NuxtLink 
+            :to="`/work/${work.slug}`" 
+            :class="['works-items__link link-works-items']"
           >
             <h4 class="link-works-items__title">{{ work.title }}</h4>
             <div class="link-works-items__service"><p>{{ work.service }}</p></div>
             <div class="link-works-items__year"><p>{{ work.year }}</p></div>
-          </a>
+          </NuxtLink>
         </li>
         <div class="line"></div>
       </ul>

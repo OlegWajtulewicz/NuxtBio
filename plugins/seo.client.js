@@ -10,7 +10,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     const pageName = route.path.split('/').filter(Boolean).pop() || 'home';
     
     // Используем существующие ключи для заголовка
-    document.title = `${nuxtApp.$i18n.t(pageName)} | Portfolio`;
+    document.title = `${nuxtApp.$i18n.t(`pages.${pageName}.title`)} | Portfolio`;
 
     // Обновляем мета-теги
     const metaTags = document.getElementsByTagName('meta');

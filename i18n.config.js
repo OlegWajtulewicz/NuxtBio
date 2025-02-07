@@ -1,4 +1,6 @@
 import privacyTranslations from './locales/privacy'
+import cookiesTranslations from './locales/cookies'
+import product from './locales/productPizza'
 
 export default defineI18nConfig(() => ({
   legacy: false,
@@ -15,6 +17,9 @@ export default defineI18nConfig(() => ({
       close: 'Close',
       all_works: 'all works',
       privacy: 'Privacy',
+      back: 'Back',
+      live_site: 'Live Site',
+      want_same: 'I want the same',
 
       about_home: {
         main_text: "I'm a web developer with a passion for creating websites. I strive for perfection, so that my projects are not only aesthetically pleasing and functional, but also effectively solve business problems.",
@@ -31,7 +36,10 @@ export default defineI18nConfig(() => ({
         about: { title: 'About' },
         work: { title: 'Works' },
         cookie: { title: 'Cookie' },
-        privacy: { title: 'Privacy' }
+        privacy: { title: 'Privacy' },
+        'julia-maisa': { title: 'Julia Maisa' },
+        'groove-school': { title: 'Groove School' },
+        'pizza-next': { title: 'Pizza Next' }
       },
       bio: {
         title: "FRONTEND DEVELOPER",
@@ -74,7 +82,11 @@ export default defineI18nConfig(() => ({
         settings: 'Cookie settings',
         privacy: 'Privacy'
       },
-      privacy_page: privacyTranslations.en
+      ...cookiesTranslations.en,
+      ...privacyTranslations.en,
+      privacy_page: privacyTranslations.en.privacy_page,
+      cookie_page: cookiesTranslations.en.cookie_page,
+      ...product.en
     },
     ru: {
       navigation: 'навигация',
@@ -86,6 +98,11 @@ export default defineI18nConfig(() => ({
       menu: 'Меню',
       close: 'Закрыть',
       all_works: 'все работы',
+      want_same: 'Хочу такой же',
+      back: 'Назад',
+      project_not_found: 'Проект не найден',
+      back_to_works: 'Вернуться к работам',
+      live_site: 'Дальше',
 
       about_home: {
         main_text: "Я веб-разработчик, увлеченный созданием сайтов. Я стремлюсь к совершенству, чтобы мои проекты были не только эстетически привлекательными и функциональными, но и эффективно решали бизнес-задачи.",
@@ -102,7 +119,10 @@ export default defineI18nConfig(() => ({
         about: { title: 'Обо мне' },
         work: { title: 'Работы' },
         cookie: { title: 'Cookie' },
-        privacy: { title: 'Privacy' }
+        privacy: { title: 'Privacy' },
+        'julia-maisa': { title: 'Julia Maisa' },
+        'groove-school': { title: 'Groove School' },
+        'pizza-next': { title: 'Pizza Next' }
       },
       bio: {
         title: "ФРОНТЕНД РАЗРАБОТЧИК",
@@ -145,7 +165,11 @@ export default defineI18nConfig(() => ({
         settings: 'Настройки cookies',
         privacy: 'Privacy'
       },
-      privacy_page: privacyTranslations.ru
+      ...cookiesTranslations.ru,
+      ...privacyTranslations.ru,
+      privacy_page: privacyTranslations.ru.privacy_page,
+      cookie_page: cookiesTranslations.ru.cookie_page,
+      ...product.ru
     },
     pl: {
       navigation: 'nawigacja',
@@ -159,10 +183,13 @@ export default defineI18nConfig(() => ({
       all_works: 'wszystkie prace',
       cookie: 'Pliki cookie',
       privacy: 'Prywatność',
+      back: 'Wróć',
+      live_site: 'Następna',
+      want_same: 'Chcę taki sam',
 
       cookies: {
         title: "Cenimy Twoją prywatność",
-        description: "Używamy plików cookie w celu poprawy komfortu przeglądania, wyświetlania spersonalizowanych reklam lub treści oraz analizowania ruchu. Klikając przycisk \"Akceptuję wszystko\", użytkownik wyraża zgodę na korzystanie przez nas z plików ",
+        description: "Używamy plików cookie w celu poprawy komfortu przeglądania, wyświetlania spersonalizowanych reklam lub treści oraz analizowania ruchu. Klikając przycisk \"Akceptuję wszystkie\", użytkownik wyraża zgodę na korzystanie przez nas z plików ",
         accept_all: "Zaakceptuj wszystkie",
         save: "Zapisz",
         reject: "Odrzucić",
@@ -189,7 +216,10 @@ export default defineI18nConfig(() => ({
         about: { title: 'O mnie' },
         work: { title: 'Prace' },
         cookie: { title: 'Cookie' },
-        privacy: { title: 'Prywatność' }
+        privacy: { title: 'Prywatność' },
+        'julia-maisa': { title: 'Julia Maisa' },
+        'groove-school': { title: 'Groove School' },
+        'pizza-next': { title: 'Pizza Next' }
       },
       bio: {
         title: "FRONTEND DEVELOPER",
@@ -219,7 +249,11 @@ export default defineI18nConfig(() => ({
         guard_orchestra: "Orkiestra Reprezentacyjna Wojska Białoruskiego",
         music_theater: "Białoruski Państwowy Teatr Muzyczny"
       },
-      privacy_page: privacyTranslations.pl
+      ...cookiesTranslations.pl,
+      ...privacyTranslations.pl,
+      privacy_page: privacyTranslations.pl.privacy_page,
+      cookie_page: cookiesTranslations.pl.cookie_page,
+      ...product.pl
     }
   }
 })) 

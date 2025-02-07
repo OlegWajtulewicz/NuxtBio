@@ -101,6 +101,11 @@
 }
 //========================================================================================================================================================
 .policy {
+    background: linear-gradient(to bottom, var(--background-color), #242424);
+    border-radius: 0 0 calc(var(--border-radius)* 2) calc(var(--border-radius)* 2);
+    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
+    border-bottom: 0.01em solid var(--color-border-light);
+    overflow: hidden;
     @include adaptiveValue("padding-top", 80, 30);
     @include adaptiveValue("padding-bottom", 80, 20);
     &__container {
@@ -118,6 +123,9 @@
         width: 100%;
         order: 2;
         position: relative;
+        h2 {
+            margin-bottom: 1em;
+        }
         p {
             margin-bottom: 2em;
             color: vars.$mainColor;

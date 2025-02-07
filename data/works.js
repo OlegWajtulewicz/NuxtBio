@@ -1,152 +1,137 @@
 export const works = [
   {
     title: 'Julia Maisa',
+    slug: 'julia-maisa',
     service: 'Design & Development',
     year: '2024',
-    link: './julia-maisa.html',
     image: '/img/works/Julia.png',
     color: 'orange',
-    external: false,
-    description: 'Design & Development'
+    external: true
   },
   {
     title: 'Groove School',
+    slug: 'groove-school',
     service: 'Design & Development',
     year: '2024',
-    link: './groove-school.html',
     image: '/img/works/bwg.png',
     color: 'blue1',
-    external: false,
-    description: 'Design & Development'
+    external: false
   },
   {
     title: 'Pizza-Next',
+    slug: 'pizza-next',
     service: 'Full Stack Development',
     year: '2024',
-    link: './pizza.html',
     image: '/img/works/pizza-next.png',
     color: 'yellow',
-    external: false,
-    description: 'Full Stack Development'
+    external: false
   },
   {
     title: 'CREATEX',
+    slug: 'createx',
     service: 'Development',
     year: '2023',
-    link: 'https://vaitulevichaleh.com/createx',
     image: '/img/works/createx.png',
     color: 'violet',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'ShickAvtoRent',
+    slug: 'shickavtorent',
     service: 'Design & Development',
     year: '2023',
-    link: 'https://rent.shikauto.by',
     image: '/img/works/autorent.png',
     color: 'brown',
-    external: true,
-    description: 'Design & Development'
+    external: true
   },
   {
     title: 'Zlatmax',
+    slug: 'zlatmax',
     service: 'Development',
     year: '2023',
-    link: 'https://vaitulevichaleh.com/zlatmax',
     image: '/img/works/zlat.png',
     color: 'graphite',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'Weather',
+    slug: 'weather',
     service: 'Development',
     year: '2024',
-    link: 'https://www.vaitulevichaleh.com/Forecast',
     image: '/img/works/weather.jpg',
     color: 'blue',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'Cocktail',
+    slug: 'cocktail',
     service: 'Development',
     year: '2024',
-    link: 'https://olegwajtulewicz.github.io',
     image: '/img/works/cocktail.png',
     color: 'grey',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'idStudio',
+    slug: 'idstudio',
     service: 'Development',
     year: '2023',
-    link: 'https://vaitulevichaleh.com/idstudio',
     image: '/img/works/idStudio.png',
     color: 'brown',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'BWJazzMusic',
+    slug: 'bwjazzmusic',
     service: 'Design & Development',
     year: '2023',
-    link: 'https://bwjazzmusic.com/warsztat',
     image: '/img/works/bwjWar.png',
     color: 'graphite',
-    external: true,
-    description: 'Design & Development'
+    external: true
   },
   {
     title: 'BYD',
+    slug: 'byd',
     service: 'ReDesign & Development',
     year: '2024',
-    link: 'https://vaitulevichaleh.com/BYD',
     image: '/img/works/byd.png',
     color: 'blue1',
-    external: true,
-    description: 'ReDesign & Development'
+    external: true
   },
   {
     title: 'Pulse',
+    slug: 'pulse',
     service: 'Development',
     year: '2022',
-    link: 'https://vaitulevichaleh.com/pulse',
     image: '/img/works/pulse.png',
     color: 'green',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'Latitude',
+    slug: 'latitude',
     service: 'Development',
     year: '2022',
-    link: 'https://vaitulevichaleh.com/latitude',
     image: '/img/works/latitude.png',
     color: 'pink',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'AMBRA',
+    slug: 'ambra',
     service: 'Development',
     year: '2024',
-    link: 'https://vaitulevichaleh.com/ambra',
     image: '/img/works/ambra.png',
     color: 'teal',
-    external: true,
-    description: 'Development'
+    external: true
   },
   {
     title: 'Test_WWM',
+    slug: 'test-wwm',
     service: 'Design & Development',
     year: '2025',
-    link: 'https://vaitulevichaleh.com/test',
     image: '/img/works/test.png',
     color: 'yellow',
-    external: true,
-    description: 'Design & Development'
-  },
+    external: true
+  }
 ] 

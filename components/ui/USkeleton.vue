@@ -28,11 +28,11 @@ defineProps({
   overflow: hidden;
 
   &--bg {
-    background-color: rgb(8, 8, 8);
+    background-color: rgba(82, 82, 82, 0.432);
   }
 
   &--rounded {
-    border-radius: 0.5rem;
+    border-radius: 1em;
   }
 
   &--rounded-full {
@@ -40,11 +40,16 @@ defineProps({
   }
 
   &--pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 2s ease-in-out infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 
 @keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
   50% {
     opacity: .7;
   }

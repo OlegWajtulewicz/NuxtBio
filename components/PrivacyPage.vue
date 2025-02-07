@@ -64,7 +64,7 @@
             <p>{{ $t('privacy_page.section4.general_objection_text') }}</p>
             <ul>
               <li>{{ $t('privacy_page.section4.general_objection_list1') }}</li>
-              <li>{{ $t('privacy_page.section4.general_objection_or') }}</li>
+              <p>{{ $t('privacy_page.section4.general_objection_or') }}</p>
               <li>{{ $t('privacy_page.section4.general_objection_list2') }}</li>
             </ul>
             <p>{{ $t('privacy_page.section4.general_objection_rights') }}</p>

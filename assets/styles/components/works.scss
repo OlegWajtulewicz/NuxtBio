@@ -120,6 +120,8 @@
 	// .works-items__container
 
 	&__container {
+		max-width: 80em;
+		margin-inline: auto;
 		padding-bottom: calc(var(--section-padding) * 2);
 		padding-inline: var(--container-padding);
 	}

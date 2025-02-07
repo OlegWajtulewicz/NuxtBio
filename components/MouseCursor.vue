@@ -1,3 +1,16 @@
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+defineProps({
+  projects: {
+    type: Array,
+    required: true
+  }
+})
+
+</script>
 <template>
   <div>
     <div class="mouse-image">
@@ -16,21 +29,14 @@
     <div class="mouse-btn no-select"></div>
     <div class="mouse-span no-select">
       <p>
-        <span class="mouse-span__link">Live Site</span>
+        <span class="mouse-span__link">{{ t('live_site') }}</span>
         <span class="icon-Right"></span>
       </p>
     </div>
   </div>
 </template>
 
-<script setup>
-defineProps({
-  projects: {
-    type: Array,
-    required: true
-  }
-})
-</script>
+
 
 <style scoped lang="scss">
 @use '@/assets/styles/components/mouse';

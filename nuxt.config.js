@@ -27,7 +27,8 @@ export default defineNuxtConfig({
    // { src: '~/plugins/locomotiveScroll.client.js', mode: 'client' },
     { src: '~/plugins/scrollDirection.client.js', mode: 'client' },
     { src: '~/plugins/hamburgerNav.client.js', mode: 'client' },
-    { src: '~/plugins/seo.client.js', mode: 'client' }
+    { src: '~/plugins/seo.client.js', mode: 'client' },
+    { src: '~/plugins/gsap.client.js', mode: 'client' }
   ],
   googleFonts: {
     families: {
@@ -60,7 +61,12 @@ export default defineNuxtConfig({
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
   },
   build: {
-    transpile: ['gsap', 'three'],
+    transpile: ['gsap'],
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    }
   },
   app: {
     pageTransition: {
@@ -91,21 +97,33 @@ export default defineNuxtConfig({
         { property: 'twitter:url', content: 'https://vaitulevichaleh.com' },
         { property: 'twitter:title', content: 'Aleh Vaitulevich • Freelance Developer' },
         { property: 'twitter:description', content: 'Delivering tailor-made digital designs and building interactive websites.' },
-        { property: 'twitter:image', content: 'https://vaitulevichaleh.com/Portfolio.PNG' }
+        { property: 'twitter:image', content: 'https://vaitulevichaleh.com/Portfolio.PNG' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'author', content: 'Aleh Vaitulevich' }
       ],
       link: [
         // Favicons
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
-        { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/favicon/favicon-48x48.png' },
+        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' },
-        { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
-        // Locomotive Scroll CSS
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css' }
+        { rel: 'shortcut icon', href: '/favicon/favicon.ico' }
       ],
       style: [
        // { children: 'body{opacity: 0;}' }
       ],
-      script: []
+      script: [
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'
+        },
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'
+        }
+      ]
+    },
+    image: {
+      quality: 80,
+      format: ['webp']
     }
-  }
+  },
+  
 })

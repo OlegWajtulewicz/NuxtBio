@@ -52,7 +52,7 @@ onMounted(() => {
         <ul class="works-tiles__tiles-list work-tiles-wrapper">
           <li v-for="work in works" :key="work.title" class="works-tiles__item">
             <div class="works-tiles__wrapper">
-              <a :href="work.link" :class="['works-tiles__link link-works-tiles', work.external ? 'works-link' : '']" :target="work.external ? '_blank' : ''">
+              <NuxtLink :to="`/work/${work.slug}`" :class="['works-tiles__link link-works-tiles']">
                 <div class="link-works-tiles__images">
                   <div :class="['item-latest-work__color', work.color]"></div>
                   <img :src="work.image" :alt="work.title" class="link-works-tiles__image ibg">
@@ -63,7 +63,7 @@ onMounted(() => {
                   <div class="link-works-tiles__service"><p>{{ work.service }}</p></div>
                   <div class="link-works-tiles__year"><p>{{ work.year }}</p></div>
                 </div>
-              </a>
+              </NuxtLink>
             </div>
           </li>
         </ul>
