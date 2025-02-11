@@ -4,6 +4,7 @@ import { useNuxtApp } from '#app'
 import { useI18n } from 'vue-i18n'
 import MouseCursor from './MouseCursor.vue'
 import { works } from '@/data/works'
+import { NuxtLink } from '#components'
 
 const { t } = useI18n()
 const isClient = ref(false)
@@ -37,7 +38,7 @@ onUnmounted(() => {
         <ul class="latest-work__wrapper work-wrapper">
             <li v-for="project in works.slice(0,4)" :key="project.image" class="latest-work__item item-latest-work visible">
                 <div class="latest-work__diwider"></div>
-                <a :href="project.link" class="item-latest-work__body">
+                <NuxtLink :to="`/work/${project.slug}`" class="item-latest-work__body">
                     <div class="item-latest-work__title">
                         <div class="item-latest-work__title--item">{{ project.title }}</div>
                     </div>
@@ -48,14 +49,14 @@ onUnmounted(() => {
                     </div>
                     
                     <div class="item-latest-work__descr">{{ project.description }}</div>
-                </a>
+                </NuxtLink>
             </li>
             <div class="latest-work__diwider"></div>
         </ul>
 
         <ul class="latest-work__wrapper--tiles">
             <li v-for="project in works.slice(0,2)" :key="project.image" class="latest-work__item item-latest-work visible">
-                <a :href="project.link" class="item-latest-work__body single-tile-wrap">
+                <NuxtLink :to="`/work/${project.slug}`" class="item-latest-work__body single-tile-wrap">
                     <div class="item-latest-work__images" v-if="isClient" v-lazy>
                         <div class="item-latest-work__color" :class="project.color"></div>
                         <img :data-src="project.image" :alt="project.title" class="tile-image item-latest-work__image ibg">
@@ -65,7 +66,7 @@ onUnmounted(() => {
                     </div>
                     <div class="latest-work__diwider"></div>
                     <div class="item-latest-work__descr">{{ project.description }}</div>
-                </a>
+                </NuxtLink>
             </li>
         </ul>
     </div>

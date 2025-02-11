@@ -1,3 +1,4 @@
+<!--   -->
 <script setup>
 import MainHome from '@/components/MainHome.vue'
 import MarqueeHome from '@/components/MarqueeHome.vue'
@@ -23,3 +24,9 @@ definePageMeta({
     <AllWorksButton />
   </div>
 </template>
+
+<style scoped lang="scss">
+@use "sass:math";
+@use '@/assets/styles/main.scss';
+
+</style>

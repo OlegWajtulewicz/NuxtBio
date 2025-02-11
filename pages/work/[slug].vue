@@ -114,11 +114,17 @@ definePageMeta({
     </div>
 
     <!-- Основной контент -->
-    <section v-else-if="product" class="product-wrap color-container" data-scroll-section>
-      <div :class="['works__color', product.color]"></div>
+     
+    <section 
+        v-else-if="product" 
+        class="product-wrap" 
+        :class="`gradient-${product.color}`" 
+        data-scroll-section
+        >
+      
       <div class="product">
         <div class="product__container">
-          <ProductHeader :link="product.liveUrl" />
+          <ProductHeader :link="product.liveUrl" :subtitle="product.subtitle" />
           <ProductImage :image="product.mainImage" :title="product.title" />
           <ProductInfo 
             :stack="product.stack" 
@@ -143,17 +149,7 @@ definePageMeta({
         />
       </template>
 
-      
       <ProductGrid v-if="product.slug === 'pizza-next'" />
-
-      <!-- Дополнительные фичи, если есть -->
-      <div v-if="product.features?.length" class="product__features">
-        <div v-for="feature in product.features" :key="feature.title" class="feature">
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.description }}</p>
-          <img :src="feature.image" :alt="feature.title">
-        </div>
-      </div>
 
       <ProductButton />
     </section>
@@ -168,6 +164,70 @@ definePageMeta({
 
 <style lang="scss">
 @use '~/assets/styles/components/product.scss';
+
+.product-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  &.gradient-orangeOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(38, 16%, 10%));
+  }
+
+  &.gradient-blueOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(210, 16%, 12%));
+  }
+
+  &.gradient-yellowOp {
+    background: linear-gradient(to bottom, var(--background-color), rgb(37, 37, 31));
+  }
+
+  &.gradient-violetOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(280, 16%, 12%));
+  }
+
+  &.gradient-brownOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(37, 25%, 10%));
+  }
+
+  &.gradient-greyOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(0, 0%, 10%));
+  }
+
+  &.gradient-blue1Op {
+    background: linear-gradient(to bottom, var(--background-color), hsl(210, 16%, 12%));
+  }
+
+  &.gradient-redOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(0, 21%, 10%));
+  }
+
+  &.gradient-pinkOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(300, 16%, 12%));
+  }
+
+  &.gradient-cyanOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(180, 25%, 15%));
+  }
+
+  &.gradient-tealOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(180, 17%, 10%));
+  }
+  
+  &.gradient-greenOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(120, 14%, 10%));
+  }
+
+  &.gradient-orange6Op {
+    background: linear-gradient(to bottom, var(--background-color), hsl(37, 24%, 15%));
+  }
+
+  &.gradient-graphiteOp {
+    background: linear-gradient(to bottom, var(--background-color), hsl(0, 0%, 10%));
+  }
+
+  // Добавьте другие цвета по необходимости
+}
+
 
 .loading-skeleton {
   padding: 2rem;
@@ -280,30 +340,9 @@ definePageMeta({
     text-decoration: none;
     transition: all 0.3s ease;
     
-    &:hover {
-     // background: rgba(255, 255, 255, 0.1);
-    }
+    
   }
 }
 
-.product__features {
-  padding: var(--section-padding) 0;
-  
-  .feature {
-    margin-bottom: 2rem;
-    
-    h3 {
-      margin-bottom: 1rem;
-    }
-    
-    p {
-      margin-bottom: 1rem;
-    }
-    
-    img {
-      width: 100%;
-      border-radius: var(--border-radius);
-    }
-  }
-}
+
 </style>

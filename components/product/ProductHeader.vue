@@ -7,6 +7,10 @@ defineProps({
   link: {
     type: String,
     required: true
+  },
+  subtitle: {
+    type: String,
+    required: true
   }
 })
 
@@ -127,7 +131,7 @@ function moveMagnet(event) {
 
 <template>
   <div class="product__header">
-    <h5 class="product__title">portfolio</h5>
+    <h5 class="product__title">{{ subtitle }}</h5>
     <a :href="link" target="_blank" class="product__button product-header-pr">
       <div class="product__btn footer__mail btn magnetic" data-btn-hover data-strength="25" data-strength-text="15">
         <div class="btn__bg"></div>

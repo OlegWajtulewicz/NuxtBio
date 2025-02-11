@@ -33,7 +33,7 @@ export const works = [
     year: '2023',
     image: '/img/works/createx.png',
     color: 'violet',
-    external: true
+    external: false
   },
   {
     title: 'ShickAvtoRent',
@@ -42,7 +42,7 @@ export const works = [
     year: '2023',
     image: '/img/works/autorent.png',
     color: 'brown',
-    external: true
+    external: false
   },
   {
     title: 'Zlatmax',
@@ -81,6 +81,33 @@ export const works = [
     external: true
   },
   {
+    title: 'Latitude',
+    slug: 'latitude',
+    service: 'Development',
+    year: '2022',
+    image: '/img/works/latitude.png',
+    color: 'pink',
+    external: true
+  },
+  {
+    title: 'AMBRA',
+    slug: 'ambra',
+    service: 'Development',
+    year: '2024',
+    image: '/img/works/ambra.png',
+    color: 'teal',
+    external: true
+  },
+  {
+    title: 'Test_WWM',
+    slug: 'test-wwm',
+    service: 'Design & Development',
+    year: '2025',
+    image: '/img/works/test.png',
+    color: 'yellow',
+    external: true
+  },
+  {
     title: 'BWJazzMusic',
     slug: 'bwjazzmusic',
     service: 'Design & Development',
@@ -107,31 +134,5 @@ export const works = [
     color: 'green',
     external: true
   },
-  {
-    title: 'Latitude',
-    slug: 'latitude',
-    service: 'Development',
-    year: '2022',
-    image: '/img/works/latitude.png',
-    color: 'pink',
-    external: true
-  },
-  {
-    title: 'AMBRA',
-    slug: 'ambra',
-    service: 'Development',
-    year: '2024',
-    image: '/img/works/ambra.png',
-    color: 'teal',
-    external: true
-  },
-  {
-    title: 'Test_WWM',
-    slug: 'test-wwm',
-    service: 'Design & Development',
-    year: '2025',
-    image: '/img/works/test.png',
-    color: 'yellow',
-    external: true
-  }
+  
 ] 

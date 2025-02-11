@@ -40,6 +40,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../plugins/ScrollSmoother3.12.6.min.js")> &
   InjectionType<typeof import("../../plugins/locomotiveScroll.client.js")> &
   InjectionType<typeof import("../../plugins/magneticButtons.client.js")> &
+  InjectionType<typeof import("../../plugins/scroll-top.js")> &
   InjectionType<typeof import("../../plugins/useLocomotiveScroll.client.js")> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/ssg-detect.js")>
 

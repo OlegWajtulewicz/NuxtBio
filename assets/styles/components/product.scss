@@ -5,7 +5,7 @@
 @use '../variables' as vars;
 
 .product {
-    background-color: var(--background-color);
+  //  background-color: var(--background-color);
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -92,15 +92,13 @@
     height: auto;
     border-radius: 0 0 calc(var(--border-radius)* 2) calc(var(--border-radius)* 2);
     overflow: hidden;
-    .works__color {
-       opacity: 0;
-    }
+    
 } 
 //========================================================================================================================================================
 .product-page-button {
-    background-color: var(--background-color);
+ //   background-color: var(--background-color);
     border-radius: 0 0 calc(var(--border-radius)* 2) calc(var(--border-radius)* 2);
-    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
+   // box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
     border-bottom: 0.01em solid var(--color-border-light);
     overflow: hidden;
     transition: var(--animation-primary);
