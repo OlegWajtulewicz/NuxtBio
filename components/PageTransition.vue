@@ -84,13 +84,6 @@ function initLoaderHome() {
     // Возврат блока в исходное положение
     tl.set(".transition__screen", { bottom: "-142%" }, "+=0.6")
 
-    // Обновление ScrollTrigger
-    tl.call(() => {
-      if (typeof ScrollTrigger !== "undefined") {
-        ScrollTrigger.refresh()
-      }
-    }, null, "+=3")
-
     isReady.value = true
   })
 
@@ -155,6 +148,7 @@ function pageTransitionIn() {
       duration: 1.5,
       scale: 1,
       height: "auto",
+      opacity: 1,
       ease: "Expo.easeOut",
       delay: 0.1,
       clearProps: "all"
@@ -163,6 +157,7 @@ function pageTransitionIn() {
     tl.to(".wrapper", {
       duration: 1.5,
       y: "0em",
+      opacity: 1,
       ease: "Expo.easeOut",
       delay: 0.1,
       clearProps: "all"
@@ -198,17 +193,32 @@ function pageTransitionOut() {
   
   const tl = gsap.timeline()
 
-  tl.set(".home__container", "header", { clearProps: 'all', height: 'unset' })
+  tl.set(".transition__screen", { bottom: "-142%", opacity: 1 })
+  tl.set(".transition__rounded-wrap.top", { opacity: 1 })
   
+  // Анимация для больших экранов
   if (window.innerWidth > 1024) {
     tl.to(".wrapper", {
-      scale: 1,
-      height: "100%",
+      scale: 0.95,
       opacity: 0,
+      duration: 0.5,
+      ease: "power2.inOut"
     })
   } else {
-    tl.to(".wrapper", { opacity: 0 })
+    tl.to(".wrapper", { 
+      opacity: 0,
+      y: "30vh",
+      duration: 0.5,
+      ease: "power2.inOut"
+    })
   }
+
+  // Анимация поднятия экрана
+  tl.to(".transition__screen", {
+    duration: 0.8,
+    bottom: "-30%",
+    ease: "Power2.easeIn",
+  }, "-=0.3")
 
   return tl
 }
@@ -218,7 +228,6 @@ onMounted(() => {
   initLoaderHome()
 })
 
-// Экспортируем функции для использования в родительских компонентах
 defineExpose({
   pageTransitionIn,
   pageTransitionOut
@@ -226,21 +235,19 @@ defineExpose({
 </script>
 
 <template>
-  <div v-show="isClient">
-    <div class="transition__container">
-      <div class="transition__fade"></div>
-      <div class="transition__screen">
-        <div class="transition__rounded-wrap top">
-          <div class="transition__rounded-div"></div>
-        </div>
-        <div class="transition__rounded-wrap bottom">
-          <div class="transition__rounded-div"></div>
-        </div>
+  <div class="transition__container">
+    <div class="transition__fade"></div>
+    <div class="transition__screen">
+      <div class="transition__rounded-wrap top">
+        <div class="transition__rounded-div"></div>
+      </div>
+      <div class="transition__rounded-wrap bottom">
+        <div class="transition__rounded-div"></div>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-@use '@/assets/styles/components/transition';
+@use '@/assets/styles/components/transition.scss';
 </style>

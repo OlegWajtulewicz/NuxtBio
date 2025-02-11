@@ -8,6 +8,8 @@ import Cookies from '~/components/Cookies.vue'
 import PageTransition from '@/components/PageTransition.vue'
 
 const router = useRouter()
+let beforeHook = null
+let afterHook = null
 
 // Функция для обработки начала перехода
 function onBeforeRouteLeave(to, from, next) {
@@ -32,14 +34,13 @@ function onRouteEnter() {
 }
 
 onMounted(() => {
-  router.beforeEach(onBeforeRouteLeave)
-  router.afterEach(onRouteEnter)
+  beforeHook = router.beforeEach(onBeforeRouteLeave)
+  afterHook = router.afterEach(onRouteEnter)
 })
 
 onBeforeUnmount(() => {
-  // Удаляем обработчики при размонтировании компонента
-  router.beforeHooks.delete(onBeforeRouteLeave)
-  router.afterHooks.delete(onRouteEnter)
+  if (beforeHook) beforeHook()
+  if (afterHook) afterHook()
 })
 </script>
 

@@ -18,7 +18,6 @@ const routes = [
     meta: {
       layout: 'about-layout', 
       title: 'About • Aleh Vaitulevich'
-      
     },
   },
   {
@@ -37,14 +36,9 @@ const router = createRouter({
   routes,
 });
 
-// Применение middleware для каждого маршрута
-router.beforeEach((to, from, next) => {
-  loadLayoutMiddleware(to).then(() => {
-    next();
-  }).catch(err => {
-    console.error(err);
-    next();
-  });
+router.beforeEach(async (to, from, next) => {
+  await loadLayoutMiddleware(to)
+  next()
 });
 
 export default router;
