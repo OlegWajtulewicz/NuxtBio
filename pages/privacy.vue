@@ -2,20 +2,41 @@
 import PageHead from '@/components/PageHead.vue'
 import MouseCursor from '@/components/MouseCursor.vue'
 import PrivacyPage from '@/components/PrivacyPage.vue'
+import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
+import { watch, nextTick } from 'vue'
+import { transition } from '@/utils/transitionTemplate'
+import { useHead } from 'unhead'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
+
 // Создаем пустой массив для курсора
 const works = ref([])
 
-useHead({
-  title: 'Privacy Policy • Aleh Vaitulevich'
+definePageMeta({
+  layout: 'privacy-layout',
+  ...transition
 })
 
-definePageMeta({
-  layout: 'privacy-layout'
-})
+useHead(() => ({
+  title: t('meta.privacy.title')
+}))
+
+watch(() =>
+    [general.isTransitionFinish, general.isPreloaderVisible],
+    ([transitionFinish, preloaderVisibility]) => {
+        if(transitionFinish && !preloaderVisibility) {
+          nextTick(() => {
+            firstScreenAnimation({parent: '.main'})
+          })
+        }
+    }
+)
 </script>
 
 <template>
   <div>
+    
     <MouseCursor :projects="works" />
     <PageHead />
     <div>

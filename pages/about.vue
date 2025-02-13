@@ -2,17 +2,37 @@
 import PageHead from '@/components/PageHead.vue'
 import MouseCursor from '@/components/MouseCursor.vue'
 import BioAbout from '@/components/BioAbout.vue'
+import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
+import { watch, nextTick } from 'vue'
+import { transition } from '@/utils/transitionTemplate'
+import { useHead } from 'unhead'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
 
 // Создаем пустой массив для курсора
 const works = ref([])
 
-useHead({
-  title: 'About • Aleh Vaitulevich'
+definePageMeta({
+  layout: 'about-layout',
+  ...transition
 })
 
-definePageMeta({
-  layout: 'about-layout'
-})
+useHead(() => ({
+  title: t('meta.about.title')
+}))
+
+watch(() =>
+    [general.isTransitionFinish, general.isPreloaderVisible],
+    ([transitionFinish, preloaderVisibility]) => {
+        if(transitionFinish && !preloaderVisibility) {
+          nextTick(() => {
+            firstScreenAnimation({parent: '.main'})
+          })
+        }
+    }
+)
+
 </script>
 
 <template>

@@ -125,5 +125,7 @@ export default defineNuxtConfig({
       format: ['webp']
     }
   },
-  
+  imports: {
+		dirs: ['stores', 'utils'],
+	},
 })

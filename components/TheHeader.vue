@@ -5,7 +5,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-    <header class="header"  id="header"  data-scroll-section> 
+    <header class="header"  id="header"  data-scroll-section  data-lenis-prevent> 
         <div class="header__container" id="up">
             <div class="header__header magnetic" data-strength="20" data-strength-text="10">
                 <div class="header__svg-icon top">    
@@ -30,7 +30,16 @@ const { t } = useI18n()
                         <NuxtLink to="/about" class="menu-top-header__link magnetic" data-strength="20" data-strength-text="10">{{ t('about') }}<p hidden class="btn__text"></p></NuxtLink>
                     </li>
                     <li class="menu-top-header__item" data-link-update>
-                        <a href="#footer" data-barba-prevent="self" class="menu-top-header__link magnetic" data-strength="20" data-strength-text="10">{{ t('contact') }}<p hidden class="btn__text"></p></a>
+                        <a 
+                            @click.prevent="general.scrollLenis?.scrollTo('#footer')" 
+                            href="#footer" 
+                            class="menu-top-header__link magnetic" 
+                            data-strength="20" 
+                            data-strength-text="10"
+                        >
+                            {{ t('contact') }}
+                            <p hidden class="btn__text"></p>
+                        </a>
                     </li>
                     <button type="button" class="menu__icon icon-menu">
                         <span class="icon-menu__divider">•</span>

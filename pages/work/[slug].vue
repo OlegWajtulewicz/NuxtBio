@@ -11,10 +11,14 @@ import PageHead from '@/components/PageHead.vue'
 import USkeleton from '@/components/ui/USkeleton.vue'
 import MouseCursor from '@/components/MouseCursor.vue'
 import ProductGrid from '@/components/product/ProductGrid.vue'
+import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
+import { watch, nextTick } from 'vue'
+import { transition } from '@/utils/transitionTemplate'
+import { useHead } from 'unhead'
 
 const route = useRoute()
 const router = useRouter()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const isLoading = ref(true)
 const isError = ref(false)
 const errorMessage = ref('')
@@ -76,12 +80,25 @@ useHead({
 })
 
 definePageMeta({
-  layout: 'slug-layout'
+  layout: 'slug-layout',
+  ...transition
 })
+
+watch(() =>
+    [general.isTransitionFinish, general.isPreloaderVisible],
+    ([transitionFinish, preloaderVisibility]) => {
+        if(transitionFinish && !preloaderVisibility) {
+          nextTick(() => {
+            firstScreenAnimation({parent: '.main'})
+          })
+        }
+    }
+)
 </script>
 
 <template>
   <div>
+   
     <MouseCursor :projects="works"  />
     <PageHead />
     
@@ -116,7 +133,7 @@ definePageMeta({
     <!-- Основной контент -->
      
     <section 
-        v-else-if="product" 
+        v-if="product && !isLoading" 
         class="product-wrap" 
         :class="`gradient-${product.color}`" 
         data-scroll-section
@@ -339,10 +356,6 @@ definePageMeta({
     border-radius: var(--border-radius);
     text-decoration: none;
     transition: all 0.3s ease;
-    
-    
   }
 }
-
-
 </style>

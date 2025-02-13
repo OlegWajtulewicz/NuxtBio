@@ -1,51 +1,35 @@
 <script setup>
-import { onMounted, onBeforeUnmount } from 'vue'
-import { useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 import MenuMobile from '@/components/MenuMobile.vue'
 import FooterMain from '@/components/FooterMain.vue'
 import Cookies from '~/components/Cookies.vue'
-import PageTransition from '@/components/PageTransition.vue'
+import ThePreloader from '@/components/ThePreloader.vue'
 
-const router = useRouter()
+import { onMounted, watch, nextTick } from 'vue'
+import { useRoute } from 'vue-router'
+import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
 
-// Функция для обработки начала перехода
-function onBeforeRouteLeave(to, from, next) {
-  const pageTransition = document.querySelector('.transition__container')?.parentNode?.__vueParentComponent?.ctx
-
-  if (pageTransition?.pageTransitionOut) {
-    pageTransition.pageTransitionOut().then(() => {
-      next()
-    })
-  } else {
-    next()
-  }
-}
-
-// Функция для обработки завершения перехода
-function onRouteEnter() {
-  const pageTransition = document.querySelector('.transition__container')?.parentNode?.__vueParentComponent?.ctx
-
-  if (pageTransition?.pageTransitionIn) {
-    pageTransition.pageTransitionIn()
-  }
-}
+const route = useRoute()
 
 onMounted(() => {
-  router.beforeEach(onBeforeRouteLeave)
-  router.afterEach(onRouteEnter)
+    useSmoothScroll()
 })
 
-onBeforeUnmount(() => {
-  // Удаляем обработчики при размонтировании компонента
-  router.beforeHooks.delete(onBeforeRouteLeave)
-  router.afterHooks.delete(onRouteEnter)
-})
+watch(() =>
+    [general.isTransitionStart, general.isPreloaderVisible],
+    ([transitionStart, preloaderVisibility]) => {
+        if(transitionStart && !preloaderVisibility) {
+          nextTick(() => {
+            firstScreenAnimation({parent: '.main'})
+          })
+        }
+    }
+)
 </script>
 
 <template>
-  <div class="wrapper" data-lenis-prevent>
-    <PageTransition />
+  <div class="wrapper about">
+    <ThePreloader />
     <TheHeader />
     <MenuMobile />
     <main class="main">

@@ -132,4 +132,23 @@ export default defineNuxtPlugin((nuxtApp) => {
       })
     })
   }
+
+  if (process.client) {
+    nuxtApp.hook('app:mounted', () => {
+        setTimeout(() => {
+            initStickyCursorWithDelay()
+        }, 150)
+    })
+}
+
+// Делаем функцию доступной через nuxtApp
+return {
+    provide: {
+        mouseCursor: {
+            initStickyCursorWithDelay
+        }
+    }
+}
+
+
 }) 

@@ -5,14 +5,32 @@ import MarqueeHome from '@/components/MarqueeHome.vue'
 import AboutHome from '@/components/AboutHome.vue'
 import LatestWork from '@/components/LatestWork.vue'
 import AllWorksButton from '@/components/AllWorksButton.vue'
+import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
+import { watch, nextTick } from 'vue'
+import { transition } from '@/utils/transitionTemplate'
+import { useHead } from 'unhead'
+import { useI18n } from 'vue-i18n'
 
-useHead({
-  title: 'Aleh Vaitulevich • Freelance Developer'
-})
+const { t, locale } = useI18n()
 
 definePageMeta({
-  layout: 'home-layout'
+  layout: 'home-layout',
+  ...transition,
 })
+
+useHead(() => ({
+  title: t('meta.home.title')
+}))
+
+watch(() =>
+		[general.isTransitionFinish, general.isPreloaderVisible],
+		([transitionFinish, preloaderVisibility]) => {
+        if(transitionFinish && !preloaderVisibility) {
+          nextTick(() => {
+            firstScreenAnimation({parent: '.main'})
+          })
+        }
+	})
 </script>
 
 <template>

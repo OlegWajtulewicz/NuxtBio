@@ -90,7 +90,14 @@ onUnmounted(() => {
                         </NuxtLink>
                     </li>
                     <li class="menu__item" data-link-update>
-                        <a href="#footer" data-barba-prevent="self" class="menu__link magnetic" data-strength="25" data-strength-text="15">
+                        <a 
+                            @click.prevent="general.scrollLenis?.scrollTo('#footer')" 
+                            href="#footer" 
+                            data-barba-prevent="self" 
+                            class="menu__link magnetic" 
+                            data-strength="25" 
+                            data-strength-text="15"
+                        >
                             <span class="btn__text">
                                 <p class="btn-text-p change">{{ t('contact') }}</p>
                             </span> 

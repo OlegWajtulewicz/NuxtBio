@@ -1,6 +1,7 @@
 import privacyTranslations from './locales/privacy'
 import cookiesTranslations from './locales/cookies'
 import product from './locales/productPizza'
+import { meta } from './locales/meta'
 
 export default defineI18nConfig(() => ({
   legacy: false,
@@ -98,7 +99,8 @@ export default defineI18nConfig(() => ({
       ...privacyTranslations.en,
       privacy_page: privacyTranslations.en.privacy_page,
       cookie_page: cookiesTranslations.en.cookie_page,
-      ...product.en
+      ...product.en,
+      ...meta.en
     },
     ru: {
       navigation: 'навигация',
@@ -193,7 +195,8 @@ export default defineI18nConfig(() => ({
       ...privacyTranslations.ru,
       privacy_page: privacyTranslations.ru.privacy_page,
       cookie_page: cookiesTranslations.ru.cookie_page,
-      ...product.ru
+      ...product.ru,
+      ...meta.ru
     },
     pl: {
       navigation: 'nawigacja',
@@ -290,7 +293,8 @@ export default defineI18nConfig(() => ({
       ...privacyTranslations.pl,
       privacy_page: privacyTranslations.pl.privacy_page,
       cookie_page: cookiesTranslations.pl.cookie_page,
-      ...product.pl
+      ...product.pl,
+      ...meta.pl
     }
   }
 })) 

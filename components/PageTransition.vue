@@ -109,7 +109,7 @@ function pageTransitionIn() {
   })
 
   if (window.innerWidth > 1024) {
-    tl.set(".wrapper", { opacity: 0, scale: 0.95, height: "100%" })
+    tl.set(".wrapper", { opacity: 0, height: "100%" })
   } else {
     tl.set(".wrapper", { opacity: 0, y: "30vh" })
   }
@@ -215,13 +215,13 @@ function pageTransitionOut() {
 
 onMounted(() => {
   isClient.value = true
-  initLoaderHome()
+//  initLoaderHome()
 })
 
 // Экспортируем функции для использования в родительских компонентах
 defineExpose({
-  pageTransitionIn,
-  pageTransitionOut
+//  pageTransitionIn,
+//  pageTransitionOut
 })
 </script>
 

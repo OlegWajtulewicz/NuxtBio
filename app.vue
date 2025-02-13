@@ -1,3 +1,12 @@
+<script setup>
+definePageMeta({
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  }
+})
+</script>
+
 <template>
   <div data-scroll-container>
     <NuxtLayout>

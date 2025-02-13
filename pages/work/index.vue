@@ -7,8 +7,13 @@ import WorksGrid from '@/components/WorksGrid.vue'
 import MouseCursor from '@/components/MouseCursor.vue'
 import { works } from '@/data/works'
 import USkeleton from '@/components/ui/USkeleton.vue'
+import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
+import { watch, nextTick } from 'vue'
+import { transition } from '@/utils/transitionTemplate'
+import { useHead } from 'unhead'
+import { useI18n } from 'vue-i18n'
 
-
+const { t, locale } = useI18n()
 const gridViewStore = useGridViewStore()
 const isLoading = ref(true)
 const isImagesLoaded = ref(false)
@@ -36,13 +41,26 @@ onMounted(() => {
   
 })
 
-useHead({
-  title: 'Work • Aleh Vaitulevich'
-})
 
 definePageMeta({
-  layout: 'work-layout'
+  layout: 'work-layout',
+  ...transition
 })
+
+useHead(() => ({
+  title: t('meta.work.title')
+}))
+
+watch(() =>
+    [general.isTransitionFinish, general.isPreloaderVisible],
+    ([transitionFinish, preloaderVisibility]) => {
+        if(transitionFinish && !preloaderVisibility) {
+          nextTick(() => {
+            firstScreenAnimation({parent: '.main'})
+          })
+        }
+    }
+)
 </script>
 
 <template>

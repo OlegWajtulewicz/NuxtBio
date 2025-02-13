@@ -48,7 +48,7 @@ onUnmounted(() => {
                         </div>
                     </div>
                     
-                    <div class="item-latest-work__descr">{{ project.description }}</div>
+                    <div class="item-latest-work__descr">{{ project.service }}</div>
                 </NuxtLink>
             </li>
             <div class="latest-work__diwider"></div>
@@ -65,7 +65,7 @@ onUnmounted(() => {
                         <div class="item-latest-work__title--item">{{ project.title }}</div>
                     </div>
                     <div class="latest-work__diwider"></div>
-                    <div class="item-latest-work__descr">{{ project.description }}</div>
+                    <div class="item-latest-work__descr">{{ project.service }}</div>
                 </NuxtLink>
             </li>
         </ul>
