@@ -83,7 +83,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/nuxtbio/',
+  //  baseURL: '/nuxtbio/',
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
@@ -159,6 +159,10 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'netlify'
+    preset: 'netlify',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
   },
 })
