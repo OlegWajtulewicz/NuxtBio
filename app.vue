@@ -1,11 +1,3 @@
-<script setup>
-definePageMeta({
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in'
-  }
-})
-</script>
 
 <template>
   <div data-scroll-container>
@@ -16,7 +8,10 @@ definePageMeta({
 </template>
 
 <style>
-/* --------------------------------- Base Styles --------------------------------- */
+:root {
+  color-scheme: dark;
+}
+
 html {
   background-color: var(--background-color);
   color: var(--text-primary);
@@ -27,18 +22,25 @@ body {
   overflow-x: hidden;
 }
 
-/* --------------------------------- Locomotive Scroll --------------------------------- */
+/* Smooth Scroll Styles */
 html.has-scroll-smooth {
   overflow: hidden;
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  inset: 0;
 }
 
 [data-scroll-container] {
   min-height: 100vh;
   width: 100%;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 </style>

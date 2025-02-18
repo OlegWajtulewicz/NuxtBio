@@ -62,10 +62,10 @@ export const nuxtI18nOptions = {
     "alwaysRedirect": false,
     "cookieCrossOrigin": false,
     "cookieDomain": null,
-    "cookieKey": "i18n_redirected",
+    "cookieKey": "i18n_locale",
     "cookieSecure": false,
     "fallbackLocale": "",
-    "redirectOn": "root",
+    "redirectOn": "no_prefix",
     "useCookie": true
   },
   "differentDomains": false,

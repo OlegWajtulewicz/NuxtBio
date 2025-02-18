@@ -36,6 +36,8 @@ export { useCounterStore } from '../stores/counter';
 export { useGridViewStore } from '../stores/gridView';
 export { general } from '../stores/index';
 export { useMenuStore } from '../stores/menu';
+export { titleAnimation } from '../animation/titleAnimation';
+export { initTricksWords, initSpanLinesAnimation } from '../animation/trickWordAnimation';
 export { defineShortcuts } from '../node_modules/@nuxt/ui/dist/runtime/composables/defineShortcuts';
 export { useProvideButtonGroup, useInjectButtonGroup } from '../node_modules/@nuxt/ui/dist/runtime/composables/useButtonGroup';
 export { useCarouselScroll } from '../node_modules/@nuxt/ui/dist/runtime/composables/useCarouselScroll';

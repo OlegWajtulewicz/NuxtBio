@@ -45,6 +45,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 			}
 		})
 
+
 		// Анимация перехода 
 		if (window.innerWidth > 1024) {
 			tl.to(".wrapper", {
@@ -60,7 +61,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 	to.meta.pageTransition.onEnter = (el, done) => {
 		let tl = gsap.timeline({
 			onComplete() {
-				gsap.set(el, {
+				gsap.set(el,  {
 					clearProps: 'all'
 				})
 				general.isTransitionFinish = true
@@ -71,7 +72,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
 			}
 		})
 
-		
 		
 		if (window.innerWidth > 1024) {
 			tl.to(".wrapper", {
@@ -86,9 +86,5 @@ export default defineNuxtRouteMiddleware((to, from) => {
 				clearProps: "all" 
 			}, "+=.1")
 		}
-		
-	
-		
-		
 	}
 })

@@ -21,6 +21,7 @@ export default defineI18nConfig(() => ({
       back: 'Back',
       live_site: 'Live Site',
       want_same: 'I want the same',
+      back_to_works: 'Back to works',
 
       about_home: {
         main_text: "I'm a web developer with a passion for creating websites. I strive for perfection, so that my projects are not only aesthetically pleasing and functional, but also effectively solve business problems.",
@@ -213,6 +214,7 @@ export default defineI18nConfig(() => ({
       back: 'Wróć',
       live_site: 'Następna',
       want_same: 'Chcę taki sam',
+      back_to_works: 'Wróć do prac',
 
       cookies: {
         title: "Cenimy Twoją prywatność",

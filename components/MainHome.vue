@@ -4,9 +4,13 @@ import { gsap } from 'gsap'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { backgroundFragment, backgroundVertex, particleFragment, particleVertex, fragment, vertex } from './shaders'
+import { titleAnimation } from '@/animation/titleAnimation'
 
 onMounted(() => {
     initTHREEScene()
+    if (process.client) {
+        titleAnimation()
+    }
 })
 
 function initTHREEScene() {
@@ -187,21 +191,21 @@ function initTHREEScene() {
 </script>
 
 <template>
-    <section class="home" data-scroll-section>
-        <div class="home__bg" data-scroll data-scroll-speed="-1.5" ></div>
+    <section class="home" >
+        <div class="home__bg" data-scroll data-scroll-speed="+1.5" ></div>
         <div class="home__container ">
             <div class="home__text" data-scroll data-scroll-speed="-3" data-scroll-position="top"> 
-                <div class="span-lines animate">
+                <div class="">
                     <h1 data-value="UI/UX Design" class="home__subtitle text-effect">Creative </h1>
                 </div>
                 <div class="home__canvas">
                     <div class="home__canvas-wrap" id="myCanvas"></div>
                 </div>
                 <h1 class="home__subtitle--right" data-scroll data-scroll-speed="-2" data-scroll-position="top"> 
-                    <div class="span-lines animate">web </div> 
+                    <div class=" ">web </div> 
                 </h1>
                 <h1 class="home__subtitle--right1" >  
-                    <div class="span-lines animate" data-scroll data-scroll-speed="-2" data-scroll-position="top">
+                    <div class="" data-scroll data-scroll-speed="-2" data-scroll-position="top">
                         development
                     </div>
                 </h1>

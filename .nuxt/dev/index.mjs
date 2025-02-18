@@ -3,11 +3,10 @@ import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { parentPort, threadId } from 'node:worker_threads';
-import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, getResponseStatus, setResponseHeaders, setHeaders, sendRedirect, proxyRequest, createError, getQuery as getQuery$1, getRequestURL, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, readBody, getResponseStatusText } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/h3/dist/index.mjs';
+import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, getResponseStatus, setResponseHeaders, setHeaders, sendRedirect, proxyRequest, createError, getQuery as getQuery$1, getRequestURL, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, readBody, getResponseStatusText } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/h3/dist/index.mjs';
 import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { stringify, uneval } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/devalue/index.js';
 import destr from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/destr/dist/index.mjs';
-import { renderToString } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/server-renderer/index.mjs';
 import { propsToString, renderSSRHead } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/@unhead/ssr/dist/index.mjs';
 import { createServerHead as createServerHead$1, CapoPlugin } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unhead/dist/index.mjs';
 import { klona } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/klona/dist/index.mjs';
@@ -21,14 +20,12 @@ import { consola } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_mod
 import { getContext } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unctx/dist/index.mjs';
 import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/errx/dist/index.js';
 import { isVNode, version, unref } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/index.mjs';
-import { basename, isAbsolute } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/pathe/dist/index.mjs';
+import { basename } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/pathe/dist/index.mjs';
 import { getIcons } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/@iconify/utils/lib/index.mjs';
 import { hash } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ohash/dist/index.mjs';
 import { createStorage, prefixStorage } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/dist/index.mjs';
 import unstorage_47drivers_47fs from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/drivers/fs.mjs';
 import { collections } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/.nuxt/nuxt-icon-server-bundle.mjs';
-import { fileURLToPath } from 'node:url';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ipx/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/radix3/dist/index.mjs';
 import { defineHeadPlugin } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/@unhead/shared/dist/index.mjs';
 
@@ -422,7 +419,7 @@ const _IVbDiWZQkE = (function(nitro) {
 
 const rootDir = "C:/Users/vaj-o/OneDrive/Desktop/NuxtBio";
 
-const appHead = {"meta":[{"charset":"UTF-8"},{"name":"format-detection","content":"telephone=no"},{"name":"viewport","content":"width=device-width, initial-scale=1.0"},{"name":"description","content":"Delivering tailor-made digital designs and building interactive websites."},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://vaitulevichaleh.com"},{"property":"og:title","content":"Aleh Vaitulevich • Freelance Developer"},{"property":"og:description","content":"Delivering tailor-made digital designs and building interactive websites."},{"property":"og:image","content":"https://vaitulevichaleh.com/Portfolio.PNG"},{"property":"og:locale","content":"en"},{"property":"og:site_name","content":"Aleh Vaitulevich"},{"property":"twitter:card","content":"summary_large_image"},{"property":"twitter:url","content":"https://vaitulevichaleh.com"},{"property":"twitter:title","content":"Aleh Vaitulevich • Freelance Developer"},{"property":"twitter:description","content":"Delivering tailor-made digital designs and building interactive websites."},{"property":"twitter:image","content":"https://vaitulevichaleh.com/Portfolio.PNG"},{"name":"robots","content":"index, follow"},{"name":"author","content":"Aleh Vaitulevich"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"/favicon/apple-touch-icon.png"},{"rel":"icon","type":"image/png","sizes":"96x96","href":"/favicon/favicon-96x96.png"},{"rel":"icon","type":"image/svg+xml","href":"/favicon/favicon.svg"},{"rel":"shortcut icon","href":"/favicon/favicon.ico"}],"style":[],"script":[{"src":"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"},{"src":"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"}],"noscript":[],"htmlAttrs":{"lang":"en"}};
+const appHead = {"meta":[{"charset":"UTF-8"},{"name":"format-detection","content":"telephone=no"},{"name":"viewport","content":"width=device-width, initial-scale=1.0"},{"name":"description","content":"Delivering tailor-made digital designs and building interactive websites."},{"property":"og:type","content":"website"},{"property":"og:url","content":"https://vaitulevichaleh.com"},{"property":"og:title","content":"Aleh Vaitulevich • Freelance Developer"},{"property":"og:description","content":"Delivering tailor-made digital designs and building interactive websites."},{"property":"og:image","content":"https://vaitulevichaleh.com/Portfolio.PNG"},{"property":"og:locale","content":"en"},{"property":"og:site_name","content":"Aleh Vaitulevich"},{"property":"twitter:card","content":"summary_large_image"},{"property":"twitter:url","content":"https://vaitulevichaleh.com"},{"property":"twitter:title","content":"Aleh Vaitulevich • Freelance Developer"},{"property":"twitter:description","content":"Delivering tailor-made digital designs and building interactive websites."},{"property":"twitter:image","content":"https://vaitulevichaleh.com/Portfolio.PNG"},{"name":"robots","content":"index, follow"},{"name":"author","content":"Aleh Vaitulevich"}],"link":[{"rel":"apple-touch-icon","sizes":"180x180","href":"/favicon/apple-touch-icon.png"},{"rel":"icon","type":"image/png","sizes":"96x96","href":"/favicon/favicon-96x96.png"},{"rel":"icon","type":"image/svg+xml","href":"/favicon/favicon.svg"},{"rel":"shortcut icon","href":"/favicon/favicon.ico"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":true}],"style":[],"script":[{"src":"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js","body":true,"defer":false},{"src":"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js","body":true,"defer":false}],"noscript":[],"htmlAttrs":{"lang":"en"}};
 
 const appRootTag = "div";
 
@@ -525,7 +522,7 @@ _WpcMwPsLih
 const inlineAppConfig = {
   "nuxt": {},
   "icon": {
-    "provider": "server",
+    "provider": "iconify",
     "class": "",
     "aliases": {},
     "iconifyApiEndpoint": "https://api.iconify.design",
@@ -789,9 +786,9 @@ function _expandFromEnv(value) {
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/",
+    "baseURL": "/nuxtbio/",
     "buildId": "dev",
-    "buildAssetsDir": "/_nuxt/",
+    "buildAssetsDir": "_nuxt",
     "cdnURL": ""
   },
   "nitro": {
@@ -799,6 +796,20 @@ const _inlineRuntimeConfig = {
     "routeRules": {
       "/__nuxt_error": {
         "cache": false
+      },
+      "/**": {
+        "swr": 3600,
+        "cache": {
+          "swr": true,
+          "maxAge": 3600
+        }
+      },
+      "/api/**": {
+        "swr": 600,
+        "cache": {
+          "swr": true,
+          "maxAge": 600
+        }
       },
       "/_nuxt/builds/meta/**": {
         "headers": {
@@ -834,10 +845,10 @@ const _inlineRuntimeConfig = {
         "alwaysRedirect": false,
         "cookieCrossOrigin": false,
         "cookieDomain": "",
-        "cookieKey": "i18n_redirected",
+        "cookieKey": "i18n_locale",
         "cookieSecure": false,
         "fallbackLocale": "",
-        "redirectOn": "root",
+        "redirectOn": "no_prefix",
         "useCookie": true
       },
       "experimental": {
@@ -1480,30 +1491,14 @@ const _R34QAG = defineCachedEventHandler(async (event) => {
   // 1 week
 });
 
-const _hOpbCd = lazyEventHandler(() => {
-  const opts = useRuntimeConfig().ipx || {};
-  const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
-  const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
-  const httpStorage = opts.http?.domains ? ipxHttpStorage({ ...opts.http }) : void 0;
-  if (!fsStorage && !httpStorage) {
-    throw new Error("IPX storage is not configured!");
-  }
-  const ipxOptions = {
-    ...opts,
-    storage: fsStorage || httpStorage,
-    httpStorage
-  };
-  const ipx = createIPX(ipxOptions);
-  const ipxHandler = createIPXH3Handler(ipx);
-  return useBase(opts.baseURL, ipxHandler);
-});
-
 const _lazy_bywtDb = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '/__nuxt_error', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/api/_nuxt_icon/:collection', handler: _R34QAG, lazy: false, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _hOpbCd, lazy: false, middleware: false, method: undefined },
+  { route: '/api/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/_nuxt/builds/meta/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/_nuxt/builds/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -1770,32 +1765,7 @@ const renderSSRHeadOptions = {"omitLineBreaks":false};
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
 const getClientManifest = () => import('file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
-const getSSRRenderer = lazyCachedFunction(async () => {
-  const manifest = await getClientManifest();
-  if (!manifest) {
-    throw new Error("client.manifest is not available");
-  }
-  const createSSRApp = await getServerEntry();
-  if (!createSSRApp) {
-    throw new Error("Server bundle is not available");
-  }
-  const options = {
-    manifest,
-    renderToString: renderToString$1,
-    buildAssetsURL
-  };
-  const renderer = createRenderer(createSSRApp, options);
-  async function renderToString$1(input, context) {
-    const html = await renderToString(input, context);
-    if (process.env.NUXT_VITE_NODE_OPTIONS) {
-      renderer.rendererContext.updateManifest(await getClientManifest());
-    }
-    return APP_ROOT_OPEN_TAG + html + APP_ROOT_CLOSE_TAG;
-  }
-  return renderer;
-});
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   const spaTemplate = await Promise.resolve().then(function () { return _virtual__spaTemplate; }).then((r) => r.template).catch(() => "").then((r) => {
@@ -1884,7 +1854,7 @@ const renderer = defineRenderHandler(async (event) => {
     url,
     event,
     runtimeConfig: useRuntimeConfig(event),
-    noSSR: event.context.nuxt?.noSSR || routeOptions.ssr === false && !isRenderingIsland || (false),
+    noSSR: !!true,
     head,
     error: !!ssrError,
     nuxt: void 0,
@@ -1894,7 +1864,7 @@ const renderer = defineRenderHandler(async (event) => {
     modules: /* @__PURE__ */ new Set(),
     islandContext
   };
-  const renderer = ssrContext.noSSR ? await getSPARenderer() : await getSSRRenderer();
+  const renderer = await getSPARenderer() ;
   const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
     if (ssrContext._renderResponse && error.message === "skipping render") {
       return {};
@@ -2083,7 +2053,7 @@ function renderPayloadJsonScript(opts) {
     "type": "application/json",
     "innerHTML": contents,
     "data-nuxt-data": appId,
-    "data-ssr": !(opts.ssrContext.noSSR)
+    "data-ssr": !(true)
   };
   {
     payload.id = "__NUXT_DATA__";

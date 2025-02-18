@@ -41,6 +41,8 @@ declare global {
   const h: typeof import('../../node_modules/vue')['h']
   const hasInjectionContext: typeof import('../../node_modules/vue')['hasInjectionContext']
   const initMarqueeScroll: typeof import('../../utils/marqueeScroll')['initMarqueeScroll']
+  const initSpanLinesAnimation: typeof import('../../animation/trickWordAnimation')['initSpanLinesAnimation']
+  const initTricksWords: typeof import('../../animation/trickWordAnimation')['initTricksWords']
   const inject: typeof import('../../node_modules/vue')['inject']
   const injectHead: typeof import('../../node_modules/@unhead/vue')['injectHead']
   const isNuxtError: typeof import('../../node_modules/nuxt/dist/app/composables/error')['isNuxtError']
@@ -99,6 +101,7 @@ declare global {
   const showError: typeof import('../../node_modules/nuxt/dist/app/composables/error')['showError']
   const slidOverInjectionKey: typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/useSlideover')['slidOverInjectionKey']
   const storeToRefs: typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['storeToRefs']
+  const titleAnimation: typeof import('../../animation/titleAnimation')['titleAnimation']
   const toRaw: typeof import('../../node_modules/vue')['toRaw']
   const toRef: typeof import('../../node_modules/vue')['toRef']
   const toRefs: typeof import('../../node_modules/vue')['toRefs']
@@ -262,6 +265,8 @@ declare module 'vue' {
     readonly h: UnwrapRef<typeof import('../../node_modules/vue')['h']>
     readonly hasInjectionContext: UnwrapRef<typeof import('../../node_modules/vue')['hasInjectionContext']>
     readonly initMarqueeScroll: UnwrapRef<typeof import('../../utils/marqueeScroll')['initMarqueeScroll']>
+    readonly initSpanLinesAnimation: UnwrapRef<typeof import('../../animation/trickWordAnimation')['initSpanLinesAnimation']>
+    readonly initTricksWords: UnwrapRef<typeof import('../../animation/trickWordAnimation')['initTricksWords']>
     readonly inject: UnwrapRef<typeof import('../../node_modules/vue')['inject']>
     readonly injectHead: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['injectHead']>
     readonly isNuxtError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['isNuxtError']>
@@ -320,6 +325,7 @@ declare module 'vue' {
     readonly showError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['showError']>
     readonly slidOverInjectionKey: UnwrapRef<typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/useSlideover')['slidOverInjectionKey']>
     readonly storeToRefs: UnwrapRef<typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['storeToRefs']>
+    readonly titleAnimation: UnwrapRef<typeof import('../../animation/titleAnimation')['titleAnimation']>
     readonly toRaw: UnwrapRef<typeof import('../../node_modules/vue')['toRaw']>
     readonly toRef: UnwrapRef<typeof import('../../node_modules/vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('../../node_modules/vue')['toRefs']>

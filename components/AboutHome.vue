@@ -1,8 +1,9 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, nextTick } from 'vue'
 import { gsap } from 'gsap'
 import { useI18n } from 'vue-i18n'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { initTricksWords, initSpanLinesAnimation } from '@/animation/trickWordAnimation'
 
 const { t } = useI18n()
 
@@ -11,64 +12,18 @@ if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
 
-function initTricksWords() {
-  try {
-    const spanElements = document.querySelectorAll('.about__text .span-lines')
-    if (!spanElements.length) return
-
-    spanElements.forEach(wordWrap => {
-      if (!wordWrap?.innerHTML) return
-
-      const words = wordWrap.textContent.split(' ')
-      const wrappedWords = words.map(word => 
-        `<span class="span-line"><span class="span-line-inner">${word}</span></span>`
-      ).join(' ')
-      
-      wordWrap.innerHTML = wrappedWords
-    })
-  } catch (error) {
-    console.warn('Error in initTricksWords:', error)
-  }
-}
-
-function initSpanLinesAnimation() {
-  try {
-    if (document.querySelector('.span-lines.animate')) {
-      document.querySelectorAll('.span-lines.animate').forEach(function(triggerElement) {
-        let targetElements = triggerElement.querySelectorAll('.span-line-inner')
-
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: triggerElement,
-            toggleActions: 'play none none reset',
-            start: "0% 100%",
-            end: "100% 0%"
-          }
-        })
-
-        if (targetElements.length > 0) {
-          tl.from(targetElements, {
-            y: "100%",
-            stagger: 0.01,
-            ease: "power3.out",
-            duration: 1
-          })
-        }
-      })
-    }
-  } catch (error) {
-    console.warn('Error in initSpanLinesAnimation:', error)
-  }
-}
-
-onMounted(() => {
+onMounted(async () => {
   if (!process.client) return
+
+  // Ждем следующего тика для уверенности, что DOM обновился
+  await nextTick()
   
-  // Даем время на рендеринг
-  window.addEventListener('load', () => {
+  // Проверяем наличие элементов перед инициализацией
+  const spanElements = document.querySelectorAll('.span-lines')
+  if (spanElements.length > 0) {
     initTricksWords()
     initSpanLinesAnimation()
-  })
+  }
 })
 </script>
 

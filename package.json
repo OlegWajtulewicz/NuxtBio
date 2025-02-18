@@ -6,7 +6,8 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preview": "nuxt preview"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "gsap": "^3.12.7",
     "jquery": "^3.7.1",
     "nuxt": "^3.15.2",
+    "nuxt-locomotive-scroll": "^0.0.1",
     "pinia": "^2.3.1",
     "three": "^0.172.0"
   },

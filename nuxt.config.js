@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+   enabled: true,
+
+   timeline: {
+    enabled: true,
+   },
+  },
   compatibilityDate: "2024-12-18",
   pages: true,
   modules: [
@@ -17,8 +23,12 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root'
+      cookieKey: 'i18n_locale',
+      redirectOn: 'no_prefix',
+      alwaysRedirect: false,
+      cookieDomain: null,
+      cookieSecure: false
+     // cookieKey: 'i18n_redirected',
     }
   },
   plugins: [
@@ -73,6 +83,8 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
+    baseURL: '/nuxtbio/',
+    buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
         lang: 'en'
@@ -106,26 +118,47 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
         { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' },
-        { rel: 'shortcut icon', href: '/favicon/favicon.ico' }
+        { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
       ],
       style: [
        // { children: 'body{opacity: 0;}' }
       ],
       script: [
         {
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+          body: true,
+          defer: false // убираем defer
         },
         {
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
+          body: true,
+          defer: false // убираем defer
         }
       ]
     },
     image: {
       quality: 80,
-      format: ['webp']
+      format: ['webp'],
+      dir: '/img'
     }
   },
   imports: {
-		dirs: ['stores', 'utils'],
-	},
+        dirs: ['stores', 'utils', 'animation'],
+  },
+  experimental: {
+    payloadExtraction: true,
+    renderJsonPayloads: true,
+  },
+  routeRules: {
+    // Кэширование статических страниц
+    '/**': { swr: 3600 },
+    // Кэширование API
+    '/api/**': { swr: 600 },
+  },
+  ssr: false,
+  nitro: {
+    preset: 'netlify'
+  },
 })

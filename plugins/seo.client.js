@@ -1,4 +1,6 @@
 export default defineNuxtPlugin((nuxtApp) => {
+  let prevTitle = '';
+  
   // Функция обновления SEO-метаданных
   const updateSEO = () => {
     if (!process.client) return;
@@ -9,22 +11,27 @@ export default defineNuxtPlugin((nuxtApp) => {
     // Получаем название текущей страницы
     const pageName = route.path.split('/').filter(Boolean).pop() || 'home';
     
-    // Используем существующие ключи для заголовка
-    document.title = `${nuxtApp.$i18n.t(`pages.${pageName}.title`)} | Portfolio`;
+    if (general.isTransitionStart) {
+      // Сохраняем текущий заголовок
+      prevTitle = document.title;
+    } else {
+      // Используем существующие ключи для заголовка
+      document.title = nuxtApp.$i18n.t(`pages.${pageName}.title`);
 
-    // Обновляем мета-теги
-    const metaTags = document.getElementsByTagName('meta');
-    
-    // Обновляем og:title
-    const ogTitle = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:title');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', document.title);
-    }
+      // Обновляем мета-теги
+      const metaTags = document.getElementsByTagName('meta');
+      
+      // Обновляем og:title
+      const ogTitle = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:title');
+      if (ogTitle) {
+        ogTitle.setAttribute('content', document.title);
+      }
 
-    // Обновляем twitter:title
-    const twitterTitle = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'twitter:title');
-    if (twitterTitle) {
-      twitterTitle.setAttribute('content', document.title);
+      // Обновляем twitter:title
+      const twitterTitle = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'twitter:title');
+      if (twitterTitle) {
+        twitterTitle.setAttribute('content', document.title);
+      }
     }
   };
 

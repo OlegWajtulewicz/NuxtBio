@@ -1,8 +1,9 @@
 <script setup>
-import { onMounted, watch } from 'vue'
+import { onMounted, watch, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
+const isClient = ref(false)
 
 function hideBanner() {
   document.getElementById('cookie-consent-banner').classList.remove('visible');
@@ -92,46 +93,49 @@ function setConsent(consent) {
 
 // Обновляем обработчики при изменении языка
 watch(locale, () => {
-  // Небольшая задержка, чтобы DOM успел обновиться
-  setTimeout(() => {
-    setupEventListeners()
-  }, 100)
+  if (isClient.value) {
+    // Небольшая задержка, чтобы DOM успел обновиться
+    setTimeout(() => {
+      setupEventListeners()
+    }, 100)
+  }
 })
 
 onMounted(() => {
+  isClient.value = true
   checkConsentState();
   setupEventListeners();
 });
 
-
-
 </script>
 
 <template>
-  <div>
-    <div id="cookie-consent-banner" class="cookie-consent-banner">
-      <div class="cookie-consent-banner__container">
-        <h3>{{ $t('cookies.title') }}</h3>
-        <p>{{ $t('cookies.description') }}<strong><a href=""> cookies.</a></strong></p>
-        <div class="cookie-consent-banner__buttons">
-          <button id="btn-accept-all" class="cookie-consent-button btn-success">{{ $t('cookies.accept_all') }}</button>
-          <button id="btn-accept-some" class="cookie-consent-button btn-outline">{{ $t('cookies.save') }}</button>
-          <button id="btn-reject-all" class="cookie-consent-button btn-grayscale">{{ $t('cookies.reject') }}</button>
-        </div>
-        
-        <div class="cookie-consent-options">
-          <label><input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>{{ $t('cookies.necessary') }}</label>
-          <label><input id="consent-analytics" type="checkbox" value="Analytics" checked>{{ $t('cookies.analytics') }}</label>
-          <label><input id="consent-preferences" type="checkbox" value="Preferences" checked>{{ $t('cookies.preferences') }}</label>
-          <label><input id="consent-marketing" type="checkbox" value="Marketing">{{ $t('cookies.marketing') }}</label>
+  <ClientOnly>
+    <div>
+      <div id="cookie-consent-banner" class="cookie-consent-banner">
+        <div class="cookie-consent-banner__container">
+          <h3>{{ $t('cookies.title') }}</h3>
+          <p>{{ $t('cookies.description') }}<strong><a href=""> cookies.</a></strong></p>
+          <div class="cookie-consent-banner__buttons">
+            <button id="btn-accept-all" class="cookie-consent-button btn-success">{{ $t('cookies.accept_all') }}</button>
+            <button id="btn-accept-some" class="cookie-consent-button btn-outline">{{ $t('cookies.save') }}</button>
+            <button id="btn-reject-all" class="cookie-consent-button btn-grayscale">{{ $t('cookies.reject') }}</button>
+          </div>
+          
+          <div class="cookie-consent-options">
+            <label><input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>{{ $t('cookies.necessary') }}</label>
+            <label><input id="consent-analytics" type="checkbox" value="Analytics" checked>{{ $t('cookies.analytics') }}</label>
+            <label><input id="consent-preferences" type="checkbox" value="Preferences" checked>{{ $t('cookies.preferences') }}</label>
+            <label><input id="consent-marketing" type="checkbox" value="Marketing">{{ $t('cookies.marketing') }}</label>
+          </div>
         </div>
       </div>
+      <!-- Добавляем кнопку для открытия настроек -->
+      <button id="btn-open-consent" style="display: none;">
+        {{ $t('cookies.settings') }}
+      </button>
     </div>
-    <!-- Добавляем кнопку для открытия настроек -->
-    <button id="btn-open-consent" style="display: none;">
-      {{ $t('cookies.settings') }}
-    </button>
-  </div>
+  </ClientOnly>
 </template>
 
 <style scoped lang="scss">
