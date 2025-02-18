@@ -57,6 +57,16 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   vite: {
+    build: {
+      assetsDir: '_nuxt', // указываем директорию для ассетов
+      rollupOptions: {
+        output: {
+          assetFileNames: '_nuxt/[name].[hash][extname]',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
+        }
+      }
+    },
     css: {
       preprocessorOptions: {
         scss: {
