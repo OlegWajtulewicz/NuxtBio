@@ -83,7 +83,8 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-  //  baseURL: '/nuxtbio/',
+    // baseURL: '/nuxtbio/', // для dev
+    baseURL: '/', // для netlify
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
@@ -139,17 +140,29 @@ export default defineNuxtConfig({
       ]
     },
     image: {
-      quality: 80,
-      format: ['webp'],
-      dir: '/img'
+    //  quality: 80,
+     // format: ['webp'],
+     // dir: '/img'
+
+      dir: 'public/img',
+      // Netlify adapter
+      provider: 'netlify',
+      screens: {
+        xs: 320,
+        sm: 640,
+        md: 768,
+        lg: 1024,
+        xl: 1280,
+        xxl: 1536
+      }
     }
   },
   imports: {
         dirs: ['stores', 'utils', 'animation'],
   },
   experimental: {
-    payloadExtraction: true,
-    renderJsonPayloads: true,
+    payloadExtraction: false,
+    renderJsonPayloads: false,
   },
   routeRules: {
     // Кэширование статических страниц
@@ -159,10 +172,17 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'netlify',
+  //  preset: 'node-server', // для dev
+     preset: 'netlify', // для netlify
     prerender: {
       crawlLinks: true,
-      routes: ['/']
+    //  routes: ['/'],  // для dev
+      routes: [
+        '/',
+        '/work', // добавляем маршруты
+        '/about',
+        '/contact'
+      ]
     }
   },
 })

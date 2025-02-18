@@ -769,7 +769,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "bb306ac6-90e9-475d-94e2-3455f4ade4db",
+    "buildId": "0a3eedd0-96c4-40e8-b68d-512f5489597d",
     "buildAssetsDir": "_nuxt",
     "cdnURL": ""
   },
@@ -1593,5 +1593,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, getRouteRules as g, joinURL as j, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u, withoutTrailingSlash as w };
+export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, getRouteRules as g, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u };
 //# sourceMappingURL=nitro.mjs.map
