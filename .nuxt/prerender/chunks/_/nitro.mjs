@@ -769,7 +769,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/nuxtbio/",
-    "buildId": "1a2dd9d8-84e6-4c71-8355-86879ec8b4e0",
+    "buildId": "88a4b046-58ac-4abf-9ee9-106bdb09dade",
     "buildAssetsDir": "_nuxt",
     "cdnURL": ""
   },
@@ -780,18 +780,8 @@ const _inlineRuntimeConfig = {
         "cache": false
       },
       "/**": {
-        "swr": 3600,
-        "cache": {
-          "swr": true,
-          "maxAge": 3600
-        }
-      },
-      "/api/**": {
-        "swr": 600,
-        "cache": {
-          "swr": true,
-          "maxAge": 600
-        }
+        "swr": false,
+        "static": true
       },
       "/_nuxt/builds/meta/**": {
         "headers": {
@@ -1458,11 +1448,6 @@ const handlers = [
   { route: '', handler: _gLAmmR, lazy: false, middleware: true, method: undefined },
   { route: '/api/_nuxt_icon/:collection', handler: _R34QAG, lazy: false, middleware: false, method: undefined },
   { route: '/_ipx/**', handler: _hOpbCd, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/api/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/_nuxt/builds/meta/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/_nuxt/builds/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/_nuxt/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined }
 ];
 

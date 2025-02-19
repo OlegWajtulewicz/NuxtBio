@@ -84,7 +84,9 @@ export default defineNuxtConfig({
     transpile: ['gsap'],
     optimization: {
       splitChunks: {
-        chunks: 'all'
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: undefined
       }
     }
   },
@@ -184,17 +186,20 @@ export default defineNuxtConfig({
     renderJsonPayloads: false,
   },
   routeRules: {
-    // Кэширование статических страниц
-    '/**': { swr: 3600 },
-    // Кэширование API
-    '/api/**': { swr: 600 },
+    '/**': { 
+        swr: false,
+        static: true 
+      }
+  },
+  generate: {
+    fallback: true
   },
   ssr: false,
   nitro: {
    // preset: 'node-server', // для dev
       preset: 'netlify', // для netlify
       prerender: {
-        crawlLinks: true,
+      crawlLinks: true,
        // routes: ['/'],  // для dev
        routes: [
         '/',
@@ -202,7 +207,8 @@ export default defineNuxtConfig({
         '/about',
         '/cookie',
         '/privacy'
-      ]
+      ],
+      failOnError: false,
         
     },
     

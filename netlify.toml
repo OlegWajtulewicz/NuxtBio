@@ -6,8 +6,14 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
+
+[build.environment]
+  NODE_VERSION = "18"
 
 [[headers]]
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
