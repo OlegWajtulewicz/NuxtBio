@@ -768,8 +768,8 @@ function _expandFromEnv(value) {
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/nuxtbio",
-    "buildId": "d0b12eaa-2604-4b8d-a8bc-7f63a5ece8d1",
+    "baseURL": "/",
+    "buildId": "6aba34c5-a6b3-4441-bfc4-f0ba887bd1bc",
     "buildAssetsDir": "_nuxt",
     "cdnURL": ""
   },
@@ -780,7 +780,15 @@ const _inlineRuntimeConfig = {
         "cache": false
       },
       "/**": {
-        "static": true
+        "cors": true,
+        "headers": {
+          "access-control-allow-origin": "*",
+          "access-control-allow-methods": "*",
+          "access-control-allow-headers": "*",
+          "access-control-max-age": "0",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=31536000"
+        }
       },
       "/_nuxt/builds/meta/**": {
         "headers": {
