@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   vite: {
-    base: '/nuxtbio/',
+    base: '/',
     build: {
       assetsDir: '_nuxt',
       rollupOptions: {
@@ -96,7 +96,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/nuxtbio/',
+    baseURL: '/',
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
