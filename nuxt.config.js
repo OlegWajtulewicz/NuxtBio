@@ -58,12 +58,12 @@ export default defineNuxtConfig({
   ],
   vite: {
     build: {
-      assetsDir: '_nuxt', // указываем директорию для ассетов
+      assetsDir: '_nuxt',
       rollupOptions: {
         output: {
-          assetFileNames: '_nuxt/[name].[hash][extname]',
-          chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js'
+          assetFileNames: '[name].[hash][extname]',
+          chunkFileNames: '[name].[hash].js',
+          entryFileNames: '[name].[hash].js'
         }
       }
     },
@@ -95,8 +95,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-     baseURL: '/nuxtbio/', // для dev
-     // baseURL: '/', // для netlify
+    baseURL: '/',
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
@@ -187,30 +186,25 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/**': { 
-        swr: false,
-        static: true 
-      }
+      static: true 
+    }
   },
   generate: {
     fallback: true
   },
   ssr: false,
   nitro: {
-   // preset: 'node-server', // для dev
-      preset: 'netlify', // для netlify
-      prerender: {
+    preset: 'netlify',
+    prerender: {
       crawlLinks: true,
-       // routes: ['/'],  // для dev
-       routes: [
+      routes: [
         '/',
         '/work',
         '/about',
         '/cookie',
         '/privacy'
       ],
-      failOnError: false,
-        
-    },
-    
+      failOnError: false
+    }
   },
 })
