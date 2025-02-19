@@ -94,7 +94,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
      baseURL: '/nuxtbio/', // для dev
-   // baseURL: '/', // для netlify
+    // baseURL: '/', // для netlify
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
@@ -191,17 +191,17 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'node-server', // для dev
-   //  preset: 'netlify', // для netlify
+   // preset: 'node-server', // для dev
+     preset: 'netlify', // для netlify
     prerender: {
       crawlLinks: true,
-      routes: ['/'],  // для dev
-   //  routes: [
-   //   '/',
-   //   '/work', // добавляем маршруты
-   //   '/about',
-   //   '/contact'
-   // ]
+    //  routes: ['/'],  // для dev
+      routes: [
+        '/',
+        '/work', // добавляем маршруты
+        '/about',
+        '/contact'
+      ]
     }
   },
 })
