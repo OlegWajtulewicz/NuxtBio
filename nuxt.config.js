@@ -195,7 +195,14 @@ export default defineNuxtConfig({
       preset: 'netlify', // для netlify
       prerender: {
         crawlLinks: true,
-        routes: ['/'],  // для dev
+       // routes: ['/'],  // для dev
+       routes: [
+        '/',
+        '/work',
+        '/about',
+        '/cookie',
+        '/privacy'
+      ]
         
     },
     
