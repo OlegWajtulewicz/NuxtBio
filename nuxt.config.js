@@ -57,16 +57,16 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   vite: {
-  //  build: {
-  //    assetsDir: '_nuxt', // указываем директорию для ассетов
-  //    rollupOptions: {
- //       output: {
- //         assetFileNames: '_nuxt/[name].[hash][extname]',
- //         chunkFileNames: '_nuxt/[name].[hash].js',
- //         entryFileNames: '_nuxt/[name].[hash].js'
- //       }
- //     }
-  //  },
+    build: {
+      assetsDir: '_nuxt', // указываем директорию для ассетов
+      rollupOptions: {
+        output: {
+          assetFileNames: '_nuxt/[name].[hash][extname]',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
+        }
+      }
+    },
     css: {
       preprocessorOptions: {
         scss: {
@@ -94,7 +94,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
      baseURL: '/nuxtbio/', // для dev
-    // baseURL: '/', // для netlify
+     // baseURL: '/', // для netlify
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
@@ -164,7 +164,7 @@ export default defineNuxtConfig({
       },
       quality: 80,
       // Настройки для статической генерации
-      staticFilename: '[publicPath]/[name]-[hash][ext]',
+      staticFilename: 'img/[name]-[hash][ext]',
       presets: {
         cover: {
           modifiers: {
@@ -192,16 +192,18 @@ export default defineNuxtConfig({
   ssr: false,
   nitro: {
    // preset: 'node-server', // для dev
-     preset: 'netlify', // для netlify
-    prerender: {
+      preset: 'netlify', // для netlify
+      prerender: {
       crawlLinks: true,
     //  routes: ['/'],  // для dev
       routes: [
         '/',
         '/work', // добавляем маршруты
         '/about',
-        '/contact'
       ]
+    },
+    output: {
+      publicDir: 'dist'
     }
   },
 })
