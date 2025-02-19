@@ -194,16 +194,10 @@ export default defineNuxtConfig({
    // preset: 'node-server', // для dev
       preset: 'netlify', // для netlify
       prerender: {
-      crawlLinks: true,
-    //  routes: ['/'],  // для dev
-      routes: [
-        '/',
-        '/work', // добавляем маршруты
-        '/about',
-      ]
+        crawlLinks: true,
+        routes: ['/'],  // для dev
+        
     },
-    output: {
-      publicDir: 'dist'
-    }
+    
   },
 })
