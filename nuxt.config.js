@@ -85,9 +85,7 @@ export default defineNuxtConfig({
     transpile: ['gsap'],
     optimization: {
       splitChunks: {
-        chunks: 'all',
-        automaticNameDelimiter: '.',
-        name: undefined
+        chunks: 'all'
       }
     }
   },
