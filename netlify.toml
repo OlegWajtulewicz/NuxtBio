@@ -3,8 +3,8 @@
   publish = "dist"
   
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/nuxtbio/*"
+  to = "/nuxtbio/index.html"
   status = 200
   force = true
 
