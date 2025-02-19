@@ -59,12 +59,12 @@ export default defineNuxtConfig({
   vite: {
     base: '/',
     build: {
-      assetsDir: '',
+      assetsDir: '_nuxt',
       rollupOptions: {
         output: {
-          assetFileNames: '[name].[hash][extname]',
-          chunkFileNames: '[name].[hash].js',
-          entryFileNames: '[name].[hash].js'
+          assetFileNames: '_nuxt/[name].[hash][extname]',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
         }
       }
     },
@@ -96,8 +96,8 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/nuxtbio',
-    buildAssetsDir: '',
+    baseURL: '/',
+    buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
         lang: 'en'
