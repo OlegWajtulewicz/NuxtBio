@@ -10,7 +10,7 @@ import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
 
 
 onMounted(() => {
-    useSmoothScroll()
+   // useSmoothScroll()
 })
 
 watch(() =>

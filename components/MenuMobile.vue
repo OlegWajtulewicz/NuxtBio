@@ -49,6 +49,16 @@ onUnmounted(() => {
   document.removeEventListener('keydown', handleEscape)
   document.removeEventListener('click', handleMenuClick)
 })
+
+const scrollToFooter = () => {
+  const footer = document.querySelector('#footer')
+  if (footer) {
+    footer.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
 </script>
 
 <template>
@@ -91,7 +101,7 @@ onUnmounted(() => {
                     </li>
                     <li class="menu__item" data-link-update>
                         <a 
-                            @click.prevent="general.scrollLenis?.scrollTo('#footer')" 
+                            @click.prevent="scrollToFooter"
                             href="#footer" 
                             data-barba-prevent="self" 
                             class="menu__link magnetic" 

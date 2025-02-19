@@ -57,16 +57,16 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   vite: {
-    build: {
-      assetsDir: '_nuxt', // указываем директорию для ассетов
-      rollupOptions: {
-        output: {
-          assetFileNames: '_nuxt/[name].[hash][extname]',
-          chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js'
-        }
-      }
-    },
+  //  build: {
+  //    assetsDir: '_nuxt', // указываем директорию для ассетов
+  //    rollupOptions: {
+ //       output: {
+ //         assetFileNames: '_nuxt/[name].[hash][extname]',
+ //         chunkFileNames: '_nuxt/[name].[hash].js',
+ //         entryFileNames: '_nuxt/[name].[hash].js'
+ //       }
+ //     }
+  //  },
     css: {
       preprocessorOptions: {
         scss: {
@@ -93,8 +93,8 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    // baseURL: '/nuxtbio/', // для dev
-    baseURL: '/', // для netlify
+     baseURL: '/nuxtbio/', // для dev
+   // baseURL: '/', // для netlify
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
@@ -150,13 +150,10 @@ export default defineNuxtConfig({
       ]
     },
     image: {
-    //  quality: 80,
-     // format: ['webp'],
-     // dir: '/img'
-
-      dir: 'public/img',
-      // Netlify adapter
-      provider: 'netlify',
+      provider: 'ipx', // используем стандартный провайдер
+      dir: 'public', // указываем корневую директорию
+      domains: ['nuxtbio.netlify.app'], // разрешаем домен
+      format: ['webp'], // поддерживаемые форматы
       screens: {
         xs: 320,
         sm: 640,
@@ -164,6 +161,18 @@ export default defineNuxtConfig({
         lg: 1024,
         xl: 1280,
         xxl: 1536
+      },
+      quality: 80,
+      // Настройки для статической генерации
+      staticFilename: '[publicPath]/[name]-[hash][ext]',
+      presets: {
+        cover: {
+          modifiers: {
+            fit: 'cover',
+            format: 'webp'
+           
+          }
+        }
       }
     }
   },
@@ -182,17 +191,17 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-  //  preset: 'node-server', // для dev
-     preset: 'netlify', // для netlify
+    preset: 'node-server', // для dev
+   //  preset: 'netlify', // для netlify
     prerender: {
       crawlLinks: true,
-    //  routes: ['/'],  // для dev
-      routes: [
-        '/',
-        '/work', // добавляем маршруты
-        '/about',
-        '/contact'
-      ]
+      routes: ['/'],  // для dev
+   //  routes: [
+   //   '/',
+   //   '/work', // добавляем маршруты
+   //   '/about',
+   //   '/contact'
+   // ]
     }
   },
 })

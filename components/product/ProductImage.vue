@@ -14,17 +14,21 @@ defineProps({
 <template>
   <div class="product__image-wrap" data-scroll-section>
     <div class="product__image" >
-      <img 
-        :src="image" 
-        data-scroll 
-        data-scroll-speed="-1" 
-        data-scroll-position="top" 
-        class="ibg" 
+      <NuxtImg 
+        :src="image"
         :alt="title"
+        class="ibg"
         loading="lazy"
         decoding="async"
         fetchpriority="high"
+        format="webp"
+        fit="cover"
+        placeholder
       />
     </div>
   </div>
 </template> 
+<style scoped lang="scss">
+@use '@/assets/styles/components/product.scss';
+
+</style> 

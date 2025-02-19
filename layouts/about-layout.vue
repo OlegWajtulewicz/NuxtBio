@@ -12,7 +12,7 @@ import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
 const route = useRoute()
 
 onMounted(() => {
-    useSmoothScroll()
+  //  useSmoothScroll()
 })
 
 watch(() =>

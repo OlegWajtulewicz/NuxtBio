@@ -12,7 +12,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 	from.meta.pageTransition.onLeave = (el, done) => {
 		general.isTransitionFinish = false
 		general.isTransitionStart = true
-		general.scrollLenis.stop()
+	//	general.scrollLenis.stop()
 
 		let tl = gsap.timeline({
 			onComplete() {
@@ -66,7 +66,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 				})
 				general.isTransitionFinish = true
 				general.isTransitionStart = false
-				general.scrollLenis.start()
+			//	general.scrollLenis.start()
 				nuxtApp.$mouseCursor?.initStickyCursorWithDelay()
 				done()
 			}

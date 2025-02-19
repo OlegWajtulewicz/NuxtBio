@@ -1,6 +1,16 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 const { t, locale } = useI18n()
+
+const scrollToFooter = () => {
+  const footer = document.querySelector('#footer')
+  if (footer) {
+    footer.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
 </script>
 
 <template>
@@ -30,7 +40,7 @@ const { t, locale } = useI18n()
                     </li>
                     <li class="menu-top-header__item" data-link-update>
                         <a 
-                            @click.prevent="general.scrollLenis?.scrollTo('#footer')" 
+                            @click.prevent="scrollToFooter"
                             href="#footer" 
                             class="menu-top-header__link magnetic" 
                             data-strength="20" 
