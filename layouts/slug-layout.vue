@@ -17,16 +17,10 @@ import MenuMobile from '@/components/MenuMobile.vue'
 import FooterWork from '@/components/FooterWork.vue'
 import Cookies from '~/components/Cookies.vue'
 import ThePreloader from '@/components/ThePreloader.vue'
-
-import { onMounted, watch, nextTick } from 'vue'
-import { useRoute } from 'vue-router'
+import { general } from '@/stores'
+import { watch, nextTick } from 'vue'
 import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
 
-const route = useRoute()
-
-onMounted(() => {
-   // useSmoothScroll()
-})
 
 watch(() =>
     [general.isTransitionStart, general.isPreloaderVisible],

@@ -5,15 +5,10 @@ import FooterMain from '@/components/FooterMain.vue'
 import Cookies from '~/components/Cookies.vue'
 import ThePreloader from '@/components/ThePreloader.vue'
 
-import { onMounted, watch, nextTick } from 'vue'
-import { useRoute } from 'vue-router'
+import { watch, nextTick } from 'vue'
 import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
+import { general } from '@/stores'
 
-const route = useRoute()
-
-onMounted(() => {
-  //  useSmoothScroll()
-})
 
 watch(() =>
     [general.isTransitionStart, general.isPreloaderVisible],

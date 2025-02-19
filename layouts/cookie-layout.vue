@@ -17,13 +17,9 @@ import MenuMobile from '@/components/MenuMobile.vue'
 import FooterMain from '@/components/FooterMain.vue'
 import Cookies from '~/components/Cookies.vue'
 import ThePreloader from '@/components/ThePreloader.vue'
-
-import { onMounted, watch, nextTick } from 'vue'
-import { useRoute } from 'vue-router'
+import { general } from '@/stores'
+import { watch, nextTick } from 'vue'
 import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
-
-const route = useRoute()
-
 
 watch(() =>
     [general.isTransitionStart, general.isPreloaderVisible],

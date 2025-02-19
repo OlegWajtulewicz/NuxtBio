@@ -4,14 +4,10 @@ import MenuMobile from '@/components/MenuMobile.vue'
 import FooterMain from '@/components/FooterMain.vue'
 import Cookies from '~/components/Cookies.vue'
 import ThePreloader from '@/components/ThePreloader.vue'
-
+import { general } from '@/stores'
 import { onMounted, watch, nextTick } from 'vue'
 import { firstScreenAnimation } from '@/composables/useFirstScreenAnimation'
 
-
-onMounted(() => {
-   // useSmoothScroll()
-})
 
 watch(() =>
     [general.isTransitionStart, general.isPreloaderVisible],
@@ -23,7 +19,6 @@ watch(() =>
         }
     }
 )
-
 </script>
 
 <template>

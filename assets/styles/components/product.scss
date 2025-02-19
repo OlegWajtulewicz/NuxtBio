@@ -76,14 +76,11 @@
     }
     &__image {
         position: absolute;
-    //    top: -10vw;
-      //  top: -2.5vw;
+    
         left: 0;
-      //  height: calc(100% + 10vw);
+      
         width: 100%;
-        @media (max-width: toEm(1024)){
-     //         top: -6.5vw;
-        }
+     
     }
 }
 .product-wrap {
