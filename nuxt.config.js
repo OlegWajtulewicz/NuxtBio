@@ -62,9 +62,9 @@ export default defineNuxtConfig({
       assetsDir: '_nuxt',
       rollupOptions: {
         output: {
-          assetFileNames: '[name].[hash][extname]',
-          chunkFileNames: '[name].[hash].js',
-          entryFileNames: '[name].[hash].js'
+          assetFileNames: '_nuxt/[name].[hash][extname]',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
         }
       }
     },
@@ -96,7 +96,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/',
+    baseURL: '/nuxtbio/',
     buildAssetsDir: '_nuxt',
     head: {
       htmlAttrs: {
@@ -192,7 +192,7 @@ export default defineNuxtConfig({
     }
   },
   generate: {
-    fallback: '404.html'
+    fallback: true
   },
   ssr: false,
   nitro: {
@@ -205,17 +205,7 @@ export default defineNuxtConfig({
         '/about',
         '/cookie',
         '/privacy'
-      ],
-      failOnError: false
-    },
-    routeRules: {
-      '/**': {
-        cors: true,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Cache-Control': 'public, max-age=31536000'
-        }
-      }
+      ]
     }
   },
 })
