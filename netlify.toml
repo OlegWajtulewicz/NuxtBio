@@ -4,43 +4,49 @@
   environment = { NODE_VERSION = "18" }
 
 [[headers]]
-  for = "/_nuxt/*.js"
+  for = "/_nuxt/*"
     [headers.values]
     Content-Type = "application/javascript"
-    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
   for = "/_nuxt/*.css"
     [headers.values]
     Content-Type = "text/css"
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
   for = "/_nuxt/*.woff2"
     [headers.values]
     Content-Type = "font/woff2"
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
   for = "/_nuxt/*.woff"
     [headers.values]
     Content-Type = "font/woff"
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
   for = "/_nuxt/*.svg"
     [headers.values]
     Content-Type = "image/svg+xml"
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
   for = "/_nuxt/*.png"
     [headers.values]
     Content-Type = "image/png"
+    Cache-Control = "public, max-age=31536000"
 
-# Сначала обрабатываем статические файлы
+# Rewrite для статических файлов
 [[redirects]]
   from = "/_nuxt/*"
   to = "/_nuxt/:splat"
+  force = true
   status = 200
 
-# Потом все остальное на index.html
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
