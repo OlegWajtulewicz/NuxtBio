@@ -3,19 +3,8 @@
   publish = "dist"
   environment = { NODE_VERSION = "18" }
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [[headers]]
   for = "/_nuxt/*.js"
-    [headers.values]
-    Content-Type = "application/javascript"
-    X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "/*.js"
     [headers.values]
     Content-Type = "application/javascript"
     X-Content-Type-Options = "nosniff"
@@ -26,17 +15,7 @@
     Content-Type = "text/css"
 
 [[headers]]
-  for = "/*.css"
-    [headers.values]
-    Content-Type = "text/css"
-
-[[headers]]
   for = "/_nuxt/*.woff2"
-    [headers.values]
-    Content-Type = "font/woff2"
-
-[[headers]]
-  for = "/*.woff2"
     [headers.values]
     Content-Type = "font/woff2"
 
@@ -46,16 +25,23 @@
     Content-Type = "font/woff"
 
 [[headers]]
-  for = "/*.woff"
-    [headers.values]
-    Content-Type = "font/woff"
-
-[[headers]]
   for = "/_nuxt/*.svg"
     [headers.values]
     Content-Type = "image/svg+xml"
 
 [[headers]]
-  for = "/*.svg"
+  for = "/_nuxt/*.png"
     [headers.values]
-    Content-Type = "image/svg+xml"
+    Content-Type = "image/png"
+
+# Сначала обрабатываем статические файлы
+[[redirects]]
+  from = "/_nuxt/*"
+  to = "/_nuxt/:splat"
+  status = 200
+
+# Потом все остальное на index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
