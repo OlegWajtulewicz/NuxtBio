@@ -4,9 +4,15 @@
   environment = { NODE_VERSION = "18" }
 
 [[headers]]
-  for = "/_nuxt/*"
+  for = "/_nuxt/*.js"
     [headers.values]
-    Content-Type = "application/javascript"
+    Content-Type = "text/javascript;charset=utf-8"
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/_nuxt/*.mjs"
+    [headers.values]
+    Content-Type = "text/javascript;charset=utf-8"
     Cache-Control = "public, max-age=31536000"
 
 [[headers]]
@@ -43,8 +49,8 @@
 [[redirects]]
   from = "/_nuxt/*"
   to = "/_nuxt/:splat"
-  force = true
   status = 200
+  force = true
 
 # SPA fallback
 [[redirects]]
