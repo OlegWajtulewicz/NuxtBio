@@ -7,6 +7,7 @@
   from = "/nuxtbio/*"
   to = "/nuxtbio/index.html"
   status = 200
+  force = true
 
 [[headers]]
   for = "/*"
@@ -16,18 +17,77 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*"
+  for = "/nuxtbio/_nuxt/*.js"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/javascript; charset=utf-8"
 
 [[headers]]
-  for = "/nuxtbio/*.js"
+  for = "/nuxtbio/_nuxt/*.css"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "text/css; charset=utf-8"
 
 [[headers]]
-  for = "/nuxtbio/*.css"
+  for = "/nuxtbio/_nuxt/*.woff2"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "font/woff2"
+
+[[headers]]
+  for = "/nuxtbio/_nuxt/*.woff"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "font/woff"
+
+[[headers]]
+  for = "/nuxtbio/_nuxt/*.ttf"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "font/ttf"
+
+[[headers]]
+  for = "/nuxtbio/_nuxt/*.eot"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/vnd.ms-fontobject"
+
+[[headers]]
+  for = "/nuxtbio/_nuxt/*.svg"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "image/svg+xml"
+
+[[headers]]
+  for = "/nuxtbio/_nuxt/*.{png,jpg,jpeg,gif,webp}"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/nuxtbio/favicon/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[redirects]]
+  from = "/nuxtbio/_nuxt/*"
+  to = "/nuxtbio/_nuxt/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/nuxtbio/favicon/*"
+  to = "/nuxtbio/favicon/:splat"
+  status = 200
+  force = true
