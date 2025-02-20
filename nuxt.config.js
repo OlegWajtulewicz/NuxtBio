@@ -57,17 +57,6 @@ export default defineNuxtConfig({
     '@/assets/styles/index.scss'
   ],
   vite: {
-    base: '/',
-    build: {
-      assetsDir: '_nuxt',
-      rollupOptions: {
-        output: {
-          assetFileNames: '_nuxt/[name].[hash][extname]',
-          chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js'
-        }
-      }
-    },
     css: {
       preprocessorOptions: {
         scss: {
@@ -139,71 +128,37 @@ export default defineNuxtConfig({
       script: [
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
-          body: false,
+          body: true,
           defer: false // убираем defer
         },
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
-          body: false,
+          body: true,
           defer: false // убираем defer
         }
       ]
     },
     image: {
-      provider: 'ipx', // используем стандартный провайдер
-      dir: 'public', // указываем корневую директорию
-      domains: ['nuxtbio.netlify.app'], // разрешаем домен
-      format: ['webp'], // поддерживаемые форматы
-      screens: {
-        xs: 320,
-        sm: 640,
-        md: 768,
-        lg: 1024,
-        xl: 1280,
-        xxl: 1536
-      },
       quality: 80,
-      // Настройки для статической генерации
-      staticFilename: 'img/[name]-[hash][ext]',
-      presets: {
-        cover: {
-          modifiers: {
-            fit: 'cover',
-            format: 'webp'
-           
-          }
-        }
-      }
+      format: ['webp'],
+      dir: '/img'
     }
   },
   imports: {
         dirs: ['stores', 'utils', 'animation'],
   },
   experimental: {
-    payloadExtraction: false,
-    renderJsonPayloads: false,
-    crossOriginPrefetch: true
+    payloadExtraction: true,
+    renderJsonPayloads: true,
   },
   routeRules: {
-    '/**': { 
-      static: true 
-    }
-  },
-  generate: {
-    fallback: true
+    // Кэширование статических страниц
+    '/**': { swr: 3600 },
+    // Кэширование API
+    '/api/**': { swr: 600 },
   },
   ssr: false,
   nitro: {
-    preset: 'netlify',
-    prerender: {
-      crawlLinks: true,
-      routes: [
-        '/',
-        '/work',
-        '/about',
-        '/cookie',
-        '/privacy'
-      ]
-    }
+    preset: 'netlify'
   },
 })
