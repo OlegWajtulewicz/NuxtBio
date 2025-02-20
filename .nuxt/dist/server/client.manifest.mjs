@@ -1,96 +1,41 @@
 export default {
-  "_FooterMain.CQsp5HnJ.js": {
+  "_B59pZLJY.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "FooterMain.CQsp5HnJ.js",
-    "name": "FooterMain",
-    "imports": [
-      "_nuxt-link.DnQwAe0v.js",
-      "node_modules/nuxt/dist/app/entry.js",
-      "_ThePreloader.BY5lynRP.js"
-    ],
-    "css": [
-      "FooterMain.D7UKbCR4.css"
-    ]
-  },
-  "FooterMain.D7UKbCR4.css": {
-    "file": "FooterMain.D7UKbCR4.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
-  },
-  "_FooterMain.D7UKbCR4.css": {
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true,
-    "file": "FooterMain.D7UKbCR4.css",
-    "src": "_FooterMain.D7UKbCR4.css"
-  },
-  "_MouseCursor.DPqM-OPJ.css": {
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true,
-    "file": "MouseCursor.DPqM-OPJ.css",
-    "src": "_MouseCursor.DPqM-OPJ.css"
-  },
-  "_MouseCursor.NySJGeAo.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "MouseCursor.NySJGeAo.js",
-    "name": "MouseCursor",
+    "file": "B59pZLJY.js",
+    "name": "USkeleton",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
-      "MouseCursor.DPqM-OPJ.css"
+      "USkeleton.D49NijjQ.css"
     ]
   },
-  "MouseCursor.DPqM-OPJ.css": {
-    "file": "MouseCursor.DPqM-OPJ.css",
+  "USkeleton.D49NijjQ.css": {
+    "file": "USkeleton.D49NijjQ.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
   },
-  "_PageHead.BX73KZD4.js": {
+  "_B9Njdixb.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "PageHead.BX73KZD4.js",
-    "name": "PageHead",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": [
-      "PageHead.DoCTfosQ.css"
-    ]
+    "file": "B9Njdixb.js",
+    "name": "product"
   },
-  "PageHead.DoCTfosQ.css": {
-    "file": "PageHead.DoCTfosQ.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
-  },
-  "_PageHead.DoCTfosQ.css": {
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true,
-    "file": "PageHead.DoCTfosQ.css",
-    "src": "_PageHead.DoCTfosQ.css"
-  },
-  "_ThePreloader.BY5lynRP.js": {
+  "_BVZz9hq6.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ThePreloader.BY5lynRP.js",
+    "file": "BVZz9hq6.js",
     "name": "ThePreloader",
     "imports": [
-      "_nuxt-link.DnQwAe0v.js",
+      "_DZ2OU4Sv.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
@@ -119,6 +64,108 @@ export default {
     "prefetch": true,
     "mimeType": "image/svg+xml"
   },
+  "_Bl4ChSFc.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "Bl4ChSFc.js",
+    "name": "PageHead",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "PageHead.DoCTfosQ.css"
+    ]
+  },
+  "PageHead.DoCTfosQ.css": {
+    "file": "PageHead.DoCTfosQ.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_CiKLYgJL.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CiKLYgJL.js",
+    "name": "works"
+  },
+  "_D5uiDE8a.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "D5uiDE8a.js",
+    "name": "MouseCursor",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "MouseCursor.DPqM-OPJ.css"
+    ]
+  },
+  "MouseCursor.DPqM-OPJ.css": {
+    "file": "MouseCursor.DPqM-OPJ.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_DZ2OU4Sv.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DZ2OU4Sv.js",
+    "name": "nuxt-link",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_DiJoygOG.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DiJoygOG.js",
+    "name": "FooterMain",
+    "imports": [
+      "_DZ2OU4Sv.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_BVZz9hq6.js"
+    ],
+    "css": [
+      "FooterMain.D7UKbCR4.css"
+    ]
+  },
+  "FooterMain.D7UKbCR4.css": {
+    "file": "FooterMain.D7UKbCR4.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_FooterMain.D7UKbCR4.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "FooterMain.D7UKbCR4.css",
+    "src": "_FooterMain.D7UKbCR4.css"
+  },
+  "_MouseCursor.DPqM-OPJ.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "MouseCursor.DPqM-OPJ.css",
+    "src": "_MouseCursor.DPqM-OPJ.css"
+  },
+  "_PageHead.DoCTfosQ.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "PageHead.DoCTfosQ.css",
+    "src": "_PageHead.DoCTfosQ.css"
+  },
   "_ThePreloader.hz6ldFID.css": {
     "resourceType": "style",
     "prefetch": true,
@@ -133,60 +180,13 @@ export default {
     "file": "USkeleton.D49NijjQ.css",
     "src": "_USkeleton.D49NijjQ.css"
   },
-  "_USkeleton.YTJ_V6Mj.js": {
+  "_ujgZ7hPi.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "USkeleton.YTJ_V6Mj.js",
-    "name": "USkeleton",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": [
-      "USkeleton.D49NijjQ.css"
-    ]
-  },
-  "USkeleton.D49NijjQ.css": {
-    "file": "USkeleton.D49NijjQ.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
-  },
-  "_nuxt-link.DnQwAe0v.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "nuxt-link.DnQwAe0v.js",
-    "name": "nuxt-link",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "_product.B9Njdixb.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "product.B9Njdixb.js",
-    "name": "product"
-  },
-  "_useFirstScreenAnimation.ujgZ7hPi.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "useFirstScreenAnimation.ujgZ7hPi.js",
+    "file": "ujgZ7hPi.js",
     "name": "useFirstScreenAnimation"
-  },
-  "_works.CiKLYgJL.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "works.CiKLYgJL.js",
-    "name": "works"
   },
   "assets/fonts/Decoy-BlackItalic.woff": {
     "resourceType": "font",
@@ -289,7 +289,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "i18n.config.4R0hDmqq.js",
+    "file": "4R0hDmqq.js",
     "name": "i18n.config",
     "src": "i18n.config.js?hash=c231e734&config=1",
     "isDynamicEntry": true
@@ -299,16 +299,16 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "about-layout.n_kXo9oK.js",
+    "file": "4HnObenA.js",
     "name": "about-layout",
     "src": "layouts/about-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BY5lynRP.js",
-      "_FooterMain.CQsp5HnJ.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
+      "_BVZz9hq6.js",
+      "_DiJoygOG.js",
+      "_ujgZ7hPi.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_nuxt-link.DnQwAe0v.js"
+      "_DZ2OU4Sv.js"
     ],
     "css": [
       "about-layout.CxJARMJm.css"
@@ -325,16 +325,16 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "cookie-layout.iYr50lHA.js",
+    "file": "D0ZavI13.js",
     "name": "cookie-layout",
     "src": "layouts/cookie-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BY5lynRP.js",
-      "_FooterMain.CQsp5HnJ.js",
+      "_BVZz9hq6.js",
+      "_DiJoygOG.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.DnQwAe0v.js"
+      "_ujgZ7hPi.js",
+      "_DZ2OU4Sv.js"
     ],
     "css": [
       "about-layout.CxJARMJm.css"
@@ -345,16 +345,16 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "home-layout.J-McsIA_.js",
+    "file": "il8tPLJ7.js",
     "name": "home-layout",
     "src": "layouts/home-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BY5lynRP.js",
-      "_FooterMain.CQsp5HnJ.js",
+      "_BVZz9hq6.js",
+      "_DiJoygOG.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.DnQwAe0v.js"
+      "_ujgZ7hPi.js",
+      "_DZ2OU4Sv.js"
     ],
     "css": [
       "about-layout.CxJARMJm.css"
@@ -365,16 +365,16 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "privacy-layout.CGbJRcKh.js",
+    "file": "Lb-Ahc4b.js",
     "name": "privacy-layout",
     "src": "layouts/privacy-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BY5lynRP.js",
-      "_FooterMain.CQsp5HnJ.js",
+      "_BVZz9hq6.js",
+      "_DiJoygOG.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.DnQwAe0v.js"
+      "_ujgZ7hPi.js",
+      "_DZ2OU4Sv.js"
     ],
     "css": [
       "about-layout.CxJARMJm.css"
@@ -385,16 +385,16 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "slug-layout.DQ2IkDGL.js",
+    "file": "936FoBrS.js",
     "name": "slug-layout",
     "src": "layouts/slug-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BY5lynRP.js",
-      "_nuxt-link.DnQwAe0v.js",
+      "_BVZz9hq6.js",
+      "_DZ2OU4Sv.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_product.B9Njdixb.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js"
+      "_B9Njdixb.js",
+      "_ujgZ7hPi.js"
     ],
     "css": [
       "slug-layout.LMoY0ALa.css"
@@ -411,16 +411,16 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "work-layout.Dpk2KBxi.js",
+    "file": "BZgs3M43.js",
     "name": "work-layout",
     "src": "layouts/work-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BY5lynRP.js",
-      "_FooterMain.CQsp5HnJ.js",
+      "_BVZz9hq6.js",
+      "_DiJoygOG.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.DnQwAe0v.js"
+      "_ujgZ7hPi.js",
+      "_DZ2OU4Sv.js"
     ],
     "css": [
       "about-layout.CxJARMJm.css"
@@ -557,7 +557,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.BQhj_uHY.js",
+    "file": "BpquJmFS.js",
     "name": "index",
     "src": "node_modules/@nuxt/icon/dist/runtime/components/index.js",
     "isDynamicEntry": true,
@@ -570,12 +570,12 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "error-404.u34FgTf2.js",
+    "file": "DGePE6_Y.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_nuxt-link.DnQwAe0v.js",
+      "_DZ2OU4Sv.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
@@ -593,7 +593,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "error-500.C0k6jxoJ.js",
+    "file": "D9ZTlHsK.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
@@ -615,7 +615,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "entry.f3qPgUkS.js",
+    "file": "CRVWSR2J.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -841,15 +841,15 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "about.DLvnV3Gp.js",
+    "file": "B2qV9abj.js",
     "name": "about",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.BX73KZD4.js",
-      "_MouseCursor.NySJGeAo.js",
+      "_Bl4ChSFc.js",
+      "_D5uiDE8a.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js"
+      "_ujgZ7hPi.js"
     ],
     "css": [
       "about.D91YNI2J.css"
@@ -882,15 +882,15 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "cookie.BlL2qdCN.js",
+    "file": "CwVLZX7g.js",
     "name": "cookie",
     "src": "pages/cookie.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.BX73KZD4.js",
-      "_MouseCursor.NySJGeAo.js",
+      "_Bl4ChSFc.js",
+      "_D5uiDE8a.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js"
+      "_ujgZ7hPi.js"
     ],
     "css": [
       "cookie.BDLbED50.css"
@@ -907,16 +907,16 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.DXFMhPcL.js",
+    "file": "BnjdY72u.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_nuxt-link.DnQwAe0v.js",
-      "_MouseCursor.NySJGeAo.js",
-      "_works.CiKLYgJL.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js"
+      "_DZ2OU4Sv.js",
+      "_D5uiDE8a.js",
+      "_CiKLYgJL.js",
+      "_ujgZ7hPi.js"
     ],
     "css": [
       "index.BJwo4Qmy.css"
@@ -937,15 +937,15 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "privacy.DpBeqQzX.js",
+    "file": "DlTDYqf8.js",
     "name": "privacy",
     "src": "pages/privacy.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.BX73KZD4.js",
-      "_MouseCursor.NySJGeAo.js",
+      "_Bl4ChSFc.js",
+      "_D5uiDE8a.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js"
+      "_ujgZ7hPi.js"
     ],
     "css": [
       "privacy.CzJeHJpZ.css"
@@ -962,19 +962,19 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "_slug_.DyC_aIlF.js",
+    "file": "BqnWq6EC.js",
     "name": "_slug_",
     "src": "pages/work/[slug].vue",
     "isDynamicEntry": true,
     "imports": [
-      "_nuxt-link.DnQwAe0v.js",
-      "_works.CiKLYgJL.js",
-      "_product.B9Njdixb.js",
+      "_DZ2OU4Sv.js",
+      "_CiKLYgJL.js",
+      "_B9Njdixb.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_PageHead.BX73KZD4.js",
-      "_USkeleton.YTJ_V6Mj.js",
-      "_MouseCursor.NySJGeAo.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js"
+      "_Bl4ChSFc.js",
+      "_B59pZLJY.js",
+      "_D5uiDE8a.js",
+      "_ujgZ7hPi.js"
     ],
     "css": [
       "_slug_.BlqSS58i.css"
@@ -991,18 +991,18 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.CNR-0_S8.js",
+    "file": "BX2OIQ1-.js",
     "name": "index",
     "src": "pages/work/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_PageHead.BX73KZD4.js",
-      "_nuxt-link.DnQwAe0v.js",
-      "_MouseCursor.NySJGeAo.js",
-      "_works.CiKLYgJL.js",
-      "_USkeleton.YTJ_V6Mj.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js"
+      "_Bl4ChSFc.js",
+      "_DZ2OU4Sv.js",
+      "_D5uiDE8a.js",
+      "_CiKLYgJL.js",
+      "_B59pZLJY.js",
+      "_ujgZ7hPi.js"
     ],
     "css": [
       "index.BTC0qFpg.css"

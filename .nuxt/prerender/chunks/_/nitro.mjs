@@ -769,7 +769,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/nuxtbio/",
-    "buildId": "1ea6497f-d735-4525-897d-22d75ba7cc0a",
+    "buildId": "31b62c4f-f738-4a6d-b80b-fd34adb28b57",
     "buildAssetsDir": "_nuxt",
     "cdnURL": ""
   },
@@ -780,7 +780,18 @@ const _inlineRuntimeConfig = {
         "cache": false
       },
       "/**": {
-        "static": true
+        "swr": 3600,
+        "cache": {
+          "swr": true,
+          "maxAge": 3600
+        }
+      },
+      "/api/**": {
+        "swr": 600,
+        "cache": {
+          "swr": true,
+          "maxAge": 600
+        }
       },
       "/_nuxt/builds/meta/**": {
         "headers": {
@@ -1447,6 +1458,11 @@ const handlers = [
   { route: '', handler: _gLAmmR, lazy: false, middleware: true, method: undefined },
   { route: '/api/_nuxt_icon/:collection', handler: _R34QAG, lazy: false, middleware: false, method: undefined },
   { route: '/_ipx/**', handler: _hOpbCd, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/api/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/_nuxt/builds/meta/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/_nuxt/builds/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/_nuxt/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -1577,5 +1593,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, getRouteRules as g, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u };
+export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, getRouteRules as g, joinURL as j, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u, withoutTrailingSlash as w };
 //# sourceMappingURL=nitro.mjs.map
