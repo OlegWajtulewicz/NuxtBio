@@ -416,7 +416,7 @@ function readAsset (id) {
   return promises.readFile(resolve(serverDir, assets$1[id].path))
 }
 
-const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/nuxtbio/_nuxt/":{"maxAge":31536000},"/nuxtbio/favicon/":{"maxAge":31536000},"/_nuxt/":{"maxAge":31536000}};
+const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/_nuxt/":{"maxAge":31536000}};
 
 function isPublicAssetURL(id = '') {
   if (assets$1[id]) {
@@ -768,8 +768,8 @@ function _expandFromEnv(value) {
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/nuxtbio",
-    "buildId": "357304f4-a135-4766-a38a-df3aabdf8d5e",
+    "baseURL": "/",
+    "buildId": "ed9671dd-103e-4d2d-a2a1-d60e8f2ba5e8",
     "buildAssetsDir": "_nuxt",
     "cdnURL": ""
   },
@@ -803,16 +803,6 @@ const _inlineRuntimeConfig = {
           "cache-control": "public, max-age=1, immutable"
         }
       },
-      "/nuxtbio/_nuxt/**": {
-        "headers": {
-          "cache-control": "public, max-age=31536000, immutable"
-        }
-      },
-      "/nuxtbio/favicon/**": {
-        "headers": {
-          "cache-control": "public, max-age=31536000, immutable"
-        }
-      },
       "/_nuxt/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -821,7 +811,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
-    "baseURL": "/nuxtbio",
+    "baseURL": "/",
     "i18n": {
       "baseUrl": "",
       "defaultLocale": "en",
@@ -1473,8 +1463,6 @@ const handlers = [
   { route: '/api/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/_nuxt/builds/meta/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/_nuxt/builds/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/nuxtbio/_nuxt/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/nuxtbio/favicon/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/_nuxt/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined }
 ];

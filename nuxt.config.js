@@ -70,13 +70,13 @@ export default defineNuxtConfig({
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
     build: {
-      assetsDir: '_nuxt',
+      assetsDir: '',
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: '_nuxt/[name].[hash][extname]',
-          chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js'
+          assetFileNames: '[name].[hash][extname]',
+          chunkFileNames: '[name].[hash].js',
+          entryFileNames: '[name].[hash].js'
         }
       }
     }
@@ -94,7 +94,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/nuxtbio',
+    baseURL: '/',
     buildAssetsDir: '_nuxt',
     cdnURL: '',
     head: {
@@ -127,10 +127,10 @@ export default defineNuxtConfig({
       ],
       link: [
         // Favicons
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/nuxtbio/favicon/apple-touch-icon.png' },
-        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/nuxtbio/favicon/favicon-96x96.png' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/nuxtbio/favicon/favicon.svg' },
-        { rel: 'shortcut icon', href: '/nuxtbio/favicon/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' },
+        { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
       ],
@@ -171,39 +171,14 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'netlify',
-    baseURL: '/nuxtbio',
-    prerender: {
-      crawlLinks: true,
-      routes: [
-        '/',
-        '/about',
-        '/work',
-        '/privacy',
-        '/cookie'
-      ]
-    },
-    static: true,
-    serveStatic: true,
-    publicAssets: [
-      {
-        baseURL: '/nuxtbio/_nuxt',
-        dir: 'public/_nuxt',
-        maxAge: 31536000
-      },
-      {
-        baseURL: '/nuxtbio/favicon',
-        dir: 'public/favicon',
-        maxAge: 31536000
-      }
-    ]
+    preset: 'static'
   },
   generate: {
-    fallback: true
+    fallback: '404.html'
   },
   runtimeConfig: {
     public: {
-      baseURL: '/nuxtbio'
+      baseURL: '/'
     }
   }
 })
