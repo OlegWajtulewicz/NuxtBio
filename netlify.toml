@@ -4,8 +4,8 @@
   environment = { NODE_VERSION = "18" }
 
 [[redirects]]
-  from = "/nuxtbio/*"
-  to = "/nuxtbio/index.html"
+  from = "/*"
+  to = "/index.html"
   status = 200
   force = true
 
@@ -18,76 +18,74 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.js"
+  for = "/_nuxt/*"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/favicon/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+    [headers.values]
     Content-Type = "application/javascript; charset=utf-8"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.css"
+  for = "/*.css"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
     Content-Type = "text/css; charset=utf-8"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.woff2"
+  for = "/*.woff2"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
     Content-Type = "font/woff2"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.woff"
+  for = "/*.woff"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
     Content-Type = "font/woff"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.ttf"
+  for = "/*.ttf"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
     Content-Type = "font/ttf"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.eot"
+  for = "/*.eot"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
     Content-Type = "application/vnd.ms-fontobject"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.svg"
+  for = "/*.svg"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
     Content-Type = "image/svg+xml"
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*.{png,jpg,jpeg,gif,webp}"
+  for = "/*.png"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
+    Content-Type = "image/png"
 
 [[headers]]
-  for = "/nuxtbio/favicon/*"
+  for = "/*.jpg"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
+    Content-Type = "image/jpeg"
 
-[[redirects]]
-  from = "/nuxtbio/_nuxt/*"
-  to = "/nuxtbio/_nuxt/:splat"
-  status = 200
-  force = true
+[[headers]]
+  for = "/*.gif"
+    [headers.values]
+    Content-Type = "image/gif"
 
-[[redirects]]
-  from = "/nuxtbio/favicon/*"
-  to = "/nuxtbio/favicon/:splat"
-  status = 200
-  force = true
+[[headers]]
+  for = "/*.webp"
+    [headers.values]
+    Content-Type = "image/webp"
+
+[[headers]]
+  for = "/*.ico"
+    [headers.values]
+    Content-Type = "image/x-icon"

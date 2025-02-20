@@ -94,8 +94,9 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/nuxtbio/',
+    baseURL: '/nuxtbio',
     buildAssetsDir: '_nuxt',
+    cdnURL: '',
     head: {
       htmlAttrs: {
         lang: 'en'
@@ -170,18 +171,31 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'netlify-static',
+    preset: 'netlify',
     baseURL: '/nuxtbio',
     prerender: {
       crawlLinks: true,
       routes: [
-        '/'
+        '/',
+        '/about',
+        '/work',
+        '/privacy',
+        '/cookie'
       ]
     },
     static: true,
-    serveStatic: true
+    serveStatic: true,
+    routeRules: {
+      '/nuxtbio/**': { static: true },
+      '/_nuxt/**': { static: true }
+    }
   },
   generate: {
     fallback: 'index.html'
+  },
+  runtimeConfig: {
+    public: {
+      baseURL: '/nuxtbio'
+    }
   }
 })

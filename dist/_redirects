@@ -1,7 +1,2 @@
 /* /404.html 404
-
-/nuxtbio/* /nuxtbio/index.html 200
 /* /nuxtbio/index.html 200
-
-/nuxtbio/_nuxt/* /nuxtbio/_nuxt/:splat 200
-/nuxtbio/favicon/* /nuxtbio/favicon/:splat 200
