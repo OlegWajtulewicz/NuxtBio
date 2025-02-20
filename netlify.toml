@@ -45,15 +45,18 @@
     Content-Type = "image/png"
     Cache-Control = "public, max-age=31536000"
 
-# Rewrite для статических файлов
+# Статические файлы
 [[redirects]]
   from = "/_nuxt/*"
   to = "/_nuxt/:splat"
   status = 200
-  force = true
 
-# SPA fallback
+# Все остальные запросы
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+  conditions = {Not = [
+    {Path = ["/_nuxt/*"]}
+  ]}
