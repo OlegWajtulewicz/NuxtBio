@@ -769,8 +769,8 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "ed9671dd-103e-4d2d-a2a1-d60e8f2ba5e8",
-    "buildAssetsDir": "_nuxt",
+    "buildId": "945fd707-5eb5-495a-8049-9629a30a9bb6",
+    "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
   "nitro": {
@@ -811,7 +811,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
-    "baseURL": "/",
+    "baseURL": "",
     "i18n": {
       "baseUrl": "",
       "defaultLocale": "en",

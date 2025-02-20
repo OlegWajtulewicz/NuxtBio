@@ -94,8 +94,8 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/',
-    buildAssetsDir: '_nuxt',
+    baseURL: '',
+    buildAssetsDir: '',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -171,14 +171,17 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'static'
+    preset: 'static',
+    output: {
+      publicDir: 'dist'
+    },
   },
   generate: {
     fallback: '404.html'
   },
   runtimeConfig: {
     public: {
-      baseURL: '/'
+      baseURL: ''
     }
   }
 })
