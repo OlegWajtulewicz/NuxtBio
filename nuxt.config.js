@@ -185,13 +185,21 @@ export default defineNuxtConfig({
     },
     static: true,
     serveStatic: true,
-    routeRules: {
-      '/nuxtbio/**': { static: true },
-      '/_nuxt/**': { static: true }
-    }
+    publicAssets: [
+      {
+        baseURL: '/nuxtbio/_nuxt',
+        dir: 'public/_nuxt',
+        maxAge: 31536000
+      },
+      {
+        baseURL: '/nuxtbio/favicon',
+        dir: 'public/favicon',
+        maxAge: 31536000
+      }
+    ]
   },
   generate: {
-    fallback: 'index.html'
+    fallback: true
   },
   runtimeConfig: {
     public: {
