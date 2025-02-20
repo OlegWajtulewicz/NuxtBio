@@ -84,7 +84,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/nuxtbio/',
-    buildAssetsDir: '_nuxt',
+    buildAssetsDir: '',
     head: {
       htmlAttrs: {
         lang: 'en'
@@ -159,6 +159,9 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'netlify'
+    preset: 'netlify-static'
   },
+  generate: {
+    fallback: 'index.html'
+  }
 })

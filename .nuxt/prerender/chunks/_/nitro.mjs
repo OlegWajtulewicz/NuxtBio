@@ -769,8 +769,8 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/nuxtbio/",
-    "buildId": "31b62c4f-f738-4a6d-b80b-fd34adb28b57",
-    "buildAssetsDir": "_nuxt",
+    "buildId": "92dd8ec7-d591-4df7-9642-dda7c5ccf0cd",
+    "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
   "nitro": {
