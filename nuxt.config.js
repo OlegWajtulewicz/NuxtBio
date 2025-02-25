@@ -79,7 +79,8 @@ export default defineNuxtConfig({
           entryFileNames: '_nuxt/[name].[hash].js'
         }
       }
-    }
+    },
+    base: '/'
   },
   build: {
     transpile: ['gsap'],
@@ -171,7 +172,7 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'node-server',
+    preset: 'static',
     output: {
       publicDir: 'dist'
     },
