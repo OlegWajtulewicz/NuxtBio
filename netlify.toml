@@ -12,36 +12,31 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
-  for = "/_nuxt/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/_nuxt/js/*"
+  for = "/*.js"
   [headers.values]
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/_nuxt/assets/*.css"
+  for = "/*.css"
   [headers.values]
     Content-Type = "text/css"
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/_nuxt/assets/*.woff2"
+  for = "/*.woff2"
   [headers.values]
     Content-Type = "font/woff2"
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/_nuxt/assets/*.woff"
+  for = "/*.woff"
   [headers.values]
     Content-Type = "font/woff"
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/_nuxt/assets/*.svg"
+  for = "/*.svg"
   [headers.values]
     Content-Type = "image/svg+xml"
     Cache-Control = "public, max-age=31536000, immutable"
@@ -49,5 +44,4 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
-  force = false 
+  status = 200 

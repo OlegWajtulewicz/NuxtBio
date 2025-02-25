@@ -70,17 +70,16 @@ export default defineNuxtConfig({
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
     build: {
-      assetsDir: '_nuxt',
+      assetsDir: '',
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: '_nuxt/[name].[hash][extname]',
-          chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js'
+          assetFileNames: '[name].[hash][extname]',
+          chunkFileNames: '[name].[hash].js',
+          entryFileNames: '[name].[hash].js'
         }
       }
-    },
-    base: '/'
+    }
   },
   build: {
     transpile: ['gsap'],
@@ -91,7 +90,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '_nuxt',
+    buildAssetsDir: '',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -167,10 +166,11 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'netlify',
+    preset: 'static',
     output: {
       publicDir: 'dist'
     },
+    static: true,
     prerender: {
       crawlLinks: true,
       routes: [
@@ -180,15 +180,7 @@ export default defineNuxtConfig({
         '/privacy',
         '/cookie'
       ]
-    },
-    static: true,
-    publicAssets: [
-      {
-        baseURL: '/_nuxt',
-        dir: 'public',
-        maxAge: 31536000
-      }
-    ]
+    }
   },
   generate: {
     fallback: '404.html'
