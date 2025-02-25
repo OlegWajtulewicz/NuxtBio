@@ -1,22 +1,22 @@
 const client_manifest = {
-  "_FooterMain.BKYJyFCd.js": {
+  "_FooterMain.BKBcZ7rF.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "FooterMain.BKYJyFCd.js",
+    "file": "js/FooterMain.BKBcZ7rF.js",
     "name": "FooterMain",
     "imports": [
-      "_nuxt-link.B933eZsO.js",
+      "_nuxt-link.MIWHU2W5.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_ThePreloader.BE_pi43z.js"
+      "_ThePreloader.DetsSYYP.js"
     ],
     "css": [
-      "FooterMain.D7UKbCR4.css"
+      "assets/FooterMain.D7UKbCR4.css"
     ]
   },
-  "FooterMain.D7UKbCR4.css": {
-    "file": "FooterMain.D7UKbCR4.css",
+  "assets/FooterMain.D7UKbCR4.css": {
+    "file": "assets/FooterMain.D7UKbCR4.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -25,52 +25,32 @@ const client_manifest = {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "FooterMain.D7UKbCR4.css",
+    "file": "assets/FooterMain.D7UKbCR4.css",
     "src": "_FooterMain.D7UKbCR4.css"
   },
   "_MouseCursor.DPqM-OPJ.css": {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "MouseCursor.DPqM-OPJ.css",
+    "file": "assets/MouseCursor.DPqM-OPJ.css",
     "src": "_MouseCursor.DPqM-OPJ.css"
   },
-  "_MouseCursor.Dloknv-c.js": {
+  "_MouseCursor.DZVFpQ82.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "MouseCursor.Dloknv-c.js",
+    "file": "js/MouseCursor.DZVFpQ82.js",
     "name": "MouseCursor",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
-      "MouseCursor.DPqM-OPJ.css"
+      "assets/MouseCursor.DPqM-OPJ.css"
     ]
   },
-  "MouseCursor.DPqM-OPJ.css": {
-    "file": "MouseCursor.DPqM-OPJ.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
-  },
-  "_PageHead.4JKP0h1u.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "PageHead.4JKP0h1u.js",
-    "name": "PageHead",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": [
-      "PageHead.DoCTfosQ.css"
-    ]
-  },
-  "PageHead.DoCTfosQ.css": {
-    "file": "PageHead.DoCTfosQ.css",
+  "assets/MouseCursor.DPqM-OPJ.css": {
+    "file": "assets/MouseCursor.DPqM-OPJ.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -79,42 +59,62 @@ const client_manifest = {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "PageHead.DoCTfosQ.css",
+    "file": "assets/PageHead.DoCTfosQ.css",
     "src": "_PageHead.DoCTfosQ.css"
   },
-  "_ThePreloader.BE_pi43z.js": {
+  "_PageHead.mxrHIxsj.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ThePreloader.BE_pi43z.js",
-    "name": "ThePreloader",
+    "file": "js/PageHead.mxrHIxsj.js",
+    "name": "PageHead",
     "imports": [
-      "_nuxt-link.B933eZsO.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
-      "ThePreloader.hz6ldFID.css"
-    ],
-    "assets": [
-      "sprite.3NLFG0sF.svg",
-      "pat.Bhh6DSz4.svg"
+      "assets/PageHead.DoCTfosQ.css"
     ]
   },
-  "ThePreloader.hz6ldFID.css": {
-    "file": "ThePreloader.hz6ldFID.css",
+  "assets/PageHead.DoCTfosQ.css": {
+    "file": "assets/PageHead.DoCTfosQ.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
   },
-  "sprite.3NLFG0sF.svg": {
-    "file": "sprite.3NLFG0sF.svg",
+  "_ThePreloader.DetsSYYP.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "js/ThePreloader.DetsSYYP.js",
+    "name": "ThePreloader",
+    "imports": [
+      "_nuxt-link.MIWHU2W5.js",
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "assets/ThePreloader.hz6ldFID.css"
+    ],
+    "assets": [
+      "assets/sprite.3NLFG0sF.svg",
+      "assets/pat.Bhh6DSz4.svg"
+    ]
+  },
+  "assets/ThePreloader.hz6ldFID.css": {
+    "file": "assets/ThePreloader.hz6ldFID.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "assets/sprite.3NLFG0sF.svg": {
+    "file": "assets/sprite.3NLFG0sF.svg",
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml"
   },
-  "pat.Bhh6DSz4.svg": {
-    "file": "pat.Bhh6DSz4.svg",
+  "assets/pat.Bhh6DSz4.svg": {
+    "file": "assets/pat.Bhh6DSz4.svg",
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml"
@@ -123,25 +123,25 @@ const client_manifest = {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "ThePreloader.hz6ldFID.css",
+    "file": "assets/ThePreloader.hz6ldFID.css",
     "src": "_ThePreloader.hz6ldFID.css"
   },
-  "_USkeleton.7jOF6mJy.js": {
+  "_USkeleton.Bcef2riO.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "USkeleton.7jOF6mJy.js",
+    "file": "js/USkeleton.Bcef2riO.js",
     "name": "USkeleton",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
-      "USkeleton.D49NijjQ.css"
+      "assets/USkeleton.D49NijjQ.css"
     ]
   },
-  "USkeleton.D49NijjQ.css": {
-    "file": "USkeleton.D49NijjQ.css",
+  "assets/USkeleton.D49NijjQ.css": {
+    "file": "assets/USkeleton.D49NijjQ.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -150,15 +150,15 @@ const client_manifest = {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "USkeleton.D49NijjQ.css",
+    "file": "assets/USkeleton.D49NijjQ.css",
     "src": "_USkeleton.D49NijjQ.css"
   },
-  "_nuxt-link.B933eZsO.js": {
+  "_nuxt-link.MIWHU2W5.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "nuxt-link.B933eZsO.js",
+    "file": "js/nuxt-link.MIWHU2W5.js",
     "name": "nuxt-link",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -169,7 +169,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "product.B9Njdixb.js",
+    "file": "js/product.B9Njdixb.js",
     "name": "product"
   },
   "_useFirstScreenAnimation.ujgZ7hPi.js": {
@@ -177,7 +177,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "useFirstScreenAnimation.ujgZ7hPi.js",
+    "file": "js/useFirstScreenAnimation.ujgZ7hPi.js",
     "name": "useFirstScreenAnimation"
   },
   "_works.CiKLYgJL.js": {
@@ -185,103 +185,103 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "works.CiKLYgJL.js",
+    "file": "js/works.CiKLYgJL.js",
     "name": "works"
   },
   "assets/fonts/Decoy-BlackItalic.woff": {
     "resourceType": "font",
     "mimeType": "font/woff",
-    "file": "Decoy-BlackItalic.CqqW-uFj.woff",
+    "file": "assets/Decoy-BlackItalic.CqqW-uFj.woff",
     "src": "assets/fonts/Decoy-BlackItalic.woff"
   },
   "assets/fonts/Decoy-BlackItalic.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Decoy-BlackItalic.BWrVBLid.woff2",
+    "file": "assets/Decoy-BlackItalic.BWrVBLid.woff2",
     "src": "assets/fonts/Decoy-BlackItalic.woff2"
   },
   "assets/fonts/FilsonPro-Regular.woff": {
     "resourceType": "font",
     "mimeType": "font/woff",
-    "file": "FilsonPro-Regular.BnXIhAif.woff",
+    "file": "assets/FilsonPro-Regular.BnXIhAif.woff",
     "src": "assets/fonts/FilsonPro-Regular.woff"
   },
   "assets/fonts/FilsonPro-Regular.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "FilsonPro-Regular.CLcYSeBB.woff2",
+    "file": "assets/FilsonPro-Regular.CLcYSeBB.woff2",
     "src": "assets/fonts/FilsonPro-Regular.woff2"
   },
   "assets/fonts/Porlane-Regular.woff": {
     "resourceType": "font",
     "mimeType": "font/woff",
-    "file": "Porlane-Regular.DDJheaj6.woff",
+    "file": "assets/Porlane-Regular.DDJheaj6.woff",
     "src": "assets/fonts/Porlane-Regular.woff"
   },
   "assets/fonts/Porlane-Regular.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Porlane-Regular.VNWhBGhv.woff2",
+    "file": "assets/Porlane-Regular.VNWhBGhv.woff2",
     "src": "assets/fonts/Porlane-Regular.woff2"
   },
   "assets/fonts/icomoon.eot": {
     "resourceType": "font",
     "mimeType": "font/eot",
-    "file": "icomoon.lt0x31Rw.eot",
+    "file": "assets/icomoon.lt0x31Rw.eot",
     "src": "assets/fonts/icomoon.eot"
   },
   "assets/fonts/icomoon.svg": {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml",
-    "file": "icomoon.al-XYC_W.svg",
+    "file": "assets/icomoon.al-XYC_W.svg",
     "src": "assets/fonts/icomoon.svg"
   },
   "assets/fonts/icomoon.ttf": {
     "resourceType": "font",
     "mimeType": "font/ttf",
-    "file": "icomoon.BwM_dumh.ttf",
+    "file": "assets/icomoon.BwM_dumh.ttf",
     "src": "assets/fonts/icomoon.ttf"
   },
   "assets/fonts/icomoon.woff": {
     "resourceType": "font",
     "mimeType": "font/woff",
-    "file": "icomoon.DKj2trNE.woff",
+    "file": "assets/icomoon.DKj2trNE.woff",
     "src": "assets/fonts/icomoon.woff"
   },
   "assets/images/about_ja.jpg": {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/jpeg",
-    "file": "about_ja.C9mvsjsU.jpg",
+    "file": "assets/about_ja.C9mvsjsU.jpg",
     "src": "assets/images/about_ja.jpg"
   },
   "assets/images/bbg.png": {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/png",
-    "file": "bbg.CfePIDHv.png",
+    "file": "assets/bbg.CfePIDHv.png",
     "src": "assets/images/bbg.png"
   },
   "assets/images/icons/codeium.svg": {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml",
-    "file": "codeium.ByjCc6kQ.svg",
+    "file": "assets/codeium.ByjCc6kQ.svg",
     "src": "assets/images/icons/codeium.svg"
   },
   "assets/images/icons/sprite.svg": {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml",
-    "file": "sprite.3NLFG0sF.svg",
+    "file": "assets/sprite.3NLFG0sF.svg",
     "src": "assets/images/icons/sprite.svg"
   },
   "assets/images/pat.svg": {
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml",
-    "file": "pat.Bhh6DSz4.svg",
+    "file": "assets/pat.Bhh6DSz4.svg",
     "src": "assets/images/pat.svg"
   },
   "i18n.config.js?hash=c231e734&config=1": {
@@ -289,7 +289,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "i18n.config.4R0hDmqq.js",
+    "file": "js/i18n.config.4R0hDmqq.js",
     "name": "i18n.config",
     "src": "i18n.config.js?hash=c231e734&config=1",
     "isDynamicEntry": true
@@ -299,23 +299,23 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "about-layout.CD8rnt0V.js",
+    "file": "js/about-layout.CeAYhwT8.js",
     "name": "about-layout",
     "src": "layouts/about-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BE_pi43z.js",
-      "_FooterMain.BKYJyFCd.js",
+      "_ThePreloader.DetsSYYP.js",
+      "_FooterMain.BKBcZ7rF.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_nuxt-link.B933eZsO.js"
+      "_nuxt-link.MIWHU2W5.js"
     ],
     "css": [
-      "about-layout.CxJARMJm.css"
+      "assets/about-layout.CxJARMJm.css"
     ]
   },
-  "about-layout.CxJARMJm.css": {
-    "file": "about-layout.CxJARMJm.css",
+  "assets/about-layout.CxJARMJm.css": {
+    "file": "assets/about-layout.CxJARMJm.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -325,19 +325,19 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "cookie-layout.Bae9x12l.js",
+    "file": "js/cookie-layout.HOrTWL6B.js",
     "name": "cookie-layout",
     "src": "layouts/cookie-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BE_pi43z.js",
-      "_FooterMain.BKYJyFCd.js",
+      "_ThePreloader.DetsSYYP.js",
+      "_FooterMain.BKBcZ7rF.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.B933eZsO.js"
+      "_nuxt-link.MIWHU2W5.js"
     ],
     "css": [
-      "about-layout.CxJARMJm.css"
+      "assets/about-layout.CxJARMJm.css"
     ]
   },
   "layouts/home-layout.vue": {
@@ -345,19 +345,19 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "home-layout.i8KYfWZE.js",
+    "file": "js/home-layout.CL3L5mjl.js",
     "name": "home-layout",
     "src": "layouts/home-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BE_pi43z.js",
-      "_FooterMain.BKYJyFCd.js",
+      "_ThePreloader.DetsSYYP.js",
+      "_FooterMain.BKBcZ7rF.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.B933eZsO.js"
+      "_nuxt-link.MIWHU2W5.js"
     ],
     "css": [
-      "about-layout.CxJARMJm.css"
+      "assets/about-layout.CxJARMJm.css"
     ]
   },
   "layouts/privacy-layout.vue": {
@@ -365,19 +365,19 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "privacy-layout.CkM3hXak.js",
+    "file": "js/privacy-layout.CYcMppY0.js",
     "name": "privacy-layout",
     "src": "layouts/privacy-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BE_pi43z.js",
-      "_FooterMain.BKYJyFCd.js",
+      "_ThePreloader.DetsSYYP.js",
+      "_FooterMain.BKBcZ7rF.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.B933eZsO.js"
+      "_nuxt-link.MIWHU2W5.js"
     ],
     "css": [
-      "about-layout.CxJARMJm.css"
+      "assets/about-layout.CxJARMJm.css"
     ]
   },
   "layouts/slug-layout.vue": {
@@ -385,23 +385,23 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "slug-layout.zu4GJPhE.js",
+    "file": "js/slug-layout.BVI4PFd2.js",
     "name": "slug-layout",
     "src": "layouts/slug-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BE_pi43z.js",
-      "_nuxt-link.B933eZsO.js",
+      "_ThePreloader.DetsSYYP.js",
+      "_nuxt-link.MIWHU2W5.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_product.B9Njdixb.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
     "css": [
-      "slug-layout.LMoY0ALa.css"
+      "assets/slug-layout.LMoY0ALa.css"
     ]
   },
-  "slug-layout.LMoY0ALa.css": {
-    "file": "slug-layout.LMoY0ALa.css",
+  "assets/slug-layout.LMoY0ALa.css": {
+    "file": "assets/slug-layout.LMoY0ALa.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -411,145 +411,145 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "work-layout.BME0nHzr.js",
+    "file": "js/work-layout.DG9yO8sE.js",
     "name": "work-layout",
     "src": "layouts/work-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.BE_pi43z.js",
-      "_FooterMain.BKYJyFCd.js",
+      "_ThePreloader.DetsSYYP.js",
+      "_FooterMain.BKBcZ7rF.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.B933eZsO.js"
+      "_nuxt-link.MIWHU2W5.js"
     ],
     "css": [
-      "about-layout.CxJARMJm.css"
+      "assets/about-layout.CxJARMJm.css"
     ]
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-1.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Montserrat-100-1.DV_LRdWn.woff2",
+    "file": "assets/Montserrat-100-1.DV_LRdWn.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-1.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-2.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Montserrat-100-2.D3on441i.woff2",
+    "file": "assets/Montserrat-100-2.D3on441i.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-2.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-3.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Montserrat-100-3.BcziCZ2I.woff2",
+    "file": "assets/Montserrat-100-3.BcziCZ2I.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-3.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-4.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Montserrat-100-4.BLkAzDQP.woff2",
+    "file": "assets/Montserrat-100-4.BLkAzDQP.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-4.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-5.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Montserrat-100-5.AeMhpAKq.woff2",
+    "file": "assets/Montserrat-100-5.AeMhpAKq.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-5.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-41.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-41.f7eF65bT.woff2",
+    "file": "assets/Open_Sans-300-41.f7eF65bT.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-41.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-42.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-42.Cw00GhOR.woff2",
+    "file": "assets/Open_Sans-300-42.Cw00GhOR.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-42.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-43.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-43.Cs5KUPhG.woff2",
+    "file": "assets/Open_Sans-300-43.Cs5KUPhG.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-43.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-44.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-44.CtQ6sbau.woff2",
+    "file": "assets/Open_Sans-300-44.CtQ6sbau.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-44.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-45.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-45.DrVQLkKb.woff2",
+    "file": "assets/Open_Sans-300-45.DrVQLkKb.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-45.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-46.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-46.cwLdES2L.woff2",
+    "file": "assets/Open_Sans-300-46.cwLdES2L.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-46.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-47.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-47.C2QAFfGS.woff2",
+    "file": "assets/Open_Sans-300-47.C2QAFfGS.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-47.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-48.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-48.0eckKRMD.woff2",
+    "file": "assets/Open_Sans-300-48.0eckKRMD.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-48.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-49.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-49.CrpOxvfM.woff2",
+    "file": "assets/Open_Sans-300-49.CrpOxvfM.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-49.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-50.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Open_Sans-300-50.CYuRH5ug.woff2",
+    "file": "assets/Open_Sans-300-50.CYuRH5ug.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Open_Sans-300-50.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-400-101.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Space_Mono-400-101.BNOj0Qhp.woff2",
+    "file": "assets/Space_Mono-400-101.BNOj0Qhp.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-400-101.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-400-102.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Space_Mono-400-102.DTLbW2xa.woff2",
+    "file": "assets/Space_Mono-400-102.DTLbW2xa.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-400-102.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-400-103.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Space_Mono-400-103.Rg4St2Dn.woff2",
+    "file": "assets/Space_Mono-400-103.Rg4St2Dn.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-400-103.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-700-104.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Space_Mono-700-104.DWQgDHuA.woff2",
+    "file": "assets/Space_Mono-700-104.DWQgDHuA.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-700-104.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-700-105.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Space_Mono-700-105.B2s3bDs2.woff2",
+    "file": "assets/Space_Mono-700-105.B2s3bDs2.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-700-105.woff2"
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-700-106.woff2": {
     "resourceType": "font",
     "mimeType": "font/woff2",
-    "file": "Space_Mono-700-106.mWgeinG7.woff2",
+    "file": "assets/Space_Mono-700-106.mWgeinG7.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-700-106.woff2"
   },
   "node_modules/@nuxt/icon/dist/runtime/components/index.js": {
@@ -557,7 +557,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.D3tLPwRC.js",
+    "file": "js/index.CjRveixd.js",
     "name": "index",
     "src": "node_modules/@nuxt/icon/dist/runtime/components/index.js",
     "isDynamicEntry": true,
@@ -570,20 +570,20 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "error-404.CIrqayTH.js",
+    "file": "js/error-404.CXJV_9Ag.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_nuxt-link.B933eZsO.js",
+      "_nuxt-link.MIWHU2W5.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
-      "error-404.C3V-3Mc4.css"
+      "assets/error-404.C3V-3Mc4.css"
     ]
   },
-  "error-404.C3V-3Mc4.css": {
-    "file": "error-404.C3V-3Mc4.css",
+  "assets/error-404.C3V-3Mc4.css": {
+    "file": "assets/error-404.C3V-3Mc4.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -593,7 +593,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "error-500.Cw_d8Uwj.js",
+    "file": "js/error-500.CqiIGAq3.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
@@ -601,11 +601,11 @@ const client_manifest = {
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
-      "error-500.dGVH929u.css"
+      "assets/error-500.dGVH929u.css"
     ]
   },
-  "error-500.dGVH929u.css": {
-    "file": "error-500.dGVH929u.css",
+  "assets/error-500.dGVH929u.css": {
+    "file": "assets/error-500.dGVH929u.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -615,7 +615,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "entry.boSQck7p.js",
+    "file": "js/entry.Co4a5dLO.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -631,208 +631,208 @@ const client_manifest = {
       "node_modules/nuxt/dist/app/components/error-500.vue"
     ],
     "css": [
-      "entry.DcXxnNlK.css"
+      "assets/entry.DcXxnNlK.css"
     ],
     "assets": [
-      "Porlane-Regular.VNWhBGhv.woff2",
-      "Porlane-Regular.DDJheaj6.woff",
-      "Decoy-BlackItalic.BWrVBLid.woff2",
-      "Decoy-BlackItalic.CqqW-uFj.woff",
-      "FilsonPro-Regular.CLcYSeBB.woff2",
-      "FilsonPro-Regular.BnXIhAif.woff",
-      "icomoon.lt0x31Rw.eot",
-      "icomoon.DKj2trNE.woff",
-      "icomoon.BwM_dumh.ttf",
-      "icomoon.al-XYC_W.svg",
-      "bbg.CfePIDHv.png",
-      "Montserrat-100-1.DV_LRdWn.woff2",
-      "Montserrat-100-2.D3on441i.woff2",
-      "Montserrat-100-3.BcziCZ2I.woff2",
-      "Montserrat-100-4.BLkAzDQP.woff2",
-      "Montserrat-100-5.AeMhpAKq.woff2",
-      "Open_Sans-300-41.f7eF65bT.woff2",
-      "Open_Sans-300-42.Cw00GhOR.woff2",
-      "Open_Sans-300-43.Cs5KUPhG.woff2",
-      "Open_Sans-300-44.CtQ6sbau.woff2",
-      "Open_Sans-300-45.DrVQLkKb.woff2",
-      "Open_Sans-300-46.cwLdES2L.woff2",
-      "Open_Sans-300-47.C2QAFfGS.woff2",
-      "Open_Sans-300-48.0eckKRMD.woff2",
-      "Open_Sans-300-49.CrpOxvfM.woff2",
-      "Open_Sans-300-50.CYuRH5ug.woff2",
-      "Space_Mono-400-101.BNOj0Qhp.woff2",
-      "Space_Mono-400-102.DTLbW2xa.woff2",
-      "Space_Mono-400-103.Rg4St2Dn.woff2",
-      "Space_Mono-700-104.DWQgDHuA.woff2",
-      "Space_Mono-700-105.B2s3bDs2.woff2",
-      "Space_Mono-700-106.mWgeinG7.woff2"
+      "assets/Porlane-Regular.VNWhBGhv.woff2",
+      "assets/Porlane-Regular.DDJheaj6.woff",
+      "assets/Decoy-BlackItalic.BWrVBLid.woff2",
+      "assets/Decoy-BlackItalic.CqqW-uFj.woff",
+      "assets/FilsonPro-Regular.CLcYSeBB.woff2",
+      "assets/FilsonPro-Regular.BnXIhAif.woff",
+      "assets/icomoon.lt0x31Rw.eot",
+      "assets/icomoon.DKj2trNE.woff",
+      "assets/icomoon.BwM_dumh.ttf",
+      "assets/icomoon.al-XYC_W.svg",
+      "assets/bbg.CfePIDHv.png",
+      "assets/Montserrat-100-1.DV_LRdWn.woff2",
+      "assets/Montserrat-100-2.D3on441i.woff2",
+      "assets/Montserrat-100-3.BcziCZ2I.woff2",
+      "assets/Montserrat-100-4.BLkAzDQP.woff2",
+      "assets/Montserrat-100-5.AeMhpAKq.woff2",
+      "assets/Open_Sans-300-41.f7eF65bT.woff2",
+      "assets/Open_Sans-300-42.Cw00GhOR.woff2",
+      "assets/Open_Sans-300-43.Cs5KUPhG.woff2",
+      "assets/Open_Sans-300-44.CtQ6sbau.woff2",
+      "assets/Open_Sans-300-45.DrVQLkKb.woff2",
+      "assets/Open_Sans-300-46.cwLdES2L.woff2",
+      "assets/Open_Sans-300-47.C2QAFfGS.woff2",
+      "assets/Open_Sans-300-48.0eckKRMD.woff2",
+      "assets/Open_Sans-300-49.CrpOxvfM.woff2",
+      "assets/Open_Sans-300-50.CYuRH5ug.woff2",
+      "assets/Space_Mono-400-101.BNOj0Qhp.woff2",
+      "assets/Space_Mono-400-102.DTLbW2xa.woff2",
+      "assets/Space_Mono-400-103.Rg4St2Dn.woff2",
+      "assets/Space_Mono-700-104.DWQgDHuA.woff2",
+      "assets/Space_Mono-700-105.B2s3bDs2.woff2",
+      "assets/Space_Mono-700-106.mWgeinG7.woff2"
     ]
   },
-  "entry.DcXxnNlK.css": {
-    "file": "entry.DcXxnNlK.css",
+  "assets/entry.DcXxnNlK.css": {
+    "file": "assets/entry.DcXxnNlK.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
   },
-  "Porlane-Regular.VNWhBGhv.woff2": {
-    "file": "Porlane-Regular.VNWhBGhv.woff2",
+  "assets/Porlane-Regular.VNWhBGhv.woff2": {
+    "file": "assets/Porlane-Regular.VNWhBGhv.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Porlane-Regular.DDJheaj6.woff": {
-    "file": "Porlane-Regular.DDJheaj6.woff",
+  "assets/Porlane-Regular.DDJheaj6.woff": {
+    "file": "assets/Porlane-Regular.DDJheaj6.woff",
     "resourceType": "font",
     "mimeType": "font/woff"
   },
-  "Decoy-BlackItalic.BWrVBLid.woff2": {
-    "file": "Decoy-BlackItalic.BWrVBLid.woff2",
+  "assets/Decoy-BlackItalic.BWrVBLid.woff2": {
+    "file": "assets/Decoy-BlackItalic.BWrVBLid.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Decoy-BlackItalic.CqqW-uFj.woff": {
-    "file": "Decoy-BlackItalic.CqqW-uFj.woff",
+  "assets/Decoy-BlackItalic.CqqW-uFj.woff": {
+    "file": "assets/Decoy-BlackItalic.CqqW-uFj.woff",
     "resourceType": "font",
     "mimeType": "font/woff"
   },
-  "FilsonPro-Regular.CLcYSeBB.woff2": {
-    "file": "FilsonPro-Regular.CLcYSeBB.woff2",
+  "assets/FilsonPro-Regular.CLcYSeBB.woff2": {
+    "file": "assets/FilsonPro-Regular.CLcYSeBB.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "FilsonPro-Regular.BnXIhAif.woff": {
-    "file": "FilsonPro-Regular.BnXIhAif.woff",
+  "assets/FilsonPro-Regular.BnXIhAif.woff": {
+    "file": "assets/FilsonPro-Regular.BnXIhAif.woff",
     "resourceType": "font",
     "mimeType": "font/woff"
   },
-  "icomoon.lt0x31Rw.eot": {
-    "file": "icomoon.lt0x31Rw.eot",
+  "assets/icomoon.lt0x31Rw.eot": {
+    "file": "assets/icomoon.lt0x31Rw.eot",
     "resourceType": "font",
     "mimeType": "font/eot"
   },
-  "icomoon.DKj2trNE.woff": {
-    "file": "icomoon.DKj2trNE.woff",
+  "assets/icomoon.DKj2trNE.woff": {
+    "file": "assets/icomoon.DKj2trNE.woff",
     "resourceType": "font",
     "mimeType": "font/woff"
   },
-  "icomoon.BwM_dumh.ttf": {
-    "file": "icomoon.BwM_dumh.ttf",
+  "assets/icomoon.BwM_dumh.ttf": {
+    "file": "assets/icomoon.BwM_dumh.ttf",
     "resourceType": "font",
     "mimeType": "font/ttf"
   },
-  "icomoon.al-XYC_W.svg": {
-    "file": "icomoon.al-XYC_W.svg",
+  "assets/icomoon.al-XYC_W.svg": {
+    "file": "assets/icomoon.al-XYC_W.svg",
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml"
   },
-  "bbg.CfePIDHv.png": {
-    "file": "bbg.CfePIDHv.png",
+  "assets/bbg.CfePIDHv.png": {
+    "file": "assets/bbg.CfePIDHv.png",
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/png"
   },
-  "Montserrat-100-1.DV_LRdWn.woff2": {
-    "file": "Montserrat-100-1.DV_LRdWn.woff2",
+  "assets/Montserrat-100-1.DV_LRdWn.woff2": {
+    "file": "assets/Montserrat-100-1.DV_LRdWn.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Montserrat-100-2.D3on441i.woff2": {
-    "file": "Montserrat-100-2.D3on441i.woff2",
+  "assets/Montserrat-100-2.D3on441i.woff2": {
+    "file": "assets/Montserrat-100-2.D3on441i.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Montserrat-100-3.BcziCZ2I.woff2": {
-    "file": "Montserrat-100-3.BcziCZ2I.woff2",
+  "assets/Montserrat-100-3.BcziCZ2I.woff2": {
+    "file": "assets/Montserrat-100-3.BcziCZ2I.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Montserrat-100-4.BLkAzDQP.woff2": {
-    "file": "Montserrat-100-4.BLkAzDQP.woff2",
+  "assets/Montserrat-100-4.BLkAzDQP.woff2": {
+    "file": "assets/Montserrat-100-4.BLkAzDQP.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Montserrat-100-5.AeMhpAKq.woff2": {
-    "file": "Montserrat-100-5.AeMhpAKq.woff2",
+  "assets/Montserrat-100-5.AeMhpAKq.woff2": {
+    "file": "assets/Montserrat-100-5.AeMhpAKq.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-41.f7eF65bT.woff2": {
-    "file": "Open_Sans-300-41.f7eF65bT.woff2",
+  "assets/Open_Sans-300-41.f7eF65bT.woff2": {
+    "file": "assets/Open_Sans-300-41.f7eF65bT.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-42.Cw00GhOR.woff2": {
-    "file": "Open_Sans-300-42.Cw00GhOR.woff2",
+  "assets/Open_Sans-300-42.Cw00GhOR.woff2": {
+    "file": "assets/Open_Sans-300-42.Cw00GhOR.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-43.Cs5KUPhG.woff2": {
-    "file": "Open_Sans-300-43.Cs5KUPhG.woff2",
+  "assets/Open_Sans-300-43.Cs5KUPhG.woff2": {
+    "file": "assets/Open_Sans-300-43.Cs5KUPhG.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-44.CtQ6sbau.woff2": {
-    "file": "Open_Sans-300-44.CtQ6sbau.woff2",
+  "assets/Open_Sans-300-44.CtQ6sbau.woff2": {
+    "file": "assets/Open_Sans-300-44.CtQ6sbau.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-45.DrVQLkKb.woff2": {
-    "file": "Open_Sans-300-45.DrVQLkKb.woff2",
+  "assets/Open_Sans-300-45.DrVQLkKb.woff2": {
+    "file": "assets/Open_Sans-300-45.DrVQLkKb.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-46.cwLdES2L.woff2": {
-    "file": "Open_Sans-300-46.cwLdES2L.woff2",
+  "assets/Open_Sans-300-46.cwLdES2L.woff2": {
+    "file": "assets/Open_Sans-300-46.cwLdES2L.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-47.C2QAFfGS.woff2": {
-    "file": "Open_Sans-300-47.C2QAFfGS.woff2",
+  "assets/Open_Sans-300-47.C2QAFfGS.woff2": {
+    "file": "assets/Open_Sans-300-47.C2QAFfGS.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-48.0eckKRMD.woff2": {
-    "file": "Open_Sans-300-48.0eckKRMD.woff2",
+  "assets/Open_Sans-300-48.0eckKRMD.woff2": {
+    "file": "assets/Open_Sans-300-48.0eckKRMD.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-49.CrpOxvfM.woff2": {
-    "file": "Open_Sans-300-49.CrpOxvfM.woff2",
+  "assets/Open_Sans-300-49.CrpOxvfM.woff2": {
+    "file": "assets/Open_Sans-300-49.CrpOxvfM.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Open_Sans-300-50.CYuRH5ug.woff2": {
-    "file": "Open_Sans-300-50.CYuRH5ug.woff2",
+  "assets/Open_Sans-300-50.CYuRH5ug.woff2": {
+    "file": "assets/Open_Sans-300-50.CYuRH5ug.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Space_Mono-400-101.BNOj0Qhp.woff2": {
-    "file": "Space_Mono-400-101.BNOj0Qhp.woff2",
+  "assets/Space_Mono-400-101.BNOj0Qhp.woff2": {
+    "file": "assets/Space_Mono-400-101.BNOj0Qhp.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Space_Mono-400-102.DTLbW2xa.woff2": {
-    "file": "Space_Mono-400-102.DTLbW2xa.woff2",
+  "assets/Space_Mono-400-102.DTLbW2xa.woff2": {
+    "file": "assets/Space_Mono-400-102.DTLbW2xa.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Space_Mono-400-103.Rg4St2Dn.woff2": {
-    "file": "Space_Mono-400-103.Rg4St2Dn.woff2",
+  "assets/Space_Mono-400-103.Rg4St2Dn.woff2": {
+    "file": "assets/Space_Mono-400-103.Rg4St2Dn.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Space_Mono-700-104.DWQgDHuA.woff2": {
-    "file": "Space_Mono-700-104.DWQgDHuA.woff2",
+  "assets/Space_Mono-700-104.DWQgDHuA.woff2": {
+    "file": "assets/Space_Mono-700-104.DWQgDHuA.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Space_Mono-700-105.B2s3bDs2.woff2": {
-    "file": "Space_Mono-700-105.B2s3bDs2.woff2",
+  "assets/Space_Mono-700-105.B2s3bDs2.woff2": {
+    "file": "assets/Space_Mono-700-105.B2s3bDs2.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
-  "Space_Mono-700-106.mWgeinG7.woff2": {
-    "file": "Space_Mono-700-106.mWgeinG7.woff2",
+  "assets/Space_Mono-700-106.mWgeinG7.woff2": {
+    "file": "assets/Space_Mono-700-106.mWgeinG7.woff2",
     "resourceType": "font",
     "mimeType": "font/woff2"
   },
@@ -841,38 +841,38 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "about.C0LXS5mR.js",
+    "file": "js/about.BQXTpF8E.js",
     "name": "about",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.4JKP0h1u.js",
-      "_MouseCursor.Dloknv-c.js",
+      "_PageHead.mxrHIxsj.js",
+      "_MouseCursor.DZVFpQ82.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
     "css": [
-      "about.D91YNI2J.css"
+      "assets/about.D91YNI2J.css"
     ],
     "assets": [
-      "about_ja.C9mvsjsU.jpg",
-      "codeium.ByjCc6kQ.svg"
+      "assets/about_ja.C9mvsjsU.jpg",
+      "assets/codeium.ByjCc6kQ.svg"
     ]
   },
-  "about.D91YNI2J.css": {
-    "file": "about.D91YNI2J.css",
+  "assets/about.D91YNI2J.css": {
+    "file": "assets/about.D91YNI2J.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
   },
-  "about_ja.C9mvsjsU.jpg": {
-    "file": "about_ja.C9mvsjsU.jpg",
+  "assets/about_ja.C9mvsjsU.jpg": {
+    "file": "assets/about_ja.C9mvsjsU.jpg",
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/jpeg"
   },
-  "codeium.ByjCc6kQ.svg": {
-    "file": "codeium.ByjCc6kQ.svg",
+  "assets/codeium.ByjCc6kQ.svg": {
+    "file": "assets/codeium.ByjCc6kQ.svg",
     "resourceType": "image",
     "prefetch": true,
     "mimeType": "image/svg+xml"
@@ -882,22 +882,22 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "cookie.BVHU_sz6.js",
+    "file": "js/cookie.D4YZwcW2.js",
     "name": "cookie",
     "src": "pages/cookie.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.4JKP0h1u.js",
-      "_MouseCursor.Dloknv-c.js",
+      "_PageHead.mxrHIxsj.js",
+      "_MouseCursor.DZVFpQ82.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
     "css": [
-      "cookie.BDLbED50.css"
+      "assets/cookie.BDLbED50.css"
     ]
   },
-  "cookie.BDLbED50.css": {
-    "file": "cookie.BDLbED50.css",
+  "assets/cookie.BDLbED50.css": {
+    "file": "assets/cookie.BDLbED50.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -907,27 +907,27 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.BB-oZRQR.js",
+    "file": "js/index.BYGmiQD3.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_nuxt-link.B933eZsO.js",
-      "_MouseCursor.Dloknv-c.js",
+      "_nuxt-link.MIWHU2W5.js",
+      "_MouseCursor.DZVFpQ82.js",
       "_works.CiKLYgJL.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
     "css": [
-      "index.BJwo4Qmy.css"
+      "assets/index.BJwo4Qmy.css"
     ],
     "assets": [
-      "bbg.CfePIDHv.png",
-      "about_ja.C9mvsjsU.jpg"
+      "assets/bbg.CfePIDHv.png",
+      "assets/about_ja.C9mvsjsU.jpg"
     ]
   },
-  "index.BJwo4Qmy.css": {
-    "file": "index.BJwo4Qmy.css",
+  "assets/index.BJwo4Qmy.css": {
+    "file": "assets/index.BJwo4Qmy.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -937,22 +937,22 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "privacy.gaXAK-VH.js",
+    "file": "js/privacy.B-wxYRv8.js",
     "name": "privacy",
     "src": "pages/privacy.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.4JKP0h1u.js",
-      "_MouseCursor.Dloknv-c.js",
+      "_PageHead.mxrHIxsj.js",
+      "_MouseCursor.DZVFpQ82.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
     "css": [
-      "privacy.CzJeHJpZ.css"
+      "assets/privacy.CzJeHJpZ.css"
     ]
   },
-  "privacy.CzJeHJpZ.css": {
-    "file": "privacy.CzJeHJpZ.css",
+  "assets/privacy.CzJeHJpZ.css": {
+    "file": "assets/privacy.CzJeHJpZ.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -962,26 +962,26 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "_slug_.BPDVvTnU.js",
+    "file": "js/_slug_.C9qrNbmp.js",
     "name": "_slug_",
     "src": "pages/work/[slug].vue",
     "isDynamicEntry": true,
     "imports": [
-      "_nuxt-link.B933eZsO.js",
+      "_nuxt-link.MIWHU2W5.js",
       "_works.CiKLYgJL.js",
       "_product.B9Njdixb.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_PageHead.4JKP0h1u.js",
-      "_USkeleton.7jOF6mJy.js",
-      "_MouseCursor.Dloknv-c.js",
+      "_PageHead.mxrHIxsj.js",
+      "_USkeleton.Bcef2riO.js",
+      "_MouseCursor.DZVFpQ82.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
     "css": [
-      "_slug_.BlqSS58i.css"
+      "assets/_slug_.BlqSS58i.css"
     ]
   },
-  "_slug_.BlqSS58i.css": {
-    "file": "_slug_.BlqSS58i.css",
+  "assets/_slug_.BlqSS58i.css": {
+    "file": "assets/_slug_.BlqSS58i.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -991,25 +991,25 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.BoVE15i0.js",
+    "file": "js/index.BHZCfje5.js",
     "name": "index",
     "src": "pages/work/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_PageHead.4JKP0h1u.js",
-      "_nuxt-link.B933eZsO.js",
-      "_MouseCursor.Dloknv-c.js",
+      "_PageHead.mxrHIxsj.js",
+      "_nuxt-link.MIWHU2W5.js",
+      "_MouseCursor.DZVFpQ82.js",
       "_works.CiKLYgJL.js",
-      "_USkeleton.7jOF6mJy.js",
+      "_USkeleton.Bcef2riO.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
     "css": [
-      "index.BTC0qFpg.css"
+      "assets/index.BTC0qFpg.css"
     ]
   },
-  "index.BTC0qFpg.css": {
-    "file": "index.BTC0qFpg.css",
+  "assets/index.BTC0qFpg.css": {
+    "file": "assets/index.BTC0qFpg.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
