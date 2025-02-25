@@ -1,4 +1,4 @@
-{
+const client_manifest = {
   "_FooterMain.D7Bnzh_A.js": {
     "resourceType": "script",
     "module": true,
@@ -1014,4 +1014,7 @@
     "prefetch": true,
     "preload": true
   }
-}
+};
+
+export { client_manifest as default };
+//# sourceMappingURL=client.manifest.mjs.map
