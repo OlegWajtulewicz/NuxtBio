@@ -70,13 +70,13 @@ export default defineNuxtConfig({
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
     build: {
-      assetsDir: '',
+      assetsDir: '_nuxt',
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: 'assets/[name].[hash][extname]',
-          chunkFileNames: 'js/[name].[hash].js',
-          entryFileNames: 'js/[name].[hash].js'
+          assetFileNames: '_nuxt/[name].[hash][extname]',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
         }
       }
     },
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '_nuxt/',
+    buildAssetsDir: '_nuxt',
     cdnURL: '',
     head: {
       htmlAttrs: {
