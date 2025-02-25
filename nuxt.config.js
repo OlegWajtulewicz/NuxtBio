@@ -70,13 +70,13 @@ export default defineNuxtConfig({
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
     build: {
-      assetsDir: '_nuxt',
+      assetsDir: '',
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: '_nuxt/[name].[hash][extname]',
-          chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js'
+          assetFileNames: '[name].[hash][extname]',
+          chunkFileNames: '[name].[hash].js',
+          entryFileNames: '[name].[hash].js'
         }
       }
     },
@@ -84,11 +84,6 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['gsap'],
-    optimization: {
-      splitChunks: {
-        chunks: 'all'
-      }
-    }
   },
   app: {
     pageTransition: {
@@ -96,7 +91,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '_nuxt',
+    buildAssetsDir: '',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -161,8 +156,8 @@ export default defineNuxtConfig({
         dirs: ['stores', 'utils', 'animation'],
   },
   experimental: {
-    payloadExtraction: true,
-    renderJsonPayloads: true,
+    inlineSSRStyles: false,
+    payloadExtraction: false
   },
   routeRules: {
     // Кэширование статических страниц
@@ -172,10 +167,28 @@ export default defineNuxtConfig({
   },
   ssr: false,
   nitro: {
-    preset: 'static',
+    preset: 'netlify',
     output: {
       publicDir: 'dist'
     },
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/about',
+        '/work',
+        '/privacy',
+        '/cookie'
+      ]
+    },
+    static: true,
+    publicAssets: [
+      {
+        baseURL: '/',
+        dir: 'public',
+        maxAge: 31536000
+      }
+    ]
   },
   generate: {
     fallback: '404.html'

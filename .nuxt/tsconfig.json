@@ -162,7 +162,7 @@
         "./tailwind/expose"
       ],
       "#app-manifest": [
-        "./manifest/meta/2cd1e4b5-7ab5-4476-9cf6-8314fcb576e4.json"
+        "./manifest/meta/85f0dca9-991d-4115-8c8d-e9ca2f033949.json"
       ],
       "#components": [
         "./components"
@@ -261,7 +261,6 @@
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
-    "../node_modules/@nuxt/telemetry/dist/runtime/server",
-    "../.output"
+    "../node_modules/@nuxt/telemetry/dist/runtime/server"
   ]
 }

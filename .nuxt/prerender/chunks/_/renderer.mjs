@@ -1,9 +1,9 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { getQuery, createError, appendResponseHeader, getResponseStatus, getResponseStatusText } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/h3/dist/index.mjs';
+import { getQuery, createError, getResponseStatus, getResponseStatusText } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/h3/dist/index.mjs';
 import { stringify, uneval } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/devalue/index.js';
-import { d as defineRenderHandler, b as buildAssetsURL, p as publicAssetsURL, a as useStorage, g as getRouteRules, c as useRuntimeConfig, j as joinURL, w as withoutTrailingSlash, u as useNitroApp } from './nitro.mjs';
 import { propsToString, renderSSRHead } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/@unhead/ssr/dist/index.mjs';
 import { createServerHead as createServerHead$1, CapoPlugin } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unhead/dist/index.mjs';
+import { d as defineRenderHandler, b as buildAssetsURL, p as publicAssetsURL, a as useStorage, g as getRouteRules, c as useRuntimeConfig, u as useNitroApp } from './nitro.mjs';
 import { version, unref } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/index.mjs';
 import { defineHeadPlugin } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/@unhead/shared/dist/index.mjs';
 import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/destr/dist/index.mjs';
@@ -191,8 +191,6 @@ const renderer = defineRenderHandler(async (event) => {
     modules: /* @__PURE__ */ new Set(),
     islandContext
   };
-  const _PAYLOAD_EXTRACTION = !ssrContext.noSSR && !isRenderingIsland;
-  const payloadURL = _PAYLOAD_EXTRACTION ? joinURL(ssrContext.runtimeConfig.app.cdnURL || ssrContext.runtimeConfig.app.baseURL, url, "_payload.json" ) + "?" + ssrContext.runtimeConfig.app.buildId : void 0;
   {
     ssrContext.payload.prerenderedAt = Date.now();
   }
@@ -219,20 +217,9 @@ const renderer = defineRenderHandler(async (event) => {
     }
     return response2;
   }
-  if (_PAYLOAD_EXTRACTION) {
-    appendResponseHeader(event, "x-nitro-prerender", joinURL(url, "_payload.json" ));
-    await payloadCache.setItem(withoutTrailingSlash(url), renderPayloadResponse(ssrContext));
-  }
   const inlinedStyles = [];
   const NO_SCRIPTS = routeOptions.experimentalNoScripts;
   const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
-  if (_PAYLOAD_EXTRACTION && !NO_SCRIPTS && !isRenderingIsland) {
-    head.push({
-      link: [
-        { rel: "preload", as: "fetch", crossorigin: "anonymous", href: payloadURL } 
-      ]
-    }, headEntryOptions);
-  }
   if (ssrContext._preloadManifest) {
     head.push({
       link: [
@@ -262,7 +249,7 @@ const renderer = defineRenderHandler(async (event) => {
       link: getPrefetchLinks(ssrContext, renderer.rendererContext)
     }, headEntryOptions);
     head.push({
-      script: _PAYLOAD_EXTRACTION ? renderPayloadJsonScript({ ssrContext, data: splitPayload(ssrContext).initial, src: payloadURL })  : renderPayloadJsonScript({ ssrContext, data: ssrContext.payload }) 
+      script: renderPayloadJsonScript({ ssrContext, data: ssrContext.payload }) 
     }, {
       ...headEntryOptions,
       // this should come before another end of body scripts
@@ -278,7 +265,7 @@ const renderer = defineRenderHandler(async (event) => {
         defer: resource.module ? null : true,
         // if we are rendering script tag payloads that import an async payload
         // we need to ensure this resolves before executing the Nuxt entry
-        tagPosition: _PAYLOAD_EXTRACTION && !true ? "bodyClose" : "head",
+        tagPosition: "head",
         crossorigin: ""
       }))
     }, headEntryOptions);
