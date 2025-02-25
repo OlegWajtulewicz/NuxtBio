@@ -1,4 +1,4 @@
-export default {
+const client_manifest = {
   "_FooterMain.D7UKbCR4.css": {
     "resourceType": "style",
     "prefetch": true,
@@ -1014,4 +1014,7 @@ export default {
     "prefetch": true,
     "preload": true
   }
-}
+};
+
+export { client_manifest as default };
+//# sourceMappingURL=client.manifest.mjs.map
