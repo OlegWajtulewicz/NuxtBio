@@ -74,9 +74,9 @@ export default defineNuxtConfig({
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: '[name].[hash][extname]',
-          chunkFileNames: '[name].[hash].js',
-          entryFileNames: '[name].[hash].js'
+          assetFileNames: 'assets/[name].[hash][extname]',
+          chunkFileNames: 'js/[name].[hash].js',
+          entryFileNames: 'js/[name].[hash].js'
         }
       }
     },
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '',
+    buildAssetsDir: '_nuxt/',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -184,7 +184,7 @@ export default defineNuxtConfig({
     static: true,
     publicAssets: [
       {
-        baseURL: '/',
+        baseURL: '/_nuxt',
         dir: 'public',
         maxAge: 31536000
       }
