@@ -3,77 +3,54 @@
   command = "npm run generate"
 
 [[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-[[headers]]
   for = "/_nuxt/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.js"
+  for = "*.js"
   [headers.values]
     Content-Type = "application/javascript; charset=utf-8"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.css"
+  for = "*.css"
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.woff2"
+  for = "*.woff2"
   [headers.values]
     Content-Type = "font/woff2"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.woff"
+  for = "*.woff"
   [headers.values]
     Content-Type = "font/woff"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.ttf"
+  for = "*.ttf"
   [headers.values]
     Content-Type = "font/ttf"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.eot"
+  for = "*.eot"
   [headers.values]
     Content-Type = "application/vnd.ms-fontobject"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.svg"
+  for = "*.svg"
   [headers.values]
     Content-Type = "image/svg+xml"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.png"
+  for = "*.png"
   [headers.values]
     Content-Type = "image/png"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.jpg"
+  for = "*.jpg"
   [headers.values]
     Content-Type = "image/jpeg"
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
   from = "/*"

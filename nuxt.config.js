@@ -60,23 +60,18 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `
-            @use "./assets/styles/utils/_functions" as *;
-            @use "./assets/styles/utils/_vars" as *;
-            @use "./assets/styles/mixins" as *;
-          `
+          additionalData: '@use "./assets/styles/utils/_functions" as *; @use "./assets/styles/utils/_vars" as *; @use "./assets/styles/mixins" as *;'
         }
       }
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
-    base: '/nuxtbio/',
     build: {
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: '[name].[hash][extname]',
-          chunkFileNames: '[name].[hash].js',
-          entryFileNames: '[name].[hash].js'
+          assetFileNames: '_nuxt/[name].[hash][extname]',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
         }
       }
     }
@@ -89,7 +84,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/nuxtbio',
+    baseURL: '/',
     buildAssetsDir: '_nuxt',
     cdnURL: '',
     head: {
@@ -97,9 +92,8 @@ export default defineNuxtConfig({
         lang: 'en'
       },
       meta: [
-        { charset: 'UTF-8' },
-        { name: 'format-detection', content: 'telephone=no' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Delivering tailor-made digital designs and building interactive websites.' },
         
         // Open Graph / Facebook
@@ -167,9 +161,6 @@ export default defineNuxtConfig({
   ssr: false,
   nitro: {
     preset: 'netlify',
-    output: {
-      publicDir: 'dist'
-    },
     prerender: {
       crawlLinks: true,
       routes: [
