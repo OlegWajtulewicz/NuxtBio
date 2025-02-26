@@ -70,7 +70,6 @@ export default defineNuxtConfig({
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
     build: {
-      assetsDir: '_nuxt',
       manifest: true,
       rollupOptions: {
         output: {
@@ -89,7 +88,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/',
+    baseURL: '/nuxtbio/',
     buildAssetsDir: '_nuxt',
     cdnURL: '',
     head: {
@@ -182,7 +181,7 @@ export default defineNuxtConfig({
     }
   },
   generate: {
-    fallback: '404.html'
+    fallback: true
   },
   runtimeConfig: {
     public: {
