@@ -1,12 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: {
-   enabled: true,
-
-   timeline: {
-    enabled: true,
-   },
-  },
+  devtools: { enabled: true },
   compatibilityDate: "2024-12-18",
   pages: true,
   modules: [
@@ -50,13 +44,11 @@ export default defineNuxtConfig({
       alwaysRedirect: false,
       cookieDomain: null,
       cookieSecure: false
-     // cookieKey: 'i18n_redirected',
     }
   },
   plugins: [
     { src: '~/plugins/lazyLoad.js', mode: 'client' },
     { src: '~/plugins/mouseCursor.client.js', mode: 'client' },
-   // { src: '~/plugins/locomotiveScroll.client.js', mode: 'client' },
     { src: '~/plugins/scrollDirection.client.js', mode: 'client' },
     { src: '~/plugins/hamburgerNav.client.js', mode: 'client' },
     { src: '~/plugins/seo.client.js', mode: 'client' },
@@ -94,16 +86,18 @@ export default defineNuxtConfig({
         output: {
           assetFileNames: 'assets/[name].[hash][extname]',
           chunkFileNames: 'assets/[name].[hash].js',
-          entryFileNames: 'assets/[name].[hash].js'
+          entryFileNames: 'assets/[name].[hash].js',
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor'
+            }
+          }
         }
       }
-    },
-    optimizeDeps: {
-      include: ['gsap']
     }
   },
   build: {
-    transpile: ['gsap'],
+    transpile: ['gsap']
   },
   app: {
     pageTransition: {
@@ -155,13 +149,11 @@ export default defineNuxtConfig({
       script: [
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
-          body: true,
-          async: true
+          defer: true
         },
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
-          body: true,
-          async: true
+          defer: true
         }
       ]
     },
@@ -175,17 +167,17 @@ export default defineNuxtConfig({
         dirs: ['stores', 'utils', 'animation'],
   },
   experimental: {
-    payloadExtraction: true,
-    inlineSSRStyles: false,
-    renderJsonPayloads: true
+    payloadExtraction: false,
+    inlineSSRStyles: true,
+    renderJsonPayloads: false
   },
   routeRules: {
-    '/': { prerender: true },
-    '/about': { prerender: true },
-    '/work': { prerender: true },
-    '/work/**': { prerender: true },
-    '/privacy': { prerender: true },
-    '/cookie': { prerender: true },
+    '/': { static: true },
+    '/about': { static: true },
+    '/work': { static: true },
+    '/work/**': { static: true },
+    '/privacy': { static: true },
+    '/cookie': { static: true },
     // Кэширование статических страниц
     '/**': { swr: 3600 },
     // Кэширование API
@@ -198,7 +190,6 @@ export default defineNuxtConfig({
     static: true,
     prerender: {
       crawlLinks: true,
-      failOnError: false,
       routes: [
         '/',
         '/about',

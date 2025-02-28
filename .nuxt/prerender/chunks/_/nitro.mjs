@@ -801,7 +801,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "cc089b4e-d3e0-4b25-8f8a-ca4368c0e444",
+    "buildId": "bdbec8ba-9828-409f-9953-38397bc0659f",
     "buildAssetsDir": "assets",
     "cdnURL": ""
   },
@@ -812,22 +812,22 @@ const _inlineRuntimeConfig = {
         "cache": false
       },
       "/": {
-        "prerender": true
+        "static": true
       },
       "/about": {
-        "prerender": true
+        "static": true
       },
       "/work": {
-        "prerender": true
+        "static": true
       },
       "/work/**": {
-        "prerender": true
+        "static": true
       },
       "/privacy": {
-        "prerender": true
+        "static": true
       },
       "/cookie": {
-        "prerender": true
+        "static": true
       },
       "/**": {
         "swr": 3600,
@@ -1622,5 +1622,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, baseURL as e, getRouteRules as g, joinURL as j, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u, withoutTrailingSlash as w };;globalThis.__timing__.logEnd('Load chunks/_/nitro');
+export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, baseURL as e, getRouteRules as g, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u };;globalThis.__timing__.logEnd('Load chunks/_/nitro');
 //# sourceMappingURL=nitro.mjs.map
