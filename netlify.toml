@@ -1,111 +1,29 @@
 [build]
-  publish = ".output/public"
+  publish = ".output/public"  
   command = "npm run generate"
 
 [[headers]]
-  for = "/*"
+  for = "/api/*"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Origin = "*" 
 
 [[headers]]
-  for = "/nuxtbio/_nuxt/*"
+  for = "/_nuxt/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/nuxtbio/img/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.js"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.css"
-  [headers.values]
-    Content-Type = "text/css; charset=utf-8"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.woff2"
-  [headers.values]
-    Content-Type = "font/woff2"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.woff"
-  [headers.values]
-    Content-Type = "font/woff"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.ttf"
-  [headers.values]
-    Content-Type = "font/ttf"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.svg"
-  [headers.values]
-    Content-Type = "image/svg+xml"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.png"
-  [headers.values]
-    Content-Type = "image/png"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/_nuxt/*.jpg"
-  [headers.values]
-    Content-Type = "image/jpeg"
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
 
 [[redirects]]
-  from = "/nuxtbio/*"
-  to = "/nuxtbio/index.html"
+  from = "/*"
+  to = "/index.html"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/_nuxt/*"
-  to = "/_nuxt/:splat"
-  status = 200
-  force = false
-
-[[redirects]]
-  from = "/assets/*"
-  to = "/assets/:splat"
-  status = 200
-  force = false
-
-[[redirects]]
-  from = "/_ipx/*"
-  to = "/.netlify/functions/ipx/:splat"
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
   status = 200
   force = true
 
 [[edge_functions]]
-  function = "proxy"
-  path = "/assets/*"
-
-[[edge_functions]]
   function = "ipx"
-  path = "/_ipx/*" 
+  path = "/_ipx/*"

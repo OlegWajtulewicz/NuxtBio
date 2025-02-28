@@ -910,37 +910,37 @@ const _routes = [
     name: "about",
     path: "/about",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./about.DLBv1ibo.mjs')
+    component: () => import('./about.ZPJhu62i.mjs')
   },
   {
     name: "cookie",
     path: "/cookie",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./cookie.CF_crQkR.mjs')
+    component: () => import('./cookie.C87hOEke.mjs')
   },
   {
     name: "index",
     path: "/",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./index.B69vzYD_.mjs')
+    component: () => import('./index.CQpu0nd-.mjs')
   },
   {
     name: "privacy",
     path: "/privacy",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./privacy.CSNvIJj7.mjs')
+    component: () => import('./privacy.B5DeIfzo.mjs')
   },
   {
     name: "work-slug",
     path: "/work/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_.DdJKEMj1.mjs')
+    component: () => import('./_slug_.BvDxjAnA.mjs')
   },
   {
     name: "work",
     path: "/work",
     meta: __nuxt_page_meta || {},
-    component: () => import('./index.CSVLPZ1D.mjs')
+    component: () => import('./index.CifWEidB.mjs')
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -1692,7 +1692,7 @@ const plugin = /* @__PURE__ */ defineNuxtPlugin({
     };
   }
 });
-const LazyIcon = defineAsyncComponent(() => import('./index.C2EboQ82.mjs').then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import('./index.hFm-O5RQ.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -7881,12 +7881,12 @@ const plugins = [
   ssg_detect_3fHkBxLtv0
 ];
 const layouts = {
-  "about-layout": defineAsyncComponent(() => import('./about-layout.BtVkfJlB.mjs').then((m) => m.default || m)),
-  "cookie-layout": defineAsyncComponent(() => import('./cookie-layout.Bha97Ezk.mjs').then((m) => m.default || m)),
-  "home-layout": defineAsyncComponent(() => import('./home-layout.BiGyR3du.mjs').then((m) => m.default || m)),
-  "privacy-layout": defineAsyncComponent(() => import('./privacy-layout.BIJSQ-Ed.mjs').then((m) => m.default || m)),
-  "slug-layout": defineAsyncComponent(() => import('./slug-layout.2BymjsZM.mjs').then((m) => m.default || m)),
-  "work-layout": defineAsyncComponent(() => import('./work-layout.C1Okeil0.mjs').then((m) => m.default || m))
+  "about-layout": defineAsyncComponent(() => import('./about-layout.BuQ9e06y.mjs').then((m) => m.default || m)),
+  "cookie-layout": defineAsyncComponent(() => import('./cookie-layout.o36ED7ju.mjs').then((m) => m.default || m)),
+  "home-layout": defineAsyncComponent(() => import('./home-layout.fRBIRx9S.mjs').then((m) => m.default || m)),
+  "privacy-layout": defineAsyncComponent(() => import('./privacy-layout.Czl9Ds6H.mjs').then((m) => m.default || m)),
+  "slug-layout": defineAsyncComponent(() => import('./slug-layout.Bb_gGaFD.mjs').then((m) => m.default || m)),
+  "work-layout": defineAsyncComponent(() => import('./work-layout.DJVI1yx-.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -8189,8 +8189,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404.B7jbv60q.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500.CmPdMLpP.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404.2elB52Hi.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500.CuCLNfyG.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
