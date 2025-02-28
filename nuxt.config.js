@@ -10,7 +10,29 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-12-18",
   pages: true,
   modules: [
-    '@nuxt/image',
+    ['@nuxt/image', {
+      provider: 'static',
+      dir: 'public',
+      staticFilename: '[publicPath]/[name]-[hash][ext]',
+      screens: {
+        xs: 320,
+        sm: 640,
+        md: 768,
+        lg: 1024,
+        xl: 1280,
+        xxl: 1536,
+        '2xl': 1536
+      },
+      presets: {
+        default: {
+          modifiers: {
+            format: 'webp',
+            fit: 'cover',
+            quality: '80'
+          }
+        }
+      }
+    }],
     '@nuxtjs/google-fonts',
     '@pinia/nuxt',
     '@nuxt/ui',
@@ -193,7 +215,13 @@ export default defineNuxtConfig({
     output: {
       publicDir: 'dist'
     },
-    timing: true
+    timing: true,
+    storage: {
+      images: {
+        driver: 'fs',
+        base: './public/img'
+      }
+    }
   },
   generate: {
     fallback: '404.html'

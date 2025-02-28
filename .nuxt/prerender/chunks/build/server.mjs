@@ -31,7 +31,6 @@ import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/di
 import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/drivers/fs.mjs';
 import 'file:///C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
 import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/drivers/fs-lite.mjs';
-import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ipx/dist/index.mjs';
 
 var _a;
 if (!globalThis.$fetch) {
@@ -260,13 +259,11 @@ const HASH_RE = /#/g;
 const AMPERSAND_RE = /&/g;
 const SLASH_RE = /\//g;
 const EQUAL_RE = /=/g;
-const IM_RE = /\?/g;
 const PLUS_RE = /\+/g;
 const ENC_CARET_RE = /%5e/gi;
 const ENC_BACKTICK_RE = /%60/gi;
 const ENC_PIPE_RE = /%7c/gi;
 const ENC_SPACE_RE = /%20/gi;
-const ENC_ENC_SLASH_RE = /%252f/gi;
 function encode(text) {
   return encodeURI("" + text).replace(ENC_PIPE_RE, "|");
 }
@@ -275,12 +272,6 @@ function encodeQueryValue(input) {
 }
 function encodeQueryKey(text) {
   return encodeQueryValue(text).replace(EQUAL_RE, "%3D");
-}
-function encodePath(text) {
-  return encode(text).replace(HASH_RE, "%23").replace(IM_RE, "%3F").replace(ENC_ENC_SLASH_RE, "%2F").replace(AMPERSAND_RE, "%26").replace(PLUS_RE, "%2B");
-}
-function encodeParam(text) {
-  return encodePath(text).replace(SLASH_RE, "%2F");
 }
 function decode(text = "") {
   try {
@@ -14924,36 +14915,6 @@ async function _imageMeta(url) {
     return meta;
   }
 }
-function createMapper(map) {
-  return (key) => {
-    return key ? map[key] || key : map.missingValue;
-  };
-}
-function createOperationsGenerator({ formatter, keyMap, joinWith = "/", valueMap } = {}) {
-  if (!formatter) {
-    formatter = (key, value) => `${key}=${value}`;
-  }
-  if (keyMap && typeof keyMap !== "function") {
-    keyMap = createMapper(keyMap);
-  }
-  const map = valueMap || {};
-  Object.keys(map).forEach((valueKey) => {
-    if (typeof map[valueKey] !== "function") {
-      map[valueKey] = createMapper(map[valueKey]);
-    }
-  });
-  return (modifiers = {}) => {
-    const operations = Object.entries(modifiers).filter(([_, value]) => typeof value !== "undefined").map(([key, value]) => {
-      const mapper = map[key];
-      if (typeof mapper === "function") {
-        value = mapper(modifiers[key]);
-      }
-      key = typeof keyMap === "function" ? keyMap(key) : key;
-      return formatter(key, value);
-    });
-    return operations.join(joinWith);
-  };
-}
 function parseSize(input = "") {
   if (typeof input === "number") {
     return input;
@@ -15012,7 +14973,7 @@ function createImage(globalOptions) {
   const ctx = {
     options: globalOptions
   };
-  const getImage2 = (input, options = {}) => {
+  const getImage = (input, options = {}) => {
     const image = resolveImage(ctx, input, options);
     {
       prerenderStaticImages(image.url);
@@ -15020,7 +14981,7 @@ function createImage(globalOptions) {
     return image;
   };
   const $img = (input, modifiers = {}, options = {}) => {
-    return getImage2(input, {
+    return getImage(input, {
       ...options,
       modifiers: defu(modifiers, options.modifiers || {})
     }).url;
@@ -15029,7 +14990,7 @@ function createImage(globalOptions) {
     $img[presetName] = (source, modifiers, options) => $img(source, modifiers, { ...globalOptions.presets[presetName], ...options });
   }
   $img.options = globalOptions;
-  $img.getImage = getImage2;
+  $img.getImage = getImage;
   $img.getMeta = (input, options) => getMeta(ctx, input, options);
   $img.getSizes = (input, options) => getSizes(ctx, input, options);
   ctx.$img = $img;
@@ -15222,41 +15183,6 @@ function finaliseSrcsetVariants(srcsetVariants) {
     previousWidth = sizeVariant.width;
   }
 }
-const operationsGenerator = createOperationsGenerator({
-  keyMap: {
-    format: "f",
-    fit: "fit",
-    width: "w",
-    height: "h",
-    resize: "s",
-    quality: "q",
-    background: "b"
-  },
-  joinWith: "&",
-  formatter: (key, val) => encodeParam(key) + "_" + encodeParam(val)
-});
-const getImage = (src, { modifiers = {}, baseURL: baseURL2 } = {}, ctx) => {
-  if (modifiers.width && modifiers.height) {
-    modifiers.resize = `${modifiers.width}x${modifiers.height}`;
-    delete modifiers.width;
-    delete modifiers.height;
-  }
-  const params = operationsGenerator(modifiers) || "_";
-  if (!baseURL2) {
-    baseURL2 = joinURL(ctx.options.nuxt.baseURL, "/_ipx");
-  }
-  return {
-    url: joinURL(baseURL2, params, encodePath(src))
-  };
-};
-const validateDomains = true;
-const supportsAlias = true;
-const ipxStaticRuntime$uAUo1WEn1t = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  getImage,
-  supportsAlias,
-  validateDomains
-}, Symbol.toStringTag, { value: "Module" }));
 const imageOptions = {
   "screens": {
     "xs": 320,
@@ -15267,8 +15193,16 @@ const imageOptions = {
     "xxl": 1536,
     "2xl": 1536
   },
-  "presets": {},
-  "provider": "ipxStatic",
+  "presets": {
+    "default": {
+      "modifiers": {
+        "format": "webp",
+        "fit": "cover",
+        "quality": "80"
+      }
+    }
+  },
+  "provider": "static",
   "domains": [],
   "alias": {},
   "densities": [
@@ -15279,9 +15213,7 @@ const imageOptions = {
     "webp"
   ]
 };
-imageOptions.providers = {
-  ["ipxStatic"]: { provider: ipxStaticRuntime$uAUo1WEn1t, defaults: {} }
-};
+imageOptions.providers = {};
 const useImage = () => {
   const config3 = /* @__PURE__ */ useRuntimeConfig();
   const nuxtApp = useNuxtApp();

@@ -38,7 +38,6 @@ import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/di
 import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/drivers/fs.mjs';
 import 'file:///C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
 import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/drivers/fs-lite.mjs';
-import 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ipx/dist/index.mjs';
 
 const _sfc_main$7 = {
   __name: "ProductHeader",

@@ -1,11 +1,11 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};globalThis.__timing__.logStart('Load chunks/_/nitro');import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, eventHandler, appendResponseHeader, removeResponseHeader, createError, getResponseHeader, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, getResponseStatus, setResponseHeaders, setHeaders, sendRedirect, proxyRequest, getQuery as getQuery$1, getRequestURL, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/h3/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};globalThis.__timing__.logStart('Load chunks/_/nitro');import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, eventHandler, appendResponseHeader, removeResponseHeader, createError, getResponseHeader, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, getResponseStatus, setResponseHeaders, setHeaders, sendRedirect, proxyRequest, getQuery as getQuery$1, getRequestURL, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/h3/dist/index.mjs';
 import destr from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/destr/dist/index.mjs';
 import { createHooks } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/hookable/dist/index.mjs';
 import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ofetch/dist/node.mjs';
 import { createCall, createFetch } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unenv/runtime/fetch/index.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve, basename, isAbsolute } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/pathe/dist/index.mjs';
+import { dirname, resolve, basename } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/pathe/dist/index.mjs';
 import { getIcons } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/@iconify/utils/lib/index.mjs';
 import { hash } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ohash/dist/index.mjs';
 import { consola } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unenv/runtime/npm/consola.mjs';
@@ -16,7 +16,6 @@ import { createStorage, prefixStorage } from 'file://C:/Users/vaj-o/OneDrive/Des
 import unstorage_47drivers_47fs from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/drivers/fs.mjs';
 import file_58_47_47_47C_58_47Users_47vaj_45o_47OneDrive_47Desktop_47NuxtBio_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js from 'file:///C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
 import unstorage_47drivers_47fs_45lite from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/unstorage/drivers/fs-lite.mjs';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ipx/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/radix3/dist/index.mjs';
 
 const HASH_RE = /#/g;
@@ -802,7 +801,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "522f773e-b3e8-44c7-8e14-4f45c9d604bb",
+    "buildId": "a22f0222-9bfc-4b36-ae5b-3595aef33911",
     "buildAssetsDir": "_nuxt",
     "cdnURL": ""
   },
@@ -903,18 +902,6 @@ const _inlineRuntimeConfig = {
   },
   "icon": {
     "serverKnownCssClasses": []
-  },
-  "ipx": {
-    "baseURL": "/_ipx",
-    "alias": {},
-    "fs": {
-      "dir": [
-        "C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/public"
-      ]
-    },
-    "http": {
-      "domains": []
-    }
   }
 };
 const envOptions = {
@@ -979,6 +966,7 @@ const storage = createStorage({});
 storage.mount('/assets', assets);
 
 storage.mount('internal:nuxt:prerender', file_58_47_47_47C_58_47Users_47vaj_45o_47OneDrive_47Desktop_47NuxtBio_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/.nuxt/cache/nitro/prerender"}));
+storage.mount('images', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio\\public\\img","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio\\.data\\kv"}));
 storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio\\server","ignore":["**/node_modules/**","**/.git/**"]}));
@@ -1489,30 +1477,11 @@ const _R34QAG = defineCachedEventHandler(async (event) => {
   // 1 week
 });
 
-const _hOpbCd = lazyEventHandler(() => {
-  const opts = useRuntimeConfig().ipx || {};
-  const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
-  const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
-  const httpStorage = opts.http?.domains ? ipxHttpStorage({ ...opts.http }) : void 0;
-  if (!fsStorage && !httpStorage) {
-    throw new Error("IPX storage is not configured!");
-  }
-  const ipxOptions = {
-    ...opts,
-    storage: fsStorage || httpStorage,
-    httpStorage
-  };
-  const ipx = createIPX(ipxOptions);
-  const ipxHandler = createIPXH3Handler(ipx);
-  return useBase(opts.baseURL, ipxHandler);
-});
-
 const _lazy_bywtDb = () => import('./renderer.mjs');
 
 const handlers = [
   { route: '', handler: _gLAmmR, lazy: false, middleware: true, method: undefined },
   { route: '/api/_nuxt_icon/:collection', handler: _R34QAG, lazy: false, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _hOpbCd, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/about', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
