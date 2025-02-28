@@ -7,25 +7,7 @@ export default defineNuxtConfig({
     ['@nuxt/image', {
       provider: 'static',
       dir: 'public',
-      staticFilename: '[publicPath]/[name]-[hash][ext]',
-      screens: {
-        xs: 320,
-        sm: 640,
-        md: 768,
-        lg: 1024,
-        xl: 1280,
-        xxl: 1536,
-        '2xl': 1536
-      },
-      presets: {
-        default: {
-          modifiers: {
-            format: 'webp',
-            fit: 'cover',
-            quality: '80'
-          }
-        }
-      }
+      staticFilename: '[publicPath]/[name]-[hash][ext]'
     }],
     '@nuxtjs/google-fonts',
     '@pinia/nuxt',
@@ -80,18 +62,13 @@ export default defineNuxtConfig({
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
     build: {
-      cssCodeSplit: true,
+      cssCodeSplit: false,
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: 'assets/[name].[hash][extname]',
-          chunkFileNames: 'assets/[name].[hash].js',
-          entryFileNames: 'assets/[name].[hash].js',
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor'
-            }
-          }
+          assetFileNames: '_nuxt/[name].[hash][extname]',
+          chunkFileNames: '_nuxt/[name].[hash].js',
+          entryFileNames: '_nuxt/[name].[hash].js'
         }
       }
     }
@@ -105,7 +82,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: 'assets',
+    buildAssetsDir: '_nuxt',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -149,11 +126,13 @@ export default defineNuxtConfig({
       script: [
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
-          defer: true
+          type: 'text/javascript',
+          body: true
         },
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
-          defer: true
+          type: 'text/javascript',
+          body: true
         }
       ]
     },
