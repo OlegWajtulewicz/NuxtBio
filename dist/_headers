@@ -1,6 +1,6 @@
-/_nuxt/builds/meta/*
+/assets/builds/meta/*
   cache-control: public, max-age=31536000, immutable
-/_nuxt/builds/*
+/assets/builds/*
   cache-control: public, max-age=1, immutable
-/_nuxt/*
+/assets/*
   cache-control: public, max-age=31536000, immutable

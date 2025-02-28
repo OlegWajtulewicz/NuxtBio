@@ -448,7 +448,7 @@ function readAsset (id) {
   return promises.readFile(resolve(serverDir, assets$1[id].path))
 }
 
-const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/_nuxt/":{"maxAge":31536000}};
+const publicAssetBases = {"/assets/builds/meta/":{"maxAge":31536000},"/assets/builds/":{"maxAge":1},"/assets/":{"maxAge":31536000}};
 
 function isPublicAssetURL(id = '') {
   if (assets$1[id]) {
@@ -801,8 +801,8 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "a22f0222-9bfc-4b36-ae5b-3595aef33911",
-    "buildAssetsDir": "_nuxt",
+    "buildId": "cc089b4e-d3e0-4b25-8f8a-ca4368c0e444",
+    "buildAssetsDir": "assets",
     "cdnURL": ""
   },
   "nitro": {
@@ -843,17 +843,17 @@ const _inlineRuntimeConfig = {
           "maxAge": 600
         }
       },
-      "/_nuxt/builds/meta/**": {
+      "/assets/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
         }
       },
-      "/_nuxt/builds/**": {
+      "/assets/builds/**": {
         "headers": {
           "cache-control": "public, max-age=1, immutable"
         }
       },
-      "/_nuxt/**": {
+      "/assets/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
         }
@@ -966,7 +966,6 @@ const storage = createStorage({});
 storage.mount('/assets', assets);
 
 storage.mount('internal:nuxt:prerender', file_58_47_47_47C_58_47Users_47vaj_45o_47OneDrive_47Desktop_47NuxtBio_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/.nuxt/cache/nitro/prerender"}));
-storage.mount('images', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio\\public\\img","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio\\.data\\kv"}));
 storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\vaj-o\\OneDrive\\Desktop\\NuxtBio\\server","ignore":["**/node_modules/**","**/.git/**"]}));
@@ -1490,9 +1489,9 @@ const handlers = [
   { route: '/privacy', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/cookie', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/api/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/_nuxt/builds/meta/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/_nuxt/builds/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
-  { route: '/_nuxt/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/assets/builds/meta/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/assets/builds/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/assets/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined }
 ];
 

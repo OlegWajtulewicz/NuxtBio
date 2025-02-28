@@ -11,6 +11,12 @@
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
@@ -91,14 +97,14 @@
     Access-Control-Allow-Origin = "*"
 
 [[redirects]]
-  from = "/_ipx/*"
-  to = "/.netlify/functions/ipx/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
   status = 200
   force = false
 
@@ -108,9 +114,15 @@
   status = 200
   force = false
 
+[[redirects]]
+  from = "/_ipx/*"
+  to = "/.netlify/functions/ipx/:splat"
+  status = 200
+  force = true
+
 [[edge_functions]]
   function = "proxy"
-  path = "/.netlify/proxy/_nuxt/*"
+  path = "/assets/*"
 
 [[edge_functions]]
   function = "ipx"

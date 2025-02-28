@@ -92,14 +92,9 @@ export default defineNuxtConfig({
       manifest: true,
       rollupOptions: {
         output: {
-          assetFileNames: '_nuxt/[name].[hash][extname]',
-          chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js',
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor';
-            }
-          }
+          assetFileNames: 'assets/[name].[hash][extname]',
+          chunkFileNames: 'assets/[name].[hash].js',
+          entryFileNames: 'assets/[name].[hash].js'
         }
       }
     },
@@ -116,7 +111,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '_nuxt',
+    buildAssetsDir: 'assets',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -216,12 +211,7 @@ export default defineNuxtConfig({
       publicDir: 'dist'
     },
     timing: true,
-    storage: {
-      images: {
-        driver: 'fs',
-        base: './public/img'
-      }
-    }
+    serveStatic: true
   },
   generate: {
     fallback: '404.html'
