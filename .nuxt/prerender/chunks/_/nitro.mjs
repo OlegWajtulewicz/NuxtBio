@@ -769,8 +769,8 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "2dff1a5b-83fa-484e-b13b-589c64bc46a6",
-    "buildAssetsDir": "/_nuxt/",
+    "buildId": "4be254ea-1ed6-4ba1-b93a-b5007126b3db",
+    "buildAssetsDir": "_nuxt/",
     "cdnURL": ""
   },
   "nitro": {
@@ -778,6 +778,24 @@ const _inlineRuntimeConfig = {
     "routeRules": {
       "/__nuxt_error": {
         "cache": false
+      },
+      "/": {
+        "prerender": true
+      },
+      "/about": {
+        "prerender": true
+      },
+      "/work": {
+        "prerender": true
+      },
+      "/work/**": {
+        "prerender": true
+      },
+      "/privacy": {
+        "prerender": true
+      },
+      "/cookie": {
+        "prerender": true
       },
       "/**": {
         "swr": 3600,
@@ -1463,6 +1481,12 @@ const handlers = [
   { route: '/api/_nuxt_icon/:collection', handler: _R34QAG, lazy: false, middleware: false, method: undefined },
   { route: '/_ipx/**', handler: _hOpbCd, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/about', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/work', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/work/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/privacy', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
+  { route: '/cookie', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/api/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/_nuxt/builds/meta/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
   { route: '/_nuxt/builds/**', handler: _lazy_bywtDb, lazy: true, middleware: false, method: undefined },
@@ -1597,5 +1621,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, baseURL as e, getRouteRules as g, joinURL as j, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u, withoutTrailingSlash as w };
+export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, baseURL as e, getRouteRules as g, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u };
 //# sourceMappingURL=nitro.mjs.map

@@ -1,4 +1,4 @@
-import { hasInjectionContext, inject, version, ref, watchEffect, watch, getCurrentInstance, reactive, defineAsyncComponent, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Fragment, Transition, mergeProps, useSSRContext, createApp, effectScope, getCurrentScope, shallowRef, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, isReadonly, toRaw, Text, isRef, withCtx, isShallow, isReactive } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/index.mjs';
+import { hasInjectionContext, inject, version, ref, watchEffect, watch, getCurrentInstance, reactive, defineAsyncComponent, defineComponent, h, computed, unref, provide, shallowReactive, Suspense, nextTick, Fragment, Transition, mergeProps, useSSRContext, createApp, effectScope, getCurrentScope, shallowRef, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, isReadonly, toRaw, Text, isRef, withCtx } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/index.mjs';
 import { $fetch as $fetch$1 } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/ofetch/dist/node.mjs';
 import { e as baseURL } from '../_/nitro.mjs';
 import { createHooks } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/hookable/dist/index.mjs';
@@ -621,7 +621,6 @@ const showError = (error) => {
   }
   return nuxtError;
 };
-const isNuxtError = (error) => !!error && typeof error === "object" && NUXT_ERROR_SIGNATURE in error;
 const createError = (error) => {
   const nuxtError = createError$1(error);
   Object.defineProperty(nuxtError, NUXT_ERROR_SIGNATURE, {
@@ -1684,23 +1683,6 @@ const plugin$1 = /* @__PURE__ */ defineNuxtPlugin({
       }
     });
     return { provide: { router } };
-  }
-});
-const reducers = [
-  ["NuxtError", (data) => isNuxtError(data) && data.toJSON()],
-  ["EmptyShallowRef", (data) => isRef(data) && isShallow(data) && !data.value && (typeof data.value === "bigint" ? "0n" : JSON.stringify(data.value) || "_")],
-  ["EmptyRef", (data) => isRef(data) && !data.value && (typeof data.value === "bigint" ? "0n" : JSON.stringify(data.value) || "_")],
-  ["ShallowRef", (data) => isRef(data) && isShallow(data) && data.value],
-  ["ShallowReactive", (data) => isReactive(data) && isShallow(data) && toRaw(data)],
-  ["Ref", (data) => isRef(data) && data.value],
-  ["Reactive", (data) => isReactive(data) && toRaw(data)]
-];
-const revive_payload_server_eJ33V7gbc6 = /* @__PURE__ */ defineNuxtPlugin({
-  name: "nuxt:revive-payload:server",
-  setup() {
-    for (const [reducer, fn] of reducers) {
-      definePayloadReducer(reducer, fn);
-    }
   }
 });
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
@@ -7893,7 +7875,6 @@ const plugins = [
   payloadPlugin,
   unhead_KgADcZ0jPj,
   plugin$1,
-  revive_payload_server_eJ33V7gbc6,
   plugin,
   components_plugin_KR1HBZs4kY,
   switch_locale_path_ssr_5csfIgkrBP,

@@ -1,5 +1,5 @@
 var _a;
-import { effectScope, shallowReactive, reactive, getCurrentScope, hasInjectionContext, getCurrentInstance, inject, toRef, version, unref, ref, watchEffect, watch, h, isRef, shallowRef, isReadonly, isShallow, isReactive, toRaw, defineAsyncComponent, defineComponent, computed, Fragment, createVNode, Text, provide, Suspense, nextTick, mergeProps, Transition, withCtx, useSSRContext, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, createApp } from "vue";
+import { effectScope, shallowReactive, reactive, getCurrentScope, hasInjectionContext, getCurrentInstance, inject, toRef, version, unref, ref, watchEffect, watch, h, isRef, shallowRef, isReadonly, toRaw, defineAsyncComponent, defineComponent, computed, Fragment, createVNode, Text, provide, Suspense, nextTick, mergeProps, Transition, withCtx, useSSRContext, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, createApp } from "vue";
 import { $fetch as $fetch$1 } from "ofetch";
 import { baseURL } from "#internal/nuxt/paths";
 import { createHooks } from "hookable";
@@ -608,7 +608,6 @@ const showError = (error) => {
   }
   return nuxtError;
 };
-const isNuxtError = (error) => !!error && typeof error === "object" && NUXT_ERROR_SIGNATURE in error;
 const createError = (error) => {
   const nuxtError = createError$1(error);
   Object.defineProperty(nuxtError, NUXT_ERROR_SIGNATURE, {
@@ -1675,23 +1674,6 @@ const plugin$1 = /* @__PURE__ */ defineNuxtPlugin({
       }
     });
     return { provide: { router } };
-  }
-});
-const reducers = [
-  ["NuxtError", (data) => isNuxtError(data) && data.toJSON()],
-  ["EmptyShallowRef", (data) => isRef(data) && isShallow(data) && !data.value && (typeof data.value === "bigint" ? "0n" : JSON.stringify(data.value) || "_")],
-  ["EmptyRef", (data) => isRef(data) && !data.value && (typeof data.value === "bigint" ? "0n" : JSON.stringify(data.value) || "_")],
-  ["ShallowRef", (data) => isRef(data) && isShallow(data) && data.value],
-  ["ShallowReactive", (data) => isReactive(data) && isShallow(data) && toRaw(data)],
-  ["Ref", (data) => isRef(data) && data.value],
-  ["Reactive", (data) => isReactive(data) && toRaw(data)]
-];
-const revive_payload_server_eJ33V7gbc6 = /* @__PURE__ */ defineNuxtPlugin({
-  name: "nuxt:revive-payload:server",
-  setup() {
-    for (const [reducer, fn] of reducers) {
-      definePayloadReducer(reducer, fn);
-    }
   }
 });
 const plugin = /* @__PURE__ */ defineNuxtPlugin({
@@ -7988,7 +7970,6 @@ const plugins = [
   payloadPlugin,
   unhead_KgADcZ0jPj,
   plugin$1,
-  revive_payload_server_eJ33V7gbc6,
   plugin,
   components_plugin_KR1HBZs4kY,
   switch_locale_path_ssr_5csfIgkrBP,

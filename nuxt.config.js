@@ -85,7 +85,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '/_nuxt/',
+    buildAssetsDir: '_nuxt/',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -149,10 +149,17 @@ export default defineNuxtConfig({
         dirs: ['stores', 'utils', 'animation'],
   },
   experimental: {
-    payloadExtraction: true,
-    renderJsonPayloads: true
+    payloadExtraction: false,
+    renderJsonPayloads: false,
+    inlineSSRStyles: true
   },
   routeRules: {
+    '/': { prerender: true },
+    '/about': { prerender: true },
+    '/work': { prerender: true },
+    '/work/**': { prerender: true },
+    '/privacy': { prerender: true },
+    '/cookie': { prerender: true },
     // Кэширование статических страниц
     '/**': { swr: 3600 },
     // Кэширование API
@@ -165,7 +172,13 @@ export default defineNuxtConfig({
     static: true,
     prerender: {
       crawlLinks: true,
-      routes: ['/']
+      routes: [
+        '/',
+        '/about',
+        '/work',
+        '/privacy',
+        '/cookie'
+      ]
     },
     output: {
       publicDir: 'dist'
