@@ -85,7 +85,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '_nuxt',
+    buildAssetsDir: '/_nuxt/',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -149,8 +149,8 @@ export default defineNuxtConfig({
         dirs: ['stores', 'utils', 'animation'],
   },
   experimental: {
-    inlineSSRStyles: false,
-    payloadExtraction: false
+    payloadExtraction: true,
+    renderJsonPayloads: true
   },
   routeRules: {
     // Кэширование статических страниц
@@ -158,22 +158,21 @@ export default defineNuxtConfig({
     // Кэширование API
     '/api/**': { swr: 600 },
   },
-  ssr: false,
+  ssr: true,
+  target: 'static',
   nitro: {
     preset: 'netlify',
+    static: true,
     prerender: {
       crawlLinks: true,
-      routes: [
-        '/',
-        '/about',
-        '/work',
-        '/privacy',
-        '/cookie'
-      ]
+      routes: ['/']
+    },
+    output: {
+      publicDir: 'dist'
     }
   },
   generate: {
-    fallback: true
+    fallback: '404.html'
   },
   runtimeConfig: {
     public: {

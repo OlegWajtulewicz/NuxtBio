@@ -769,8 +769,8 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "ec798edc-36bf-4b07-acd9-8afb07f5fc8c",
-    "buildAssetsDir": "_nuxt",
+    "buildId": "2dff1a5b-83fa-484e-b13b-589c64bc46a6",
+    "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
   "nitro": {
@@ -1369,6 +1369,9 @@ function getRouteRulesForPath(path) {
   return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
 }
 
+function baseURL() {
+  return useRuntimeConfig().app.baseURL;
+}
 function buildAssetsDir() {
   return useRuntimeConfig().app.buildAssetsDir;
 }
@@ -1594,5 +1597,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, getRouteRules as g, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u };
+export { useStorage as a, buildAssetsURL as b, useRuntimeConfig as c, defineRenderHandler as d, baseURL as e, getRouteRules as g, joinURL as j, publicAssetsURL as p, trapUnhandledNodeErrors as t, useNitroApp as u, withoutTrailingSlash as w };
 //# sourceMappingURL=nitro.mjs.map
