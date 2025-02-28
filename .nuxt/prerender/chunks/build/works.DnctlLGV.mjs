@@ -1,4 +1,4 @@
-const works = [
+globalThis.__timing__.logStart('Load chunks/build/works.DnctlLGV');const works = [
   {
     title: "Julia Maisa",
     slug: "julia-maisa",
@@ -136,5 +136,5 @@ const works = [
   }
 ];
 
-export { works as w };
+export { works as w };;globalThis.__timing__.logEnd('Load chunks/build/works.DnctlLGV');
 //# sourceMappingURL=works.DnctlLGV.mjs.map

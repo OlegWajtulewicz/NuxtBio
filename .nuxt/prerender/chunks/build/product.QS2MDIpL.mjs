@@ -1,4 +1,4 @@
-const products = {
+globalThis.__timing__.logStart('Load chunks/build/product.QS2MDIpL');const products = {
   "julia-maisa": {
     title: "Julia Maisa",
     subtitle: "portfolio",
@@ -441,5 +441,5 @@ const products = {
   // Здесь можно добавить остальные проекты по мере необходимости
 };
 
-export { products as p };
+export { products as p };;globalThis.__timing__.logEnd('Load chunks/build/product.QS2MDIpL');
 //# sourceMappingURL=product.QS2MDIpL.mjs.map

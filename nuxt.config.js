@@ -66,14 +66,23 @@ export default defineNuxtConfig({
     },
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
     build: {
+      cssCodeSplit: true,
       manifest: true,
       rollupOptions: {
         output: {
           assetFileNames: '_nuxt/[name].[hash][extname]',
           chunkFileNames: '_nuxt/[name].[hash].js',
-          entryFileNames: '_nuxt/[name].[hash].js'
+          entryFileNames: '_nuxt/[name].[hash].js',
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+          }
         }
       }
+    },
+    optimizeDeps: {
+      include: ['gsap']
     }
   },
   build: {
@@ -85,7 +94,7 @@ export default defineNuxtConfig({
       mode: 'out-in'
     },
     baseURL: '/',
-    buildAssetsDir: '_nuxt/',
+    buildAssetsDir: '_nuxt',
     cdnURL: '',
     head: {
       htmlAttrs: {
@@ -130,12 +139,12 @@ export default defineNuxtConfig({
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
           body: true,
-          defer: false // убираем defer
+          async: true
         },
         {
           src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
           body: true,
-          defer: false // убираем defer
+          async: true
         }
       ]
     },
@@ -149,9 +158,9 @@ export default defineNuxtConfig({
         dirs: ['stores', 'utils', 'animation'],
   },
   experimental: {
-    payloadExtraction: false,
-    renderJsonPayloads: false,
-    inlineSSRStyles: true
+    payloadExtraction: true,
+    inlineSSRStyles: false,
+    renderJsonPayloads: true
   },
   routeRules: {
     '/': { prerender: true },
@@ -172,6 +181,7 @@ export default defineNuxtConfig({
     static: true,
     prerender: {
       crawlLinks: true,
+      failOnError: false,
       routes: [
         '/',
         '/about',
@@ -182,7 +192,8 @@ export default defineNuxtConfig({
     },
     output: {
       publicDir: 'dist'
-    }
+    },
+    timing: true
   },
   generate: {
     fallback: '404.html'

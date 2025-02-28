@@ -1,15 +1,13 @@
 {
-  "_FooterMain.COnBOODr.js": {
+  "_FooterMain.BoBzduDQ.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "FooterMain.COnBOODr.js",
+    "file": "FooterMain.BoBzduDQ.js",
     "name": "FooterMain",
     "imports": [
-      "_nuxt-link.CGrBSMVZ.js",
-      "node_modules/nuxt/dist/app/entry.js",
-      "_ThePreloader.Bmg0WGLO.js"
+      "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
       "FooterMain.D7UKbCR4.css"
@@ -28,12 +26,12 @@
     "file": "FooterMain.D7UKbCR4.css",
     "src": "_FooterMain.D7UKbCR4.css"
   },
-  "_MouseCursor.D6VrJ26D.js": {
+  "_MouseCursor.9XeHQ7lm.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "MouseCursor.D6VrJ26D.js",
+    "file": "MouseCursor.9XeHQ7lm.js",
     "name": "MouseCursor",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -55,19 +53,12 @@
     "file": "MouseCursor.DPqM-OPJ.css",
     "src": "_MouseCursor.DPqM-OPJ.css"
   },
-  "_PageHead.DoCTfosQ.css": {
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true,
-    "file": "PageHead.DoCTfosQ.css",
-    "src": "_PageHead.DoCTfosQ.css"
-  },
-  "_PageHead.KLqLz4be.js": {
+  "_PageHead.B1QOlq3a.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "PageHead.KLqLz4be.js",
+    "file": "PageHead.B1QOlq3a.js",
     "name": "PageHead",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -82,15 +73,21 @@
     "prefetch": true,
     "preload": true
   },
-  "_ThePreloader.Bmg0WGLO.js": {
+  "_PageHead.DoCTfosQ.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "PageHead.DoCTfosQ.css",
+    "src": "_PageHead.DoCTfosQ.css"
+  },
+  "_ThePreloader.D-w7lNTh.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ThePreloader.Bmg0WGLO.js",
+    "file": "ThePreloader.D-w7lNTh.js",
     "name": "ThePreloader",
     "imports": [
-      "_nuxt-link.CGrBSMVZ.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
@@ -126,12 +123,19 @@
     "file": "ThePreloader.hz6ldFID.css",
     "src": "_ThePreloader.hz6ldFID.css"
   },
-  "_USkeleton.C59n51WM.js": {
+  "_USkeleton.D49NijjQ.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "USkeleton.D49NijjQ.css",
+    "src": "_USkeleton.D49NijjQ.css"
+  },
+  "_USkeleton.vNbPhRvF.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "USkeleton.C59n51WM.js",
+    "file": "USkeleton.vNbPhRvF.js",
     "name": "USkeleton",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -145,24 +149,6 @@
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "_USkeleton.D49NijjQ.css": {
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true,
-    "file": "USkeleton.D49NijjQ.css",
-    "src": "_USkeleton.D49NijjQ.css"
-  },
-  "_nuxt-link.CGrBSMVZ.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "nuxt-link.CGrBSMVZ.js",
-    "name": "nuxt-link",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
   },
   "_product.B9Njdixb.js": {
     "resourceType": "script",
@@ -299,18 +285,19 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "about-layout.DjJoehfN.js",
+    "file": "about-layout.BCGqGp7A.js",
     "name": "about-layout",
     "src": "layouts/about-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.Bmg0WGLO.js",
-      "_FooterMain.COnBOODr.js",
+      "_ThePreloader.D-w7lNTh.js",
+      "_FooterMain.BoBzduDQ.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "node_modules/nuxt/dist/app/entry.js",
-      "_nuxt-link.CGrBSMVZ.js"
+      "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": []
+    "css": [
+      "about-layout.CxJARMJm.css"
+    ]
   },
   "about-layout.CxJARMJm.css": {
     "file": "about-layout.CxJARMJm.css",
@@ -323,72 +310,76 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "cookie-layout.D7cFj_Ao.js",
+    "file": "cookie-layout.Dw_AZPFD.js",
     "name": "cookie-layout",
     "src": "layouts/cookie-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.Bmg0WGLO.js",
-      "_FooterMain.COnBOODr.js",
+      "_ThePreloader.D-w7lNTh.js",
+      "_FooterMain.BoBzduDQ.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.CGrBSMVZ.js"
+      "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": []
+    "css": [
+      "about-layout.CxJARMJm.css"
+    ]
   },
   "layouts/home-layout.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "home-layout.T1ExOoLa.js",
+    "file": "home-layout.Dlt1ETQ3.js",
     "name": "home-layout",
     "src": "layouts/home-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.Bmg0WGLO.js",
-      "_FooterMain.COnBOODr.js",
+      "_ThePreloader.D-w7lNTh.js",
+      "_FooterMain.BoBzduDQ.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.CGrBSMVZ.js"
+      "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": []
+    "css": [
+      "about-layout.CxJARMJm.css"
+    ]
   },
   "layouts/privacy-layout.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "privacy-layout.B2iROkHC.js",
+    "file": "privacy-layout.DGFUphkM.js",
     "name": "privacy-layout",
     "src": "layouts/privacy-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.Bmg0WGLO.js",
-      "_FooterMain.COnBOODr.js",
+      "_ThePreloader.D-w7lNTh.js",
+      "_FooterMain.BoBzduDQ.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.CGrBSMVZ.js"
+      "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": []
+    "css": [
+      "about-layout.CxJARMJm.css"
+    ]
   },
   "layouts/slug-layout.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "slug-layout.CpCobsWO.js",
+    "file": "slug-layout.CoYhzqqa.js",
     "name": "slug-layout",
     "src": "layouts/slug-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.Bmg0WGLO.js",
-      "_nuxt-link.CGrBSMVZ.js",
+      "_ThePreloader.D-w7lNTh.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_product.B9Njdixb.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": []
+    "css": [
+      "slug-layout.LMoY0ALa.css"
+    ]
   },
   "slug-layout.LMoY0ALa.css": {
     "file": "slug-layout.LMoY0ALa.css",
@@ -401,18 +392,19 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "work-layout.C7vEuwS5.js",
+    "file": "work-layout.Bt3tyDTm.js",
     "name": "work-layout",
     "src": "layouts/work-layout.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ThePreloader.Bmg0WGLO.js",
-      "_FooterMain.COnBOODr.js",
+      "_ThePreloader.D-w7lNTh.js",
+      "_FooterMain.BoBzduDQ.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFirstScreenAnimation.ujgZ7hPi.js",
-      "_nuxt-link.CGrBSMVZ.js"
+      "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": []
+    "css": [
+      "about-layout.CxJARMJm.css"
+    ]
   },
   "node_modules/.cache/nuxt-google-fonts/fonts/Montserrat-100-1.woff2": {
     "resourceType": "font",
@@ -540,66 +532,12 @@
     "file": "Space_Mono-700-106.mWgeinG7.woff2",
     "src": "node_modules/.cache/nuxt-google-fonts/fonts/Space_Mono-700-106.woff2"
   },
-  "node_modules/@nuxt/icon/dist/runtime/components/index.js": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "index.CYKp05LI.js",
-    "name": "index",
-    "src": "node_modules/@nuxt/icon/dist/runtime/components/index.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ]
-  },
-  "node_modules/nuxt/dist/app/components/error-404.vue": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "error-404.CXsAL72M.js",
-    "name": "error-404",
-    "src": "node_modules/nuxt/dist/app/components/error-404.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "_nuxt-link.CGrBSMVZ.js",
-      "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": []
-  },
-  "error-404.C3V-3Mc4.css": {
-    "file": "error-404.C3V-3Mc4.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
-  },
-  "node_modules/nuxt/dist/app/components/error-500.vue": {
-    "resourceType": "script",
-    "module": true,
-    "prefetch": true,
-    "preload": true,
-    "file": "error-500.CC-lO0X-.js",
-    "name": "error-500",
-    "src": "node_modules/nuxt/dist/app/components/error-500.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": []
-  },
-  "error-500.dGVH929u.css": {
-    "file": "error-500.dGVH929u.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
-  },
   "node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "entry.C8SfECGe.js",
+    "file": "entry.BZA5CzVd.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -610,37 +548,232 @@
       "layouts/privacy-layout.vue",
       "layouts/slug-layout.vue",
       "layouts/work-layout.vue",
-      "i18n.config.js?hash=c231e734&config=1",
-      "node_modules/nuxt/dist/app/components/error-404.vue",
-      "node_modules/nuxt/dist/app/components/error-500.vue"
+      "i18n.config.js?hash=c231e734&config=1"
     ],
     "css": [
-      "entry.CR7GYR0i.css"
+      "entry.BSD3d-1g.css"
     ],
-    "_globalCSS": true
+    "assets": [
+      "Porlane-Regular.VNWhBGhv.woff2",
+      "Porlane-Regular.DDJheaj6.woff",
+      "Decoy-BlackItalic.BWrVBLid.woff2",
+      "Decoy-BlackItalic.CqqW-uFj.woff",
+      "FilsonPro-Regular.CLcYSeBB.woff2",
+      "FilsonPro-Regular.BnXIhAif.woff",
+      "icomoon.lt0x31Rw.eot",
+      "icomoon.DKj2trNE.woff",
+      "icomoon.BwM_dumh.ttf",
+      "icomoon.al-XYC_W.svg",
+      "bbg.CfePIDHv.png",
+      "Montserrat-100-1.DV_LRdWn.woff2",
+      "Montserrat-100-2.D3on441i.woff2",
+      "Montserrat-100-3.BcziCZ2I.woff2",
+      "Montserrat-100-4.BLkAzDQP.woff2",
+      "Montserrat-100-5.AeMhpAKq.woff2",
+      "Open_Sans-300-41.f7eF65bT.woff2",
+      "Open_Sans-300-42.Cw00GhOR.woff2",
+      "Open_Sans-300-43.Cs5KUPhG.woff2",
+      "Open_Sans-300-44.CtQ6sbau.woff2",
+      "Open_Sans-300-45.DrVQLkKb.woff2",
+      "Open_Sans-300-46.cwLdES2L.woff2",
+      "Open_Sans-300-47.C2QAFfGS.woff2",
+      "Open_Sans-300-48.0eckKRMD.woff2",
+      "Open_Sans-300-49.CrpOxvfM.woff2",
+      "Open_Sans-300-50.CYuRH5ug.woff2",
+      "Space_Mono-400-101.BNOj0Qhp.woff2",
+      "Space_Mono-400-102.DTLbW2xa.woff2",
+      "Space_Mono-400-103.Rg4St2Dn.woff2",
+      "Space_Mono-700-104.DWQgDHuA.woff2",
+      "Space_Mono-700-105.B2s3bDs2.woff2",
+      "Space_Mono-700-106.mWgeinG7.woff2"
+    ]
   },
-  "entry.CR7GYR0i.css": {
-    "file": "entry.CR7GYR0i.css",
+  "entry.BSD3d-1g.css": {
+    "file": "entry.BSD3d-1g.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
+  },
+  "Porlane-Regular.VNWhBGhv.woff2": {
+    "file": "Porlane-Regular.VNWhBGhv.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Porlane-Regular.DDJheaj6.woff": {
+    "file": "Porlane-Regular.DDJheaj6.woff",
+    "resourceType": "font",
+    "mimeType": "font/woff"
+  },
+  "Decoy-BlackItalic.BWrVBLid.woff2": {
+    "file": "Decoy-BlackItalic.BWrVBLid.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Decoy-BlackItalic.CqqW-uFj.woff": {
+    "file": "Decoy-BlackItalic.CqqW-uFj.woff",
+    "resourceType": "font",
+    "mimeType": "font/woff"
+  },
+  "FilsonPro-Regular.CLcYSeBB.woff2": {
+    "file": "FilsonPro-Regular.CLcYSeBB.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "FilsonPro-Regular.BnXIhAif.woff": {
+    "file": "FilsonPro-Regular.BnXIhAif.woff",
+    "resourceType": "font",
+    "mimeType": "font/woff"
+  },
+  "icomoon.lt0x31Rw.eot": {
+    "file": "icomoon.lt0x31Rw.eot",
+    "resourceType": "font",
+    "mimeType": "font/eot"
+  },
+  "icomoon.DKj2trNE.woff": {
+    "file": "icomoon.DKj2trNE.woff",
+    "resourceType": "font",
+    "mimeType": "font/woff"
+  },
+  "icomoon.BwM_dumh.ttf": {
+    "file": "icomoon.BwM_dumh.ttf",
+    "resourceType": "font",
+    "mimeType": "font/ttf"
+  },
+  "icomoon.al-XYC_W.svg": {
+    "file": "icomoon.al-XYC_W.svg",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/svg+xml"
+  },
+  "bbg.CfePIDHv.png": {
+    "file": "bbg.CfePIDHv.png",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png"
+  },
+  "Montserrat-100-1.DV_LRdWn.woff2": {
+    "file": "Montserrat-100-1.DV_LRdWn.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Montserrat-100-2.D3on441i.woff2": {
+    "file": "Montserrat-100-2.D3on441i.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Montserrat-100-3.BcziCZ2I.woff2": {
+    "file": "Montserrat-100-3.BcziCZ2I.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Montserrat-100-4.BLkAzDQP.woff2": {
+    "file": "Montserrat-100-4.BLkAzDQP.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Montserrat-100-5.AeMhpAKq.woff2": {
+    "file": "Montserrat-100-5.AeMhpAKq.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-41.f7eF65bT.woff2": {
+    "file": "Open_Sans-300-41.f7eF65bT.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-42.Cw00GhOR.woff2": {
+    "file": "Open_Sans-300-42.Cw00GhOR.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-43.Cs5KUPhG.woff2": {
+    "file": "Open_Sans-300-43.Cs5KUPhG.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-44.CtQ6sbau.woff2": {
+    "file": "Open_Sans-300-44.CtQ6sbau.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-45.DrVQLkKb.woff2": {
+    "file": "Open_Sans-300-45.DrVQLkKb.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-46.cwLdES2L.woff2": {
+    "file": "Open_Sans-300-46.cwLdES2L.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-47.C2QAFfGS.woff2": {
+    "file": "Open_Sans-300-47.C2QAFfGS.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-48.0eckKRMD.woff2": {
+    "file": "Open_Sans-300-48.0eckKRMD.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-49.CrpOxvfM.woff2": {
+    "file": "Open_Sans-300-49.CrpOxvfM.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Open_Sans-300-50.CYuRH5ug.woff2": {
+    "file": "Open_Sans-300-50.CYuRH5ug.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Space_Mono-400-101.BNOj0Qhp.woff2": {
+    "file": "Space_Mono-400-101.BNOj0Qhp.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Space_Mono-400-102.DTLbW2xa.woff2": {
+    "file": "Space_Mono-400-102.DTLbW2xa.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Space_Mono-400-103.Rg4St2Dn.woff2": {
+    "file": "Space_Mono-400-103.Rg4St2Dn.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Space_Mono-700-104.DWQgDHuA.woff2": {
+    "file": "Space_Mono-700-104.DWQgDHuA.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Space_Mono-700-105.B2s3bDs2.woff2": {
+    "file": "Space_Mono-700-105.B2s3bDs2.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "Space_Mono-700-106.mWgeinG7.woff2": {
+    "file": "Space_Mono-700-106.mWgeinG7.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
   },
   "pages/about.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "about.CCRjLbc9.js",
+    "file": "about.DEBJHw8D.js",
     "name": "about",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.KLqLz4be.js",
-      "_MouseCursor.D6VrJ26D.js",
+      "_PageHead.B1QOlq3a.js",
+      "_MouseCursor.9XeHQ7lm.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": [],
+    "css": [
+      "about.D91YNI2J.css"
+    ],
     "assets": [
       "about_ja.C9mvsjsU.jpg",
       "codeium.ByjCc6kQ.svg"
@@ -669,13 +802,13 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "cookie.BYZfd3rj.js",
+    "file": "cookie.ppLsrvzp.js",
     "name": "cookie",
     "src": "pages/cookie.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.KLqLz4be.js",
-      "_MouseCursor.D6VrJ26D.js",
+      "_PageHead.B1QOlq3a.js",
+      "_MouseCursor.9XeHQ7lm.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
@@ -694,18 +827,19 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.CskmUEtd.js",
+    "file": "index.C4ynuRdU.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_nuxt-link.CGrBSMVZ.js",
-      "_MouseCursor.D6VrJ26D.js",
+      "_MouseCursor.9XeHQ7lm.js",
       "_works.CiKLYgJL.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": [],
+    "css": [
+      "index.BJwo4Qmy.css"
+    ],
     "assets": [
       "bbg.CfePIDHv.png",
       "about_ja.C9mvsjsU.jpg"
@@ -717,24 +851,18 @@
     "prefetch": true,
     "preload": true
   },
-  "bbg.CfePIDHv.png": {
-    "file": "bbg.CfePIDHv.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
-  },
   "pages/privacy.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "privacy.Cj7obdro.js",
+    "file": "privacy.CNCQjpbi.js",
     "name": "privacy",
     "src": "pages/privacy.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PageHead.KLqLz4be.js",
-      "_MouseCursor.D6VrJ26D.js",
+      "_PageHead.B1QOlq3a.js",
+      "_MouseCursor.9XeHQ7lm.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
@@ -753,21 +881,22 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "_slug_.D-FyyBwt.js",
+    "file": "_slug_.CFHjW0wU.js",
     "name": "_slug_",
     "src": "pages/work/[slug].vue",
     "isDynamicEntry": true,
     "imports": [
-      "_nuxt-link.CGrBSMVZ.js",
+      "node_modules/nuxt/dist/app/entry.js",
       "_works.CiKLYgJL.js",
       "_product.B9Njdixb.js",
-      "node_modules/nuxt/dist/app/entry.js",
-      "_PageHead.KLqLz4be.js",
-      "_USkeleton.C59n51WM.js",
-      "_MouseCursor.D6VrJ26D.js",
+      "_PageHead.B1QOlq3a.js",
+      "_USkeleton.vNbPhRvF.js",
+      "_MouseCursor.9XeHQ7lm.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": []
+    "css": [
+      "_slug_.BlqSS58i.css"
+    ]
   },
   "_slug_.BlqSS58i.css": {
     "file": "_slug_.BlqSS58i.css",
@@ -780,20 +909,21 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.DuMhggYP.js",
+    "file": "index.B2JMj6iL.js",
     "name": "index",
     "src": "pages/work/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_PageHead.KLqLz4be.js",
-      "_nuxt-link.CGrBSMVZ.js",
-      "_MouseCursor.D6VrJ26D.js",
+      "_PageHead.B1QOlq3a.js",
+      "_MouseCursor.9XeHQ7lm.js",
       "_works.CiKLYgJL.js",
-      "_USkeleton.C59n51WM.js",
+      "_USkeleton.vNbPhRvF.js",
       "_useFirstScreenAnimation.ujgZ7hPi.js"
     ],
-    "css": []
+    "css": [
+      "index.BTC0qFpg.css"
+    ]
   },
   "index.BTC0qFpg.css": {
     "file": "index.BTC0qFpg.css",

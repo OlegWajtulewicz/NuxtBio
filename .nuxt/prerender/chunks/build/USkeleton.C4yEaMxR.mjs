@@ -1,4 +1,4 @@
-import { mergeProps, useSSRContext } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/index.mjs';
+globalThis.__timing__.logStart('Load chunks/build/USkeleton.C4yEaMxR');import { mergeProps, useSSRContext } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/index.mjs';
 import { ssrRenderAttrs } from 'file://C:/Users/vaj-o/OneDrive/Desktop/NuxtBio/node_modules/vue/server-renderer/index.mjs';
 import { _ as _export_sfc } from './server.mjs';
 
@@ -35,5 +35,5 @@ _sfc_main.setup = (props, ctx) => {
 };
 const USkeleton = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-3bf74d91"]]);
 
-export { USkeleton as U };
+export { USkeleton as U };;globalThis.__timing__.logEnd('Load chunks/build/USkeleton.C4yEaMxR');
 //# sourceMappingURL=USkeleton.C4yEaMxR.mjs.map

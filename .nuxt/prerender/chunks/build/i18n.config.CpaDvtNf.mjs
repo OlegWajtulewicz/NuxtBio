@@ -1,4 +1,4 @@
-const privacyTranslations = {
+globalThis.__timing__.logStart('Load chunks/build/i18n.config.CpaDvtNf');const privacyTranslations = {
   en: {
     privacy_page: {
       section1: {
@@ -1019,5 +1019,5 @@ const i18n_config = () => ({
   }
 });
 
-export { i18n_config as default };
+export { i18n_config as default };;globalThis.__timing__.logEnd('Load chunks/build/i18n.config.CpaDvtNf');
 //# sourceMappingURL=i18n.config.CpaDvtNf.mjs.map
