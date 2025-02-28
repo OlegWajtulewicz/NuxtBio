@@ -1,5 +1,5 @@
 [build]
-  publish = "dist"
+  publish = ".output/public"
   command = "npm run generate"
 
 [[headers]]
@@ -11,13 +11,13 @@
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/_nuxt/*"
+  for = "/nuxtbio/_nuxt/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/img/*"
+  for = "/nuxtbio/img/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Access-Control-Allow-Origin = "*"
@@ -79,8 +79,8 @@
     Access-Control-Allow-Origin = "*"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/nuxtbio/*"
+  to = "/nuxtbio/index.html"
   status = 200
   force = false
 

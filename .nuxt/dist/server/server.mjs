@@ -898,37 +898,37 @@ const _routes = [
     name: "about",
     path: "/about",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import("./_nuxt/about.ZPJhu62i.js")
+    component: () => import("./nuxtbio/_nuxt/about.DLBv1ibo.js")
   },
   {
     name: "cookie",
     path: "/cookie",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import("./_nuxt/cookie.C87hOEke.js")
+    component: () => import("./nuxtbio/_nuxt/cookie.CF_crQkR.js")
   },
   {
     name: "index",
     path: "/",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import("./_nuxt/index.CQpu0nd-.js")
+    component: () => import("./nuxtbio/_nuxt/index.B69vzYD_.js")
   },
   {
     name: "privacy",
     path: "/privacy",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import("./_nuxt/privacy.B5DeIfzo.js")
+    component: () => import("./nuxtbio/_nuxt/privacy.CSNvIJj7.js")
   },
   {
     name: "work-slug",
     path: "/work/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import("./_nuxt/_slug_.BvDxjAnA.js")
+    component: () => import("./nuxtbio/_nuxt/_slug_.DdJKEMj1.js")
   },
   {
     name: "work",
     path: "/work",
     meta: __nuxt_page_meta || {},
-    component: () => import("./_nuxt/index.CifWEidB.js")
+    component: () => import("./nuxtbio/_nuxt/index.CSVLPZ1D.js")
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -1684,7 +1684,7 @@ const plugin = /* @__PURE__ */ defineNuxtPlugin({
     };
   }
 });
-const LazyIcon = defineAsyncComponent(() => import("./_nuxt/index.hFm-O5RQ.js").then((r) => r["default"] || r.default || r));
+const LazyIcon = defineAsyncComponent(() => import("./nuxtbio/_nuxt/index.C2EboQ82.js").then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["Icon", LazyIcon]
 ];
@@ -1877,7 +1877,7 @@ const localeLoaders = {
 };
 const vueI18nConfigs = [
   () => import(
-    "./_nuxt/i18n.config.CpaDvtNf.js"
+    "./nuxtbio/_nuxt/i18n.config.CpaDvtNf.js"
     /* webpackChunkName: "__i18n_config_js_c231e734" */
   )
 ];
@@ -7977,12 +7977,12 @@ const plugins = [
   ssg_detect_3fHkBxLtv0
 ];
 const layouts = {
-  "about-layout": defineAsyncComponent(() => import("./_nuxt/about-layout.BuQ9e06y.js").then((m) => m.default || m)),
-  "cookie-layout": defineAsyncComponent(() => import("./_nuxt/cookie-layout.o36ED7ju.js").then((m) => m.default || m)),
-  "home-layout": defineAsyncComponent(() => import("./_nuxt/home-layout.fRBIRx9S.js").then((m) => m.default || m)),
-  "privacy-layout": defineAsyncComponent(() => import("./_nuxt/privacy-layout.Czl9Ds6H.js").then((m) => m.default || m)),
-  "slug-layout": defineAsyncComponent(() => import("./_nuxt/slug-layout.Bb_gGaFD.js").then((m) => m.default || m)),
-  "work-layout": defineAsyncComponent(() => import("./_nuxt/work-layout.DJVI1yx-.js").then((m) => m.default || m))
+  "about-layout": defineAsyncComponent(() => import("./nuxtbio/_nuxt/about-layout.BtVkfJlB.js").then((m) => m.default || m)),
+  "cookie-layout": defineAsyncComponent(() => import("./nuxtbio/_nuxt/cookie-layout.Bha97Ezk.js").then((m) => m.default || m)),
+  "home-layout": defineAsyncComponent(() => import("./nuxtbio/_nuxt/home-layout.BiGyR3du.js").then((m) => m.default || m)),
+  "privacy-layout": defineAsyncComponent(() => import("./nuxtbio/_nuxt/privacy-layout.BIJSQ-Ed.js").then((m) => m.default || m)),
+  "slug-layout": defineAsyncComponent(() => import("./nuxtbio/_nuxt/slug-layout.2BymjsZM.js").then((m) => m.default || m)),
+  "work-layout": defineAsyncComponent(() => import("./nuxtbio/_nuxt/work-layout.C1Okeil0.js").then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -8285,8 +8285,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import("./_nuxt/error-404.2elB52Hi.js"));
-    const _Error = defineAsyncComponent(() => import("./_nuxt/error-500.CuCLNfyG.js"));
+    const _Error404 = defineAsyncComponent(() => import("./nuxtbio/_nuxt/error-404.B7jbv60q.js"));
+    const _Error = defineAsyncComponent(() => import("./nuxtbio/_nuxt/error-500.CmPdMLpP.js"));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
