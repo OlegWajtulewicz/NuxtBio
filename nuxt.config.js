@@ -81,7 +81,7 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     },
-    baseURL: '/nuxtbio/',
+    baseURL: '/',
     buildAssetsDir: '_nuxt',
     cdnURL: '',
     head: {
